@@ -53,7 +53,7 @@ Fontos, hogy szétválasszuk az adatainkat tréning és teszt adatokra. Ez bizto
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/ml.png}
-\caption{Felügyelt tanulás általános modellje \label{overflow}}
+\caption{Felügyelt tanulás általános modellje \label{ml}}
 \end{figure}
 
 \subsection{Nem felügyelt tanítás}
@@ -73,7 +73,7 @@ Az ajánlórendszerek alapja az ún. utility matrix, ami tartalmazza a felhaszn�
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/um.png}
-\caption{Utility matrix, ahol az $A,B, C, D$ felhasználók a Star Wars, Harry Potter és Twilight filmeket értékelték \label{overflow}}
+\caption{Utility matrix, ahol az $A,B, C, D$ felhasználók a Star Wars, Harry Potter és Twilight filmeket értékelték \label{um}}
 \end{figure}
 
 Célünk az, hogy hiányzó értékeket a mátrixban minél jobban megjósoljuk. Természetesen nem fontos, hogy az összes elemét kitöltsük, törekednünk kell arra, hogy az ajánlás a preferált filmek/cikkek körében legyen, mivel ezek eladása/elolvasása racionalizálható gazdasági szempontból. Jelen esetben, kíváncsiak lehetünk, hogy $A$ felhasználónak ajánlhatjuk-e Harry Potter 2. részét. Láthatjuk, hogy HP 1. részét kedvelte, és tudjuk, hogy a két film kapcsolatban van egymással (rendezők, színészek, történet, stb.) ezért gyaníthatjuk, hogy a második részt is jól fogja értékelni.
@@ -89,8 +89,8 @@ Utilty mátrix nélkül nem lehetséges a felhasználóknak ajánlattétel. Ahho
 \item Megvizsgáljuk a viselkedését: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette/stb. az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a utility mátrixban az ajánló rendszer. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak 1 elemű skálán dolgozunk.
 \end{enumerate}
 
-\section{Párhuzamos kötegelt feldolgozás}
-A kétezres évek elején és közepén, a megfelelő számítási kapacitás hiányában a párhuzamos adatfeldolgozás általában \textsl{kötegelt} (batch) módon történt. Felhasználói interakció nélkül, megadott időközönként történik a nagy mennyiségű adat feldolgozása. Előnye, hogy akkor futhat a program, amikor a rendszer leterheltsége alacsony, ezzel biztosítva az egyenletes kihasználtságot. Mivel a parancsok automatikusan futnak le, ezért kisebb az üres, nem számítással töltött idő.~\cite{batch}
+\section{Párhuzamos kötegelt adatfeldolgozás}
+A kétezres évek elején és közepén, a megfelelő számítási kapacitás hiányában a párhuzamos adatfeldolgozás általában \textsl{kötegelt} (batch) módon történt. Felhasználói interakció nélkül, megadott időközönként történik a nagy mennyiségű adat feldolgozása. Előnye, hogy akkor futhat a program, amikor a rendszer leterheltsége alacsony, ezzel biztosítva az egyenletes kihasználtságot. Mivel a parancsok automatikusan futnak le, ezért kisebb az üres, nem számítással töltött idő.~\cite{batch}.
 
 \section{Lambda-architektúra}
 A big data megjelenésével, megjelent az igény, hogy ezeket az adatokat közel valós időben tudjuk feldolgozni. Egy fejlettebb megoldásnak tekinthetjük a Lambda-architektúrát, ami a kötegelt feldolgozást (batch processing), és a adatfolyam feldolgozást (stream processing) egyesíti. Megalkotása során törekedtek arra, hogy 
@@ -107,19 +107,62 @@ A sebesség réteg csak friss adatokkal dolgozik, így csökken a pontosság és
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/lambda.png}
-\caption{Lambda architektúra felépítése \label{overflow}}
+\caption{Lambda architektúra felépítése \label{lambda}}
 \end{figure}
 
-\section{Adatfolyam}
-bounded, unbounded
+\section{Adatfolyam alapú feldolgozás}
+Lambda-architektúra a maga idejében egy rendkívül jó megoldás volt, biztosítva az alacsony válaszidő és a pontosság egyvelegét. Ahogy azonban feljődtek a technológiai megoldások, egyre jobban kiütköztek a hátrányok is. A többszörös adatfeldolgozás miatt egyszerre két infrastruktúrát kell fent tartani, ami növeli a komplexitást, hibalehetőséget, és a befektetett időt, mivel minden kódmódosítást két helyen kell egyszerre elvégezni. Léteznek félmegoldások a problémára, mint a Twitter által fejlesztett Summingbird~\cite{summingbird}, ami egy magas szintű függvénykönyvtár, mely fordítás után optimalizál a kötegelési és a sebesség rétegre. Viszont ebben az esetben is megmarad az operatív teher, amit 2 különböző infrastrutúra fenttartása okoz. Másrészt pedig csak olyan technikai megoldásokat használhatunk, amely a két engine metszéspontjában szerepel. \linebreak
+Ennek kiváltásra születtek meg a ma ismert modern adatfolyam alapú feldolgozó egységek (streaming). A rendezetlen (unorder), végtelen (unordered) és teljes globális skálázású rendszerek kiszolgálását csak úgy lehet megoldani, ha olyan rendszert fejlesztünk, ami ténylegesen ezekre a problémákra ad megoldást.~\cite{tyler}. E mellett egyéb előnyei is vannak az adatfolyam alapú rendszereknek: 
+\begin{itemize}
+\item ki tud elégíteni olyan üzleti igényeket, mint pl.:anomália keresés, csalásfelderítés, hírdetéselhelyezés
+\item hosszú távon az erőforrás eloszlás kiegyenlítettebb lesz, mivel mindig (majdnem) akkor kerül feldolgozásra, amikor létrejön
+\end{itemize}
+Mit is tekinthetünk adatfolyamnak? Olyan adatfeldolgozó motort, mely arra van tervezve, hogy végtelen és rendezetlen adatsorokat dolgozzon fel. Eddig az ilyen rendszereket alapvetően alacsony pontossággal és/vagy megbízhatatlansággal vádolták, mely csak spekulálni tud az egyes adatok valódi értékéről. Ha két dolgot szem előtt tartunk a rendszer tervezésnél, akkor túl tudunk lépni a Lambda-architektúra (és a fejlettebb micro-batch rendszerek~\cite{microbatch}) lehetőségein. Az első a konzisztens tárolás, ami azt jelenti, hogy hosszú idő után is, esetleges gépi hiba esetén is megmaradjanak az adatok helye formájukban, pontosan egyszer (at-most-once). A másik, hogy biztosítsuk, hogy a különböző időben érkező, de összetartozó, rendezetlen adatok helyes feldolgozása is megtörténhessen. Ahhoz, hogy ezt megértsük, két fogalmat kell definiálnunk:
+\begin{itemize}
+\item esemény ideje (event-time), amikor megszületett az adat
+\item feldolgozás ideje (processing-time), amikor feldolgozásra került az adat
+\end{itemize}
+Ideális esetben ez a két időhorzint megegyezik, tehát közvetlenül akkor dolgozzuk fel az adatot, amikor az létrejött. Sajnos, azonban a bemeneti forrás késése, a feldolgozó engine hibája vagy hardver üzemszünet miatt nem lehetséges.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=60mm]{img/skew.jpg}
+\caption{Adatfolyam feldolgozás a valóságban. \label{skew}}
+\end{figure}
+
+
+\subsection{Adatfeldolgozó mintázatok}
+Ahhoz, hogy tudjuk mivel dolgozik egy modern, adatfolyam alapú feldolgozó egység, részleteznünk kell az eddig használtakat.
+
+\subsubsection{Kötegelt feldolgozás véges adaton}
+Az adatfeldolgozási folyamat nagyon egyszerű, vesszük a különböző típusú adatokat meghatározott időközönként és egy adatfeldolgozó architektúra (pl.: MapReduce~\cite{mapreduce}) segítségével átalakítjuk struktúrált adatokká.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{img/batch.jpg}
+\caption{Bal oldalon található entrópikus adatokból MapReduce segítségével struktúrált, információval rendelkező adatokat generálunk. \label{batchreduce}}
+\end{figure}
+
+\subsubsection{Kötegelt feldolgozás végtelen adaton}
+\textsl{Végtelen} adatnál még mindig használhatunk kötegelt feldolgozó rendszereket, azzal a kiegészítéssel, hogy az adatok felbontjuk véges részekre, így azok feldolgozhatóvá válnak. Két fő módszertan van elterjed, a rögzített windowing és a session.
+
+\paragraph{Rögzített windowing} arra vonatkozik amely során fix méretű átmenetei időblokkokat vezetünk be, és ezeken az ablakokon futtatjuk le feldolgozó algoritmusunkat. A problémák ennél a megoldásnál nyilvánvalóak. Többidejűséggel (több sorozatban érkezik meg az adat) és többhelyűséggel (több földrajzi elhelyezkedésről érkezik meg az adat) nem tud foglalkozni, így nem tudja biztosítani az adat teljességét és pontosságát.
+
+\paragraph{Sessionnél} valamilyen felhasználói aktivitás alapján meghatározzuk, hogy valószínűleg mennyi ideig fog tartani az adatfolyam. Ez alapján hozok létre ablakokat, melyeken végrehajtom a műveleteimet. Főbb probléma, ha átcsúszik az adat a következő session-be, akkor csak a komplexitás (addícionális logikával) vagy a válaszidő növelésével(növelem a session idejét) tudjuk figyelembe venni.
+
+\subsubsection{Adatfolyam feldolgozás végtelen adaton}
+Ebben az esetben az adataink rendezetlenek és nem tudjuk explicit megmondani azt az $epszilon$ időt, ami az adat létrejötte és feldolgozás között van. 4 kategóriába lehet sorolni az ennél a csoportnál alkalmazott technikákat: időfüggetlen (time-agonostic), közelítő algoritmusok, windowing feldolgozási és windowing az adat létrejötte függvényében. 
+
+\paragraph{Időfüggetlen feldolgozás} esetében nem vesszük számításba (és nem is fontos) az, hogy mikor érkeznek meg az adatok, mivel \textsl{adatvezérelt} módon történik a logika meghatározása. Szűrők és inner-join-ok segítségével dolgozunk. Az előbbi esetben mindig csak a soron következő adatról kell eldöntenünk, hogy megfelel-e a feltételeknek (pl.: adott IP címről érkező adatok kategorizálása), míg az utóbbinál egynél több forrásból érkező adatokat úgy kapcsoljuk össze, hogy az elsőnek beérkezett adatot perzisztens módon eltároljuk. 
+
+\paragraph{Becslő algoritmusok} mint például Top-n~\cite{topn} alkotják a második kategóriát az adatfolyam alapú feldolgozó technikáknál. Végtelen adatból egy nagyjából jó, véges kimenetet generálnak, ami egyes esetekben megfelelő adatot eredményez. Ezeknek az algoritmusoknak hátránya, hogy az eredmény nem teljesen jó, illetve általában feldolgozási idő alapján dolgoznak, így a rendezetlen adatoknál pontatlan kimenet lehet az eredmény.
+
+\paragraph{Windowing} 
+TODO Processing / Event Time Windowing
+
+\section{ALS}
 
 \iffalse
-\section{Time-agonistic}
-\begin{itemize}
-\item Event time
-\item Proccesing time
-\end{itemize}
-\section{Flink(Spark/Storm/Mapreduce)}
+\section{Flink}
 \section{Ajánlórendszerek}
 \begin{itemize}
 \item Collaborative filtering
@@ -162,4 +205,10 @@ Max 1 oldal, miért ez lett
 \bibitem{introspection} http://cbdr.cmu.edu/seminar/pronin.pdf, Megtekintve: 2015.12.16
 \bibitem{batch}http://www-01.ibm.com/support/knowledgecenter/#!/zosbasics/com.ibm.zos.zmainframe/zconc_batchproc.htm,  Megtekintve: 2015.12.16
 \bibitem{lambda}http://lambda-architecture.net, Megtekintve: 2015.12.16
+\bibitem{mapreduce}http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf, Megtekintve: 2015.12.17
+\bibitem{tyler}http://radar.oreilly.com/2015/08/the-world-beyond-batch-streaming-101.html, Megtekintve: 2015.12.17
+\bibitem{summingbird}https://github.com/twitter/summingbird, Megtekintve: 2015.12.17
+\bibitem{microbatch}http://hortonworks.com/blog/apache-storm-design-pattern-micro-batching/, Megtekintve: 2015.12.17
+\bibitem{topn}https://pkghosh.wordpress.com/2014/09/10/realtime-trending-analysis-with-approximate-algorithms/
+
 \end{thebibliography}
