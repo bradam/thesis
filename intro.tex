@@ -1,6 +1,8 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
 \usepackage[magyar]{babel}
 \usepackage{indentfirst}
 \usepackage{amsmath}
@@ -86,7 +88,7 @@ Amikor bemegyünk egy könyvesboltba, többféle módon is választhatunk egyes 
 Utilty mátrix nélkül nem lehetséges a felhasználóknak ajánlattétel. Ahhoz, hogy feltudjuk tölteni, két általános megközelítés létezik.
 \begin{enumerate}
 \item Megkérdezzük a felhasználót a véleményéről (pl.: IMDb, ahol a felhasználók a filmeket értékelhetik egy 1-10-es skálán:)~\cite{imdb}: Ebben az esetben a sikerességünk limitált, mivel a felhasználónak nem származik rövid távon gazdasági előnye abból, hogy értékel (természetesen, ha minden film után reális értékelést adna, akkor hosszú távon jobb ajánlásokat kapna). Másrészt az emberi irracionalitás miatt előfordulhat, hogy részrehajlóan (akár pozitív, akár negatív irányban) értékel, ami eltorzíthatja a utility mátrixot. ~\cite{introspection}
-\item Megvizsgáljuk a viselkedését: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette/stb. az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a utility mátrixban az ajánló rendszer. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak 1 elemű skálán dolgozunk.
+\item Megvizsgáljuk a viselkedését: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette/stb. az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a utility mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak 1 elemű skálán dolgozunk.
 \end{enumerate}
 
 \section{Párhuzamos kötegelt adatfeldolgozás}
@@ -160,16 +162,50 @@ Ebben az esetben az adataink rendezetlenek és nem tudjuk explicit megmondani az
 TODO Processing / Event Time Windowing
 
 \section{ALS}
+Mikor ajánlásokat adunk a felhasználónak, a célünk az, hogy a utility mátrixban a hiányzó elemeket megkeressük. Feltételezhetjük, hogy a felhasználó elemei között kapcsolat van (mivel a felhasználó preferenciája vélhetően \textsl{rögzített} egy rövid időszakon belül), ezért különböző optimalizációs eljárásokat alkalmazhatunk. Az egyik legismertebb ilyen eljárás a mátrix faktorizáció (ALS, Alternating Least Squares), ahol az M utility mátrixunkat faktorokra, részmátrixokra bontjuk. \linebreak
+Legyen $U$ és $I$ a felhasználók és elemeik sorozata. $U={\{1, ..., U\}}$ és $I={\{1, ..., I\}}$.  Implicit feltöltött utility mátrixunk legyen $M$, ahol a kitöltött elemek 
+$r_{ui}$, az üressek (amire szeretnénk ajánlást adni) pedig $\hat{r}_{ui}$. $M$-et felbonthatjuk két részmátrixra, $P$ és $Q$, és inicializáljuk elemeiket megfelelően kis $k$-val. Válasszuk $M$ egy ismert elemét, legyen $X$. Ha ez a választott $X$ eltér a megfelelő $P$ és $Q$ elem szorzatától, akkor változtassuk meg az eltérés irányában. Ha $X$ értéke megegyezik a vizsgált $P$ és $Q$ faktor szorzatával, akkor válasszunk másik $X$-et.
+
+\[
+\begin{bmatrix}
+    1 & 1 \\
+    1 & 1  \\
+    1 & 1  \\
+    1 & 1  \\
+    1 & 1          
+\end{bmatrix}
+%
+\begin{bmatrix}
+    1 & 1 & 1 & 1 & 1 \\
+    1 & 1 & 1 & 1 & 1        
+\end{bmatrix}
+=
+\begin{bmatrix}
+    5 & 4 & ? & ? & 5\\
+	? & 4 & ? & ? & ?\\
+	5 & ? & ? & ? & 4\\
+	5 & 4 & 5 & ? & 5\\
+	5 & ? & 4 & ? & 5\\\end{bmatrix}
+\]
+
+Ha egyszerre változtatjuk a két részmátrix elemeit, akkor az NP-nehéz probléma, ezért mindig csak az $P$ részmátrixon iterálunk végig amíg $P$ értékei fixálvan vannak. Ha megfelelően jó eredményt kapunk, akkor váltunk a $Q$-ra, ahol megismételjük ezt a műveletet, amíg el nem érjük a konvergencia állapotát. Alapvető probléma még emellett, hogy ha a részmátrixon a változtatás túl kicsi, akkor rengeteg erőforrást elpazarlunk, ha túl nagy, akkor lehet, hogy átugorjuk az optimális megoldást.
+
+\section{Gradient descent}
+
+Ahhoz, hogy nagy adatmennyiségben a lehető legkevesebb költséggel (idő, számítási) tudjunk dolgozni, különböző optimalizációs eljárásokat alkalmazunk. A dolgozatomban vizsgált gradient descent egy olyan metódus, aminek a feladata, hogy egy konvex célfüggvény globális minimumát megtalálja. Legyen $J(\theta)$ a célfüggvény, aminek a minimumát keressük, $\alpha$ a tanulási ráta és $j=0, 1, ..., n$ pedig a függvény paraméterei:
+\[\theta_j:=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta)\]~\cite{andrewml}
+Veszek egy kezdeti véletlenszerű értéket, ami a függvény paraméter(einek) értéke lesz. Az algoritmus megvizsgálja a paraméterek gradiensét (parciális deriváltját), ami megadja, hogy milyen irányban kell csökkentenem a paramétert ahhoz, hogy a célfüggvényem is csökkenjen. Addig ismétlem a folyamatot, míg konvergenciára nem jutok. Fontos, hogy két ismétlés (update) között az összes paramétert változtatom. \linebreak
+Az $\alpha$ tanulási ráta megadja, hogy mekkora lépésközökkel operál az algoritmusom, tehát mekkorát csökkentek (vagy növelek) az adott változóm értékén. Ha túl nagyra veszem, akkor lehet, hogy váltakozva fogok divergálni és konvergálni, míg ha túl kicsire veszem, lehet, hogy csak a lokális minimumot találom meg.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{img/alfa.png}
+\caption{Konvergencia eltévesztése túl nagy és túl kicsi tanulási rátánál \label{alfa}}
+\end{figure}
+
 
 \iffalse
 \section{Flink}
-\section{Ajánlórendszerek}
-\begin{itemize}
-\item Collaborative filtering
-\item Content based
-\end{itemize}
-\section{ALS}
-\section{DSG}
 \section{Java, Scala}
 Max 1 oldal, miért ez lett
 \section{Dcg,nDCG}
@@ -209,6 +245,7 @@ Max 1 oldal, miért ez lett
 \bibitem{tyler}http://radar.oreilly.com/2015/08/the-world-beyond-batch-streaming-101.html, Megtekintve: 2015.12.17
 \bibitem{summingbird}https://github.com/twitter/summingbird, Megtekintve: 2015.12.17
 \bibitem{microbatch}http://hortonworks.com/blog/apache-storm-design-pattern-micro-batching/, Megtekintve: 2015.12.17
-\bibitem{topn}https://pkghosh.wordpress.com/2014/09/10/realtime-trending-analysis-with-approximate-algorithms/
+\bibitem{topn}https://pkghosh.wordpress.com/2014/09/10/realtime-trending-analysis-with-approximate-algorithms/, Megtekintve: 2015.12.17
+\bibitem{andrewml}http://cs229.stanford.edu/notes/cs229-notes1.pdf, Megtekintve: 2015.12.21
 
 \end{thebibliography}
