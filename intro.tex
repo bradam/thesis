@@ -21,12 +21,12 @@ A nagy adat (big data) napjainkban az egyik vezető cím az informatikai termino
 Becslések~\cite{2020} szerint az adatok mennyisége kétévente duplázódik, így 2020-ra az összekézben forgó adatmennyiség elérheti a 44 zetabájtnyi (vagy 44 trillió gigabájtnyi) mennyiséget.
 \linebreak
 
-A ,,big data'' lehetőséget biztosít arra, hogy ezeket az adatokat ne csak tároljuk, hanem új módokon tanuljunk belőle, értéket állítsunk elő, többet megtudjunk ügyfeleinkről, a saját üzleti folyamatainkról, ami versenyelőnyhöz vezethet. E mellett az áttörő kutatások számát is megnöveli azáltal, hogy rejtett összefüggéseket mutat meg.~\cite{brk} 
+A ,,big data'' lehetőséget biztosít arra, hogy ezeket az adatokat ne csak tároljuk, hanem új módokon tanuljunk belőle, értéket állítsunk elő, többet megtudjunk ügyfeleinkről, a saját üzleti folyamatainkról, ami versenyelőnyhöz vezethet. E mellett az áttörő kutatások számát is megnövelheti azáltal, hogy rejtett összefüggéseket mutat meg.~\cite{brk} 
 
 A cloud computing, és új technológiák megszületése és az, hogy a fizikai világ egyre jobban átterelődik az online térbe, új nehézségeket állít elő mind az adatokat kiszolgáló, mind az adatokat elemző infrastruktúrák számára. Ezek a problémák komoly gondot jelentek az informatikai iparnak, mivel érintik az fizikai manifesztációt (hardver), mind az ezt vezérlő és feldolgozó réteget (szoftver és algoritmus). Ezek a problémák,~\cite{dst} --amelyek a tradícionális adattárház technológiákra jellemzőek-- többek között származhatnak a hiba-tolerancia hiányából, a sokféle adatfajtából, a párhuzamosság hiányából, mely azt eredményezi, hogy a mai technológia fejlettség (és a központi számítási egységek fizikailag limitáltsága miatt) nem lesz megfelelő számítási teljesítmény a megnövekedett adatmennyiség menedzselésére.
 
 \section{A dolgozat célja}
-
+q
 A technológia fejlődése és a számítási teljesítmény megnövekedése hozta létre azt az üzleti igényt~\cite{rta}, hogy egyre gyorsabban, egyre nagyobb adatmennyiség feldolgozása történjen meg. Ilyen igény például:csalás felderítés~\cite{fraud}, "dolgok" internete (IoT)~\cite{iot} vagy alkalmazás monitoring~\cite{ganalitycs}. Ez az adatfeldolgozási sebesség olyan szintre eljutott, hogy közel valós időben, az adat keletkezése után megtörténhet ennek feldolgozása. Ilyen gyorsaságú adatfeldolgozásra csak elosztott rendszerek segítségével vagyunk képesek,~\cite{ucl} amelyek felépítésükből fakadóan sok lehetőség és költség jellemez, amelyeket a későbbiekben fogok kifejteni. A dolgozatomban használt Apache Flink (mely az Apache Foundation egyik legújabb és legmodernebb terméke) platform közel 40 millió elem feldolgozására képes egy 40 magos architektúrán másodpercenként.~\cite{flink}.  \linebreak
 
 Ahhoz, hogy ezt az adatmennyiséget ki tudjuk elemezni és ajánlásokat tudjunk adni, gépi tanulásra van szükségünk. A gépi tanulás az informatikának és a matematikának egy olyan ága, amely az adatok folyamatos betáplálása során új ismereteket szolgáltat, megpróbál előrejelzéseket adni anélkül, hogy explicit módon be lenne erre programozva. ~\cite{ml}. A gépi tanulás egy olyan fajtáját fogom alkalmazni, ahol a termékek és felhasználóktól szerzett adatokból a lehető legpontosabban próbáljuk megjósolni, hogy milyen termék szerepelhet a felhasználó preferencialistája elején. Célom, hogy elosztott módon felépítsem az algoritmust, megnézzem, hogy milyen esetekben érdemes a párhuzamosítás, hol van az a határ, ahol a felépítésből fakadó többletköltség és komplexitás ellenére is megéri párhuzamos architektúrát alkalmazni. 
@@ -36,11 +36,35 @@ A választott metódus a sztochasztikus gradiens leszállás (SGD, stochastic gr
 
 \section{Elosztottság}
 A megnövekedett fizikai modellezési és katonai problémák miatt már 1950-es évektől kezdve felmerült az a kérdés, hogy hogyan lehetne összetett számítási feladatokat minél gyorsabban, egyszerűbben elvégezni. ~\cite{cocke} Rájöttek, hogy a problémákat olyan részproblémákra kell bontani, melyek megoldása egymástól független, így párhuzamosan is megoldhatóak, így jött létre a párhuzamos programozás. \linebreak
-Párhuzamos programozás következő lépéseként jött létre az elosztott rendszerekre való igény, mely esetében a számolások már nem csak az adott számítási egységben különülnek el, hanem jóval több, akár különböző fizikai lokáción levő számítógép is ugyanannak a problémának egy számítását végzi. Azonban az ily módon elért számítási teljesítmény növekedés a komplexitás megnövekedésével is jár. Ezt a komplexitást különböző keretrendszerek elfedik, így biztosítva a lehetőséget elosztott alapon működő alkalmazások fejlesztésére.
+Párhuzamos programozás következő lépéseként jött létre az elosztott rendszerekre való igény, mely esetében a számolások már nem csak az adott számítási egységben különülnek el, hanem jóval több, akár különböző fizikai lokáción levő számítógép is ugyanannak a problémának egy számítását végzi. Azonban az ily módon elért számítási teljesítmény növekedés a komplexitás megnövekedésével is jár. Ezt a komplexitást különböző keretrendszerek elfedik, így biztosítva a lehetőséget elosztott alapon működő alkalmazások fejlesztésére. A komplexitás növekedése mellett a lehetőségeink is korlátozottak egy elosztott rendszer esetén. \linebreak \linebreak
+
+Egy elosztott fájlrendszer esetén a fájljaink blokkokra vannak osztva a klaszter különböző csomópontjai (node) között.Ezek a különböző fájlblokkok másolatai elérhetőek különböző (logikai és/vagy fizika) lokációkon, mellyel biztosítjuk, hogy hardver meghibásodás esetén is elérhető legyen az adat. E mellett a rendszerben lévő névcsomópont (namenode) tárolja a fájlok és a hozzátartozó blokkok helyét. ~\cite{hdfs}
+--TODO bővíteni
 
 \subsection{Hibatűrés}
 
+Az informatikai rendszerek összetettségének növekedésével megnő annak a valószínűsége, hogy a rendszerünk (vagy az alkalmazásunk) nem fogja a tőle elvárt, korrekt és pontos kimenetet biztosítani. Ezek a hibafaktorok lehetnek hardver (tároló lemez kiesés) vagy szoftver (rossz adat partícionálás) esetleg a köztes szoftverből (middleware) származóak. Ahhoz, hogy megbízható rendszert építsünk, lényeges, hogy a tervezett rendszer a különböző komponensek hibáját (közel) maximálisan tudja kijavítani. Az elosztott rendszerek kliens-szerver architektúra szerinte vannak felépítve, ahol távoli eljáráshívásoknál (RPC) kommunikálunk. Különböző mechanizmusokkal kell garantálnunk a hívás megérkezését, a hibák kijavítását és korrigálását. Ezek a különböző mechanizmusok lehetnek ~\cite{szemantika	}:
 
+\begin{itemize}
+\item Kliens nem találja a szervert, ezért a szervernek tájékoztatnia kell a klienst a kimaradásról
+\item Kliens és szerver is megfelelően működik, viszont hálózati hiba miatt a hívás nem jut el a szerverig, esetleg a szerver válasza nem jut el a klienshez. Ilyen esetekben időkorlát (timeout) bevezetése egy jó megoldás, ami során újra küldjük a hívást
+\item Hívásoknak idempotensnek kell lennie, tehát a többszöri azonos hívás futtatás sem fog hibát okozni a rendszerben
+\end{itemize}
+
+Amikor a szerver összeomlik olyanfajta szemantikákat kell alkalmaznunk, amely biztosítja a klienst a szerver állapotáról, illetve a szerver felépülés esetén tájékoztatja a klienst a jelenlegi állapotáról. \linebreak
+Különböző hibatűrési szinteket vállalhatunk a hibatűrö rendszerünkkel: ~\cite{akka}
+
+\begin{itemize}
+\item Nincs semmilyen garancia az üzenet megérkezésére
+\item At-most once (legfeljebb egyszer): Minden üzenet legfeljebb egyszer kézbesítésre kerül, de ezeknek az üzeneteknek egy rész nem jut el a címzetthez (üzenetek elveszhetnek).
+\item At-least once (legalább egyszer): Minden üzenet legalább egyszer kézbesítésre kerül, de az üzenetek többször is eljuthatnak egy címzetthez, ami duplikált rekordokhoz vezethez (de semmiképpen nem veszik el)
+\item Exactly once (Pontosan egyszer): Minden üzenet pontosan egyszer kerül kézbesítésre és fogadásra, nincs elveszett és duplikált üzenet sem.
+\item Garantáljuk az üzenet elküldését pontosan egyszer, és ezek az üzenetek helyes sorrendben érkeznek meg.
+\end{itemize}
+
+Nem minden alkalmazás/szolgáltatás szegmensnek van szüksége arra, hogy mindig maximális pontosságú kimenetet adjon, ez az ún. részleges hiba tolerancia. 
+--TODO bővíteni
+-exactly once, at most once, etc
 
 \subsection{Google fájl rendszer}
 Google 2003-ban megalkotta a google fájl rendszert (GFS, Google File System)~\cite{gfs}, ami napjaink elosztott, hibatűrö rendszereinek az alapja. Tervezésénél fontos szempont volt, hogy skálázható, megbízható, elérhető és magas teljesítménnyel rendelkező legyen mindezt úgy, hogy adat-intenzív applikációk alapját fogja szolgálni. Figyelembe vették, hogy a komponens (mind adat, mind hardver oldalon) hibák inkább általánosak, mint kivételek, így az architektúra tervezésénél ez különös figyelmet kapott. E mellett relatív nagy fájlokra szabták (~64 megabájt) és fájlok felülírása helyett (overwrite) 
@@ -52,7 +76,7 @@ hozzáfűzték (append) az adatokat a létező fájlokhoz. Az elrendezés könyv
 \caption{Google fájl rendszer felépítése \label{gfs}}
 \end{figure}
 
-A fájlokat 64 megabájtos részekre (chunk) osztják, amit egy 64 kilobájtos fájl (chunk handle) kezel. Különböző szerverek (chunk server) tárolják a részeket, és minden fájlból három másolat készül a nagyobb konzisztencia érdekében. Az állapotkezelést és utasításokat mester-szolga (master-slave) módon építették fel, mester tárolja memóriában a metaadatokat (névtér, fájl helyek és fájl - > chunk leképzést). Ezen kívül biztosítva van az automatikusan, pár másodperc alatt feléled a rendszer, hiba esetén.
+A fájlokat 64 megabájtos részekre (chunk) osztják, amit egy 64 kilobájtos fájl (chunk handle) kezel. Különböző szerverek (chunk server) tárolják a részeket, és minden fájlból három másolat készül a nagyobb konzisztencia érdekében. Az állapotkezelést és utasításokat mester-szolga (master-slave) módon építették fel, mester tárolja memóriában a metaadatokat (névtér, fájl helyek és fájl - > chunk leképzést). Ezen kívül biztosítva van az automatikusan, pár másodperc alatt feléledő a rendszer, kritikus, infrastruktúra hiba esetén.
 
 \subsection{CAP tétel}
 Az elosztott rendszerek tervezésekor és használatakor három képessséget várunk el elsősorban: legyen konzisztens (consistency), elérhető (availability) és partícionálás-tűrő (partition tolerance). 
@@ -67,6 +91,19 @@ A CAP tétel kimondja ~\cite{cap}, hogy ebből a háromból legfeljebb kettő le
 A kétezres évek elején és közepén, a megfelelő számítási kapacitás hiányában a párhuzamos adatfeldolgozás általában \textsl{kötegelt} (batch) módon történt. Felhasználói interakció nélkül, megadott időközönként történik a nagy mennyiségű adat feldolgozása. Előnye, hogy akkor futhat a program, amikor a rendszer leterheltsége alacsony, ezzel biztosítva az egyenletes kihasználtságot. Mivel a parancsok automatikusan futnak le, ezért kisebb az üres, nem számítással töltött idő.~\cite{batch}.
 
 \subsection{MapReduce}
+A Google által fejlesztett MapReduce volt az első olyan szélesebb körben is elismert programozási modell, ami lehetővé tette, hogy nagymennyiségű adatot is lehessen feldolgozni párhuzamosan, elosztott módon. ~\cite{mapreduce} Az adatokat <kulcs, érték> párokra bontjuk, ahol a kulcs egy referencia, ami hivatkozik az adatra, míg az érték maga az adat. A bemenet az adat, míg a kimenet a köztes <kulcs, érték> pár. Ezt az ún. Map függvény valósítja meg, amit a felhasználónak kell biztosítania. A köztes <kulcs, érték> párt a felhasználó által írt Reduce függvény dolgozza fel. A Reduce függvényben a köztes <kulcs, érték> párok összegzése  zajlik, tehát megkeressük a vizsgált kulcshoz az összes értéket. \linebreak
+Az egyik klasszikus példa a szószámolás, ahol meg kell számolnunk azt, hogy a bemeneti adatunk szavai milyen mennyiséggel fordulnak elő.
+
+(forrás:http://kickstarthadoop.blogspot.hu/2011/04/word-count-hadoop-map-reduce-example.html)
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=80mm]{img/wordcountflow.jpg}
+\caption{MapReduce alkalmazása  szószámoló példán keresztül. \label{wordcountflow}}
+\end{figure}
+
+Elsőként a bemeneti adatunkat (szövegfájl), sorokra bontjuk, majd a sorokat szavakra és a hozzájuk tartozó előfordulási értékekre (Map). Az így előállt <kulcs, érték> párokat aggregálom, majd összefésülöm (Reduce). A végső kimenet pedig ezeknek a összesített pároknak az összessége.
+
+A ma használt keretrendszerek, az egyszerű ötletnek és magas absztrakciós szintnek köszönhetően lehetővé teszik, hogy a felhasználónak csak a konkrét adatfeldolgozó kóddal kelljen dolgoznia, mivel a keretrendszer elfedi az elosztott számítási komplexitást. ~\cite{hadoop}
 
 
 \subsection{Adatfolyam alapú feldolgozás}
@@ -202,7 +239,7 @@ Utilty mátrix nélkül nem lehetséges a felhasználóknak ajánlattétel. Ahho
 \item Megvizsgáljuk a viselkedését: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette/stb. az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a rating mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak 1 elemű skálán dolgozunk.
 \end{enumerate}
 
-\section{ALS}
+\subsection{ALS}
 Mikor ajánlásokat adunk a felhasználónak, a célünk az, hogy a rating mátrixban a hiányzó elemeket megkeressük. Feltételezhetjük, hogy a felhasználó elemei között kapcsolat van (mivel a felhasználó preferenciája vélhetően \textsl{rögzített} egy rövid időszakon belül), ezért különböző optimalizációs eljárásokat alkalmazhatunk. Az egyik legismertebb ilyen eljárás a mátrix faktorizáció (ALS, Alternating Least Squares), ahol az M rating mátrixunkat faktorokra, részmátrixokra bontjuk. \linebreak
 Legyen $U$ és $I$ a felhasználók és elemeik sorozata. $U={\{1, ..., U\}}$ és $I={\{1, ..., I\}}$.  Implicit feltöltött rating legyen $M$, ahol a kitöltött elemek 
 $r_{ui}$, az üressek (amire szeretnénk ajánlást adni) pedig $\hat{r}_{ui}$. $M$-et felbonthatjuk két részmátrixra, $P$ és $Q$, és inicializáljuk elemeiket megfelelően kis $k$-val. Válasszuk $M$ egy ismert elemét, legyen $X$. Ha ez a választott $X$ eltér a megfelelő $P$ és $Q$ elem szorzatától, akkor változtassuk meg az eltérés irányában. Ha $X$ értéke megegyezik a vizsgált $P$ és $Q$ faktor szorzatával, akkor válasszunk másik $X$-et.
@@ -231,7 +268,7 @@ $r_{ui}$, az üressek (amire szeretnénk ajánlást adni) pedig $\hat{r}_{ui}$. 
 
 Ha egyszerre változtatjuk a két részmátrix elemeit, akkor az NP-nehéz probléma, ezért mindig csak az $P$ részmátrixon iterálunk végig amíg $P$ értékei fixálvan vannak. Ha megfelelően jó eredményt kapunk, akkor váltunk a $Q$-ra, ahol megismételjük ezt a műveletet, amíg el nem érjük a konvergencia állapotát. Alapvető probléma még emellett, hogy ha a részmátrixon a változtatás túl kicsi, akkor rengeteg erőforrást elpazarlunk, ha túl nagy, akkor lehet, hogy átugorjuk az optimális megoldást.
 
-\section{Gradient descent}
+\subsection{Gradient descent}
 
 Ahhoz, hogy nagy adatmennyiségben a lehető legkevesebb költséggel (idő, számítási) tudjunk dolgozni, különböző optimalizációs eljárásokat alkalmazunk. A dolgozatomban vizsgált gradient descent egy olyan metódus, aminek a feladata, hogy egy konvex célfüggvény globális minimumát megtalálja. Legyen $J(\theta)$ a célfüggvény, aminek a minimumát keressük, $\alpha$ a tanulási ráta és $j=0, 1, ..., n$ pedig a függvény paraméterei:
 \[\theta_j:=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta)\]~\cite{andrewml}
@@ -244,22 +281,35 @@ Az $\alpha$ tanulási ráta megadja, hogy mekkora lépésközökkel operál az a
 \caption{Konvergencia eltévesztése túl nagy és túl kicsi tanulási rátánál \label{alfa}}
 \end{figure}
 
+\subsection{Stochastic Gradient descent}
+
+
 \section{Megvalósítás}
+
+\subsection{Java, Scala}
+Dolgozatomban Java és Scala nyelvek alatt fogom implementálni a sztochasztikus gradiens leszállás algoritmust, mivel a Flink is Java alapokon írodott. Java nagyon erős támogatással bír az Apache alapítvány részéről, a 370 támogatott projektből 222 Java alapú. ~\cite{asf} E mellett a rendelkezik olyan tulajdonságokkal, ami a nagyobb, elosztott rendszerek fejlesztésének kezdeténél --'90-es évek közepe és vége-- nagyon kevés nyelv rendelkezett:
+\begin{itemize}
+\item objektum orientált alapok, mely a nagy komplexitású projektek felépítését megkönnyíti
+\item beépített függvénykönyvtár erős hálózati (TCP/IP, UDP, HTTP, stb) támogatással rendelkezik
+\item platformfüggetlenség
+\item Kivétel és hibakezelés, try/catch
+\item hálózati hatás: a Java nyelv elterjedtsége nagyon magas, az egyik legnépszerűbb nyelv a világon ~\cite{tiobe}, ami azt jelenti, hogy nagyon kiterjedt és fejlett külső keretrendszer jellemzi.
+\end{itemize}
+
+\paragraph{Scala}--Scalable Language kifejezésből származtatva ~\cite{odersky}-- az elmúlt pár évben lett közismert a nagy adatfeldolgozó, elosztott projektek kapcsán. A vegyes objektum-orientált és funkcionális megközelítés lehetővé teszi, hogy a programozók könnyen átálljanak a nyelvre, mégis kihasználjanak újfajta paradigmákat (first-class functions, immutable data structures, immutability over mutation). Java Virtuális Gép (JVM) alapokon írodott, ezért lehetővé teszi, hogy a megszokott Java könyvtárakkal is dolgozzunk, és emiatt közel azonos sebességre is képes.  E mellett típus-biztos (type-safe), tehát a fordítási időben ellenőrzi a változók típusát és értékét, így elkerülve a futási időben keletkező hibákat~\cite{toptal}. 
+
 \subsection{Flink}
 Az Apache alapítvány által támogatott Flink egy olyan valós idejű adatfolyam feldolgolozó architektúra, ami biztosítja, hogy valós időben, végtelen adaton is kellő pontossággal tudjunk műveleteket végezni, anélkül, hogy bonyolult, csak a feladatra tervezett architektúrát kellene létrehoznunk. Ezt az egyszerűséget és pontosságot következő tulajdonságaival éri el ~\cite{flink}
 \begin{itemize}
 \item egyszerűsített adatfeldolgozó csővezeték (pipeline), amely az adat megkapásától az adat feldolgozásáig tart
 \item az adatot olyan módon modellezi és dolgozza fel, ahogy az létrejött, valós-időbeli események alapján
-\item nem sorrendben érkezett adatokból származó hibák kiküszöbölése azzal, hogy event-time ablakok létrehozását támogatja
+\item nem sorrendben érkezett adatokból származó hibák kiküszöbölése azzal, hogy esemény alapú ablakok létrehozását támogatja
 \item biztosítja, hogy a lehető leghamarabb de szükségszerűen legkésőbb történjen az adatfeldolgozás, szem előtt tartva a még meg nem érkezett adatokat
 \end{itemize}
 
 \printbibliography
 
 \iffalse
-\section{Flink}
-\section{Java, Scala}
-Max 1 oldal, miért ez lett
 \section{Dcg,nDCG}
 \fi
 
