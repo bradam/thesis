@@ -72,7 +72,8 @@ hozzáfűzték (append) az adatokat a létező fájlokhoz. Az elrendezés könyv
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=130mm, height=100mm, keepaspectratio]{img/gfs.png}
-\caption{Google fájl rendszer felépítése \label{gfs}}
+\caption{Google fájl rendszer felépítése
+http://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf \label{gfs}}
 \end{figure}
 
 A fájlokat 64 megabájtos részekre (chunk) osztják, amit egy 64 kilobájtos fájl (chunk handle) kezel. Különböző szerverek (chunk server) tárolják a részeket, és minden fájlból három másolat készül a nagyobb konzisztencia érdekében. Az állapotkezelést és utasításokat mester-szolga (master-slave) módon építették fel, mester tárolja memóriában a metaadatokat (névtér, fájl helyek és fájl - > chunk leképzést). Ezen kívül biztosítva van az automatikusan, pár másodperc alatt feléledő a rendszer, kritikus, infrastruktúra hiba esetén.
@@ -93,11 +94,11 @@ A kétezres évek elején és közepén, a megfelelő számítási kapacitás hi
 A Google által fejlesztett MapReduce volt az első olyan szélesebb körben is elismert programozási modell, ami lehetővé tette, hogy nagymennyiségű adatot is lehessen feldolgozni párhuzamosan, elosztott módon. ~\cite{mapreduce} Az adatokat <kulcs, érték> párokra bontjuk, ahol a kulcs egy referencia, ami hivatkozik az adatra, míg az érték maga az adat. A bemenet az adat, míg a kimenet a köztes <kulcs, érték> pár. Ezt az ún. Map függvény valósítja meg, amit a felhasználónak kell biztosítania. A köztes <kulcs, érték> párt a felhasználó által írt Reduce függvény dolgozza fel. A Reduce függvényben a köztes <kulcs, érték> párok összegzése  zajlik, tehát megkeressük a vizsgált kulcshoz az összes értéket. \linebreak
 Az egyik klasszikus példa a szószámolás, ahol meg kell számolnunk azt, hogy a bemeneti adatunk szavai milyen mennyiséggel fordulnak elő.
 
-(forrás:http://kickstarthadoop.blogspot.hu/2011/04/word-count-hadoop-map-reduce-example.html)
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{img/wordcountflow.jpg}
-\caption{MapReduce alkalmazása  szószámoló példán keresztül. \label{wordcountflow}}
+\caption{MapReduce alkalmazása  szószámoló példán keresztül. (forrás:http://kickstarthadoop.blogspot.hu/2011/04/word-count-hadoop-map-reduce-example.html)
+\label{wordcountflow}}
 \end{figure}
 
 Elsőként a bemeneti adatunkat (szövegfájl), sorokra bontjuk, majd a sorokat szavakra és a hozzájuk tartozó előfordulási értékekre (Map). Az így előállt <kulcs, érték> párokat aggregálom, majd összefésülöm (Reduce). A végső kimenet pedig ezeknek a összesített pároknak az összessége.
@@ -110,14 +111,14 @@ Mit is tekinthetünk adatfolyamnak? Olyan adatfeldolgozó motort, mely arra van 
 Lambda architektúra a maga idejében egy rendkívül jó megoldás volt, biztosítva az alacsony válaszidő és a pontosság egyvelegét. Ahogy azonban feljődtek a technológiai megoldások, egyre jobban kiütköztek a hátrányok is. A többszörös adatfeldolgozás miatt egyszerre két infrastruktúrát kell fent tartani, ami növeli a komplexitást, hibalehetőséget, és a befektetett időt, mivel minden kódmódosítást két helyen kell egyszerre elvégezni. Léteznek félmegoldások a problémára, mint a Twitter által fejlesztett Summingbird~\cite{summingbird}, ami egy magas szintű függvénykönyvtár, mely fordítás után optimalizál a kötegelési és a sebesség rétegre. Viszont ebben az esetben is megmarad az operatív teher, amit 2 különböző infrastrutúra fenttartása okoz. Másrészt pedig csak olyan technikai megoldásokat használhatunk, amely a két engine metszéspontjában szerepel. \linebreak
 Ennek kiváltásra születtek meg a ma ismert modern adatfolyam alapú feldolgozó egységek (streaming). A rendezetlen (unorder), végtelen (unordered) és teljes globális skálázású rendszerek kiszolgálását csak úgy lehet megoldani, ha olyan rendszert fejlesztünk, ami ténylegesen ezekre a problémákra ad megoldást.~\cite{tyler}. E mellett egyéb előnyei is vannak az adatfolyam alapú rendszereknek: 
 \begin{itemize}
-\item ki tud elégíteni olyan valós idejű üzleti igényeket, mint pl.:anomália keresés, csalásfelderítés, hírdetéselhelyezés
-\item hosszú távon az erőforrás eloszlás kiegyenlítettebb lesz, mivel mindig (majdnem) akkor kerül feldolgozásra, amikor létrejön
+\item Ki tud elégíteni olyan valós idejű üzleti igényeket, mint pl.:anomália keresés, csalásfelderítés, hírdetéselhelyezés
+\item Hosszú távon az erőforrás eloszlás kiegyenlítettebb lesz, mivel mindig (majdnem) akkor kerül feldolgozásra, amikor létrejön
 \end{itemize}
 
 Ha két dolgot szem előtt tartunk a rendszer tervezésnél, akkor túl tudunk lépni a Lambda architektúra (és a fejlettebb micro-batch rendszerek~\cite{microbatch}) lehetőségein. Az első a konzisztens tárolás, ami azt jelenti, hogy hosszú idő után is, esetleges gépi hiba esetén is megmaradjanak az adatok helyes formájukban, pontosan egyszer (at-most-once). A másik, hogy biztosítsuk, hogy a különböző időben érkező, de összetartozó, rendezetlen adatok helyes feldolgozása is megtörténhessen. Ahhoz, hogy ezt megértsük, két fogalmat kell definiálnunk:
 \begin{itemize}
-\item esemény ideje (event-time), amikor megszületett az adat
-\item feldolgozás ideje (processing-time), amikor feldolgozásra került az adat
+\item Esemény ideje (event-time), amikor megszületett az adat
+\item Feldolgozás ideje (processing-time), amikor feldolgozásra került az adat
 \end{itemize}
 Ideális esetben ez a két időhorizont megegyezik, tehát közvetlenül akkor dolgozzuk fel az adatot, amikor az létrejött. Sajnos, azonban a bemeneti forrás késése, a feldolgozó motor hibája vagy hardver üzemszünet miatt nem lehetséges. 
  
@@ -130,10 +131,10 @@ Ideális esetben ez a két időhorizont megegyezik, tehát közvetlenül akkor d
 \subsection{Lambda architektúra}
 A big data megjelenésével, megjelent az igény, hogy ezeket az adatokat közel valós időben tudjuk feldolgozni. Egy fejlettebb megoldásnak tekinthetjük a Lambda architektúrát, ami a kötegelt feldolgozást (batch processing), és a adatfolyam feldolgozást (stream processing) egyesíti. Megalkotása során törekedtek arra, hogy 
 \begin{itemize}
-\item robosztus, hiba toleráns legyen, mind hardver, mind szoftver oldalon
-\item széles körű felhasználhatóság biztosítson, alacsony válaszidővel
-\item horizontálisan skálázható legyen (több "általános célű" gép használatával lehessen növelni a teljesítményt)
-\item bővíthető legyen
+\item Robosztus, hiba toleráns legyen, mind hardver, mind szoftver oldalon
+\item Széles körű felhasználhatóság biztosítson, alacsony válaszidővel
+\item Horizontálisan skálázható legyen (több "általános célű" gép használatával lehessen növelni a teljesítményt)
+\item Bővíthető legyen
 \end{itemize}
 
 Ezen feltételek mellett egy három rétegű architektúrát alkotott meg Nathan Marz~\cite{lambda}. A kötegelési réteg (batch layer), a sebesség réteg (speed layer) és a kiszolgáló réteg (serving layer) biztosítja az adatfeldolgozást. Az adat változatlan formában eljut mind a kötegelt, mind a sebesség rétegbe. A kötegelt réteg tartalmazza a mester adathalmazt, ami nem módosítható, csak egyszer írható formában tárolja az adatokat. Ez a réteg meghatározott időszakonként, ciklikusan lefutattja a számításait, amivel létrehozza az ún. kötegelt nézetet (batch view). Ez a réteg felel azért, hogy az adat pontosan (lehetséges újraszámítás, ahogy érkeznek az újabb adatok) és teljesen jelenjen meg a felhasználó előtt (magas válaszidővel).  A kiszolgáló réteg indexeli ezeket a nézeteket, ezzel biztosítva az ad-hoc, gyors lekérdezéshetőségüket. \linebreak
@@ -154,8 +155,9 @@ Az adatfeldolgozási folyamat nagyon egyszerű, vesszük a különböző típus�
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{img/batch.jpg}
-\caption{Bal oldalon található entrópikus adatokból MapReduce segítségével struktúrált, információval rendelkező adatokat generálunk. \label{batchreduce}}
+\includegraphics[width=90mm]{img/batch.png}
+\caption{Bal oldalon található entrópikus adatokból MapReduce segítségével struktúrált, információval rendelkező adatokat generálunk.
+http://radar.oreilly.com/2015/08/the-world-beyond-batch-streaming-101.html \label{batchreduce}}
 \end{figure}
 
 \subsubsection{Kötegelt feldolgozás végtelen adaton}
@@ -179,10 +181,10 @@ Ebben az esetben az adataink rendezetlenek és nem tudjuk explicit megmondani az
 
 Amikor tanulunk, a célünk, hogy minél jobb eredményeket érjünk el a számonkérésen, vagy minél több tudást halmozzunk fel, amit a későbbiek során (valószínűsíthetően) hasznosítani tudunk. A gépi tanulásnak is ugyanez a célja, különböző modellek megalkotása után a megadott példákból (input adat) különböző kimeneteket (output adat) ad ki. Az input adatokból próbál általánosítani oly módon, hogy az felhasználható legyen számára ismeretlen problémák során. Ebből következően minél több bemeneti adatunk és tapasztalatunk (adat) van, annál jobb okosabb és pontosabban fog előrejelezni a használni kívánt algoritmus. Gépi tanulást használunk például: 
 \begin{itemize}
-\item web keresés
-\item spam szűrés
-\item ajánló rendszerek
-\item online hírdetések
+\item Web keresés
+\item Spam szűrés
+\item Ajánló rendszerek
+\item Online hírdetések
 \end{itemize}
 esetén is. 
 Egy 2011-es Mckinsey riport ~\cite{mckinsey} szerint a gépi tanulás (illetve a prediktív analitika) lesz a következő évek innovációinak alapja. IBM Watson-ja~\cite{watson}, már képes a beadott tünetek alapján, megjósolni, hogy mi lehet a páciens betegsége (egyelőre még csak fejlesztőknek, API-n keresztül). \linebreak
@@ -202,14 +204,14 @@ Fontos, hogy szétválasszuk az adatainkat tréning és teszt adatokra. Ez bizto
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/ml.png}
-\caption{Felügyelt tanulás általános modellje \label{ml}}
+\caption{Felügyelt tanulás általános modellje ~\ref{UlmannSupervised} \label{ml}}
 \end{figure}
 
 \subsection{Nem felügyelt tanítás}
 Nem felügyelt tanítás esetén adottak: $(x_1, x_2, ..., x_n)$ adataink, és nincs célfüggvényünk, vagy elvárt kimenetünk. Alapvetően nem struktúrált \textsl{zajból} próbálunk mintázatot keresni, olyan modellt létrehozni, ami jól reprezentálja adatok valószínűségi eloszlálást. Annak ellenére, hogy nincs információnk arról, hogy az egyes adatok milyen kapcsolatban vannak egymással, $(x_t)$ valószínűségi eloszlását meg tudjuk jósolni  $(x_1,x_2, ..., x_{t-1})$ alapján, ahol $P(x_t|x_1,x_2, ..., x_{t-1})$.
 Egyszerűbb esetekben, ahol az bemenet sorrend irreleváns, lehet modellt építeni az adatra, ahol $(x_1, x_2, ...)$ az adatsorunk, és ezek függetlenül de egyöntetűen származnak a $P(x)^2$-ból.~\cite{unsupervised}
 
-\section{Ajánlórendszerek}
+\subsection{Ajánlórendszerek}
 Az ajánlórendszerek olyan, főként webes rendszerek, ahol a különböző forrásból származó adatok alapján ajánlunk olyan lehetőségeket a felhasználóknak, ami nagy valószínűséggel megfelel a preferenciájának. Például:
 \begin{itemize}
 \item Youtube, ahol az nézettségi történet alapján kapja az ajánlásokat a felhasználó
@@ -217,28 +219,28 @@ Az ajánlórendszerek olyan, főként webes rendszerek, ahol a különböző for
 \end{itemize}
 Két fő fajtáját különböztetjük meg az ajánló rendszereknek. A Content-based (tartalom alapú) ahol az item tulajdonságait vizsgáljuk, illetve a collaborative filtering (együttműködésen alapuló szűrés), ahol a hasonló érdeklődésű felhasználóknak nyújtott ajánlásokat vesszük alapul. \linebreak
 
-Az ajánlórendszerek alapja az ún. rating matrix, ami tartalmazza a felhasználókat és hozzájuk kapcsolt elemek adatait. Minden felhasználó-item párhoz egy értéket rendelünk, ami jellemzi, hogy mennyire preferálja az adott elemet. Ez az érték általában egy rendezett skáláról (pl.: 5 elemű skála, 1-től 5-ig számozva, ahol az 1 a legkevésbé, az 5 pedig a legjobban kedvelt elemet jelöli) kerül ki. Alapfeltevés, hogy a mátrixunk ritka (nincs teljesen kitöltve), mivel nem értékel minden felhasználó minden elemet. A hiányzó, nem ismert értékekről semmilyen explicit információval nem rendelkezünk.
+Az ajánlórendszerek alapja az ún. rating matrix, ami tartalmazza a felhasználókat és hozzájuk kapcsolt elemek adatait. Minden felhasználó, elem párhoz egy értéket rendelünk, ami jellemzi, hogy mennyire preferálja az adott elemet. Ez az érték általában egy rendezett skáláról (pl.: 5 elemű skála, 1-től 5-ig számozva, ahol az 1 a legkevésbé, az 5 pedig a legjobban kedvelt elemet jelöli) kerül ki. Alapfeltevés, hogy a mátrixunk ritka (nincs teljesen kitöltve), mivel nem értékel minden felhasználó minden elemet. A hiányzó, nem ismert értékekről semmilyen explicit információval nem rendelkezünk.
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/um.png}
-\caption{Rating matrix, ahol az $A,B, C, D$ felhasználók a Star Wars, Harry Potter és Twilight filmeket értékelték \label{um}}
+\caption{Rating matrix, ahol az $A,B, C, D$ felhasználók a Star Wars, Harry Potter és Twilight filmeket értékelték ~\ref{UlmannMatrix} \label{um}}
 \end{figure}
 
-Célünk az, hogy hiányzó értékeket a mátrixban minél jobban megjósoljuk. Természetesen nem fontos, hogy az összes elemét kitöltsük, törekednünk kell arra, hogy az ajánlás a preferált filmek/cikkek körében legyen, mivel ezek eladása/elolvasása racionalizálható gazdasági szempontból. Jelen esetben, kíváncsiak lehetünk, hogy $A$ felhasználónak ajánlhatjuk-e Harry Potter 2. részét. Láthatjuk, hogy HP 1. részét kedvelte, és tudjuk, hogy a két film kapcsolatban van egymással (rendezők, színészek, történet, stb.) ezért gyaníthatjuk, hogy a második részt is jól fogja értékelni.
+Célünk az, hogy hiányzó értékeket a mátrixban minél jobban megjósoljuk. Természetesen nem fontos, hogy az összes elemét kitöltsük, törekednünk kell arra, hogy az ajánlás a preferált filmek/cikkek körében legyen, mivel ezek eladása/elolvasása racionalizálható gazdasági szempontból. Jelen esetben, kíváncsiak lehetünk, hogy $A$ felhasználónak ajánlhatjuk-e Harry Potter 2. részét. Láthatjuk, hogy HP 1. részét kedvelte, és tudjuk, hogy a két film kapcsolatban van egymással (rendezők, színészek, történet, stb.) ezért gyaníthatjuk, hogy a második részt is kedvelni fogja.
 
-\subsection{Hosszú farok}
+\subsubsection{Hosszú farok}
 
 Amikor bemegyünk egy könyvesboltba, többféle módon is választhatunk egyes könyvek közül. Vannak kiemelt könyvek, amikre nagy az érdeklődés, ezért a könyvesbolt jobban reklámozza ezeket. Személyes ajánlásra nincs lehetőség, a választék korlátozott, erőforrás hiányában az összes könyvnek csak egy szűk szeletét mutatja meg egy könyvesbolt. Ezzel szemben egy online bolt bármit ajánlhat, ami létezhet, nem csak a populárisabbakat, hanem a kevésbé keresetteket is. Ezt a megkülönböztetést nevezzük \textsl{hosszú farok}-nak~\cite{longtail}, és ez az, ami létrehozta az ajánlórendszerek igényét. Muszáj ajánlanunk a felhasználónak termékeket --mivel nincs olyan nyilvánvaló módon prezentálva, mint a fizikai boltoknál-- ahhoz, hogy nagyobb eséllyel vásároljon belőlük.
 
-\subsection{Rating mátrix feltöltése}
+\subsubsection{Rating mátrix feltöltése}
 Utilty mátrix nélkül nem lehetséges a felhasználóknak ajánlattétel. Ahhoz, hogy feltudjuk tölteni, két általános megközelítés létezik.
 \begin{enumerate}
 \item Megkérdezzük a felhasználót a véleményéről (pl.: IMDb, ahol a felhasználók a filmeket értékelhetik egy 1-10-es skálán:)~\cite{imdb}: Ebben az esetben a sikerességünk limitált, mivel a felhasználónak nem származik rövid távon gazdasági előnye abból, hogy értékel (természetesen, ha minden film után reális értékelést adna, akkor hosszú távon jobb ajánlásokat kapna). Másrészt az emberi irracionalitás miatt előfordulhat, hogy részrehajlóan (akár pozitív, akár negatív irányban) értékel, ami eltorzíthatja a rating mátrixot. ~\cite{introspection}
-\item Megvizsgáljuk a viselkedését: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette/stb. az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a rating mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak 1 elemű skálán dolgozunk.
+\item Megvizsgáljuk a viselkedését: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette/stb. az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a rating mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak {0, 1} intervallum skálán dolgozunk.
 \end{enumerate}
 
-\subsection{ALS}
+\subsubsection{ALS}
 Mikor ajánlásokat adunk a felhasználónak, a célünk az, hogy a rating mátrixban a hiányzó elemeket megkeressük. Feltételezhetjük, hogy a felhasználó elemei között kapcsolat van (mivel a felhasználó preferenciája vélhetően \textsl{rögzített} egy rövid időszakon belül), ezért különböző optimalizációs eljárásokat alkalmazhatunk. Az egyik legismertebb ilyen eljárás a mátrix faktorizáció egy fajtája az ALS (ALS, Alternating Least Squares), ahol az M rating mátrixunkat faktorokra, részmátrixokra bontjuk. \linebreak
 Legyen $U$ és $I$ a felhasználók és elemeik sorozata. $U={\{1, ..., U\}}$ és $I={\{1, ..., I\}}$.  Implicit feltöltött rating legyen $M$, ahol a kitöltött elemek $r_{ui}$, az üresek (amire szeretnénk ajánlást adni) pedig $\hat{r}_{ui}$. $M$-et felbonthatjuk két részmátrixra, $P$ és $Q$, és inicializáljuk elemeiket megfelelően kis $k$-val. Válasszuk $M$ egy ismert elemét, legyen $X$. Ha ez a választott $X$ eltér a megfelelő $P$ és $Q$ elem szorzatától, akkor változtassuk meg az eltérés irányában. Ha $X$ értéke megegyezik a vizsgált $P$ és $Q$ faktor szorzatával, akkor válasszunk másik $X$-et.
 
@@ -266,7 +268,7 @@ Legyen $U$ és $I$ a felhasználók és elemeik sorozata. $U={\{1, ..., U\}}$ é
 
 Ha egyszerre változtatjuk a két részmátrix elemeit, akkor az NP-nehéz probléma, ezért mindig csak az $P$ részmátrixon iterálunk végig amíg $P$ értékei fixálvan vannak. Ha megfelelően jó eredményt kapunk, akkor váltunk a $Q$-ra, ahol megismételjük ezt a műveletet, amíg el nem érjük a konvergencia állapotát. Alapvető probléma még emellett, hogy ha a részmátrixon a változtatás túl kicsi, akkor rengeteg erőforrást elpazarlunk, ha túl nagy, akkor lehet, hogy átugorjuk az optimális megoldást.
 
-\subsection{Gradiens leszállás}
+\subsubsection{Gradiens leszállás}
 
 Ahhoz, hogy nagy adatmennyiségben a lehető legkevesebb költséggel (idő, számítási) tudjunk dolgozni, különböző optimalizációs eljárásokat alkalmazunk. A dolgozatomban vizsgált gradiens leszállás egy olyan metódus, aminek a feladata, hogy egy általában konvex célfüggvény lokális (vagy optimális esetben globális) minimumát megtalálja. Legyen $J(\theta)$ a célfüggvény, aminek a minimumát keressük, $\alpha$ a tanulási ráta és $j=0, 1, ..., n$ pedig a függvény paraméterei:
 \[\theta_j:=\theta_j-\alpha\sum\limits_{i=1}^n\frac{\delta}{\delta\theta_j}J(\theta)\]~\cite{andrewml}
@@ -276,12 +278,12 @@ Az $\alpha$ tanulási ráta megadja, hogy mekkora lépésközökkel operál az a
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/alfa.png}
-\caption{Konvergencia eltévesztése túl nagy és túl kicsi tanulási rátánál \label{alfa}}
+\caption{Konvergencia eltévesztése túl nagy és túl kicsi tanulási rátánál. \ref{learningrate} \label{alfa}}
 \end{figure}
 
-\subsection{Stochasztikus Gradiens leszállás}
+\subsubsection{Stochasztikus Gradiens leszállás}
 
-Gradiens leszállás egy jól müködő, egyszerű algoritmus, mellyel líneárisan tudok konvergenciára jutni. Azonban alapvető probléma vele, hogy nagy adatmennyiségnél (,,big data'') költséges a megvalósítása, mivel minden egyes paramétert ki kell számolnunk ahhoz, hogy a következő iterációra jussunk. Robbins és Monroe 1951ben ~\cite{stoch1951} írták a tanulmányukat, melyben az úgynevezett sztochasztikus optimalizációs eljárást vizsgálták. Ebben arra jutottak, hogy nem szükséges minden lépésben az összes paramétert kiszámolni, elég véletlenszerűen venni mintákat az adatsorból. Ezt nevezzük sztochasztikus gradiens leszállásnak (SGD), ami a gradiens algoritmus egy bővített, egyszerűsített változata. \linebreak
+Gradiens leszállás egy jól müködő, egyszerű algoritmus, mellyel líneárisan tudok konvergenciára jutni. Azonban alapvető probléma vele, hogy nagy adatmennyiségnél (,,big data'') költséges a megvalósítása, mivel minden egyes paramétert ki kell számolnunk ahhoz, hogy a következő iterációra jussunk. Robbins és Monroe 1951-ben ~\cite{stoch1951} írták a tanulmányukat, melyben az úgynevezett sztochasztikus optimalizációs eljárást vizsgálták. Ebben arra jutottak, hogy nem szükséges minden lépésben az összes paramétert kiszámolni, elég véletlenszerűen venni mintákat az adatsorból. Ezt nevezzük sztochasztikus gradiens leszállásnak (SGD), ami a gradiens algoritmus egy bővített, egyszerűsített változata. \linebreak
 Miért jó ez? Ha minden lépésünk csak 1 deriválttól függ (tehát 2 iteráció között csak 1 paraméter változásával számolunk), az jelentősen megtudja gyorsítani (illetve a számítási költségeket csökkenteni) a folyamatot, mivel a gradienshez képest $1/n$-es komplexitásról beszélünk, ha $n$ jelöli a tanuló adatsorunk számosságát. ~\cite{asgd}. E mellett arra is alkalmas a véletlenszerű mintavétel, hogy a zajos és redundáns adatokat kiszűrje. ~\cite{gatsby} \linebreak
 
 A \ref{sgd_bgd} ábrán láthatjuk, hogyan alakulhat a konvergencia elérés a két vizsgált algoritmusnál. 
@@ -289,7 +291,7 @@ A \ref{sgd_bgd} ábrán láthatjuk, hogyan alakulhat a konvergencia elérés a k
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{img/sgd_bgd.png}
-\caption{Gradiens és Sztochasztikus Gradiens konvergencia elérés minta \label{sgd_bgd}}
+\caption{Gradiens és Sztochasztikus Gradiens konvergencia elérés minta \ref{learningrate} \label{sgd_bgd}}
 \end{figure}
 
 
@@ -307,11 +309,11 @@ Az, hogy mikor éri meg SGD-t alkalmazni mindig az adott üzleti alkalmazástól
 \subsection{Java, Scala}
 Dolgozatomban Java és Scala nyelvek alatt fogom implementálni a sztochasztikus gradiens leszállás algoritmust, mivel a Flink is Java alapokon írodott. Java nagyon erős támogatással bír az Apache alapítvány részéről, a 370 támogatott projektből 222 Java alapú. ~\cite{asf} E mellett a rendelkezik olyan tulajdonságokkal, ami a nagyobb, elosztott rendszerek fejlesztésének kezdeténél --'90-es évek közepe és vége-- nagyon kevés nyelv rendelkezett:
 \begin{itemize}
-\item objektum orientált alapok, mely a nagy komplexitású projektek felépítését megkönnyíti
-\item beépített függvénykönyvtár erős hálózati (TCP/IP, UDP, HTTP, stb) támogatással rendelkezik
-\item platformfüggetlenség
+\item Objektum orientált alapok, mely a nagy komplexitású projektek felépítését megkönnyíti
+\item A beépített függvénykönyvtár erős hálózati (TCP/IP, UDP, HTTP, stb) támogatással rendelkezik
+\item Platformfüggetlenség
 \item Kivétel és hibakezelés, try/catch
-\item hálózati hatás: a Java nyelv elterjedtsége nagyon magas, az egyik legnépszerűbb nyelv a világon ~\cite{tiobe}, ami azt jelenti, hogy nagyon kiterjedt és fejlett külső keretrendszer jellemzi.
+\item Hálózati hatás: a Java nyelv elterjedtsége nagyon magas, az egyik legnépszerűbb nyelv a világon ~\cite{tiobe}, ami azt jelenti, hogy nagyon kiterjedt és fejlett külső keretrendszer jellemzi.
 \end{itemize}
 
 \paragraph{Scala}--Scalable Language kifejezésből származtatva ~\cite{odersky}-- az elmúlt pár évben lett közismert a nagy adatfeldolgozó, elosztott projektek kapcsán. A vegyes objektum-orientált és funkcionális megközelítés lehetővé teszi, hogy a programozók könnyen átálljanak a nyelvre, mégis kihasználjanak újfajta paradigmákat (first-class functions, immutable data structures, immutability over mutation). Java Virtuális Gép (JVM) alapokon írodott, ezért lehetővé teszi, hogy a megszokott Java könyvtárakkal is dolgozzunk, és emiatt közel azonos sebességre is képes.  E mellett típus-biztos (type-safe), tehát a fordítási időben ellenőrzi a változók típusát és értékét, így elkerülve a futási időben keletkező hibákat~\cite{toptal}. 
@@ -319,15 +321,33 @@ Dolgozatomban Java és Scala nyelvek alatt fogom implementálni a sztochasztikus
 \subsection{Flink}
 Az Apache alapítvány által támogatott Flink egy olyan valós idejű adatfolyam feldolgolozó architektúra, ami biztosítja, hogy valós időben, végtelen adaton is kellő pontossággal tudjunk műveleteket végezni, anélkül, hogy bonyolult, csak a feladatra tervezett architektúrát kellene létrehoznunk. Ezt az egyszerűséget és pontosságot következő tulajdonságaival éri el ~\cite{flink}
 \begin{itemize}
-\item egyszerűsített adatfeldolgozó csővezeték (pipeline), amely az adat megkapásától az adat feldolgozásáig tart
-\item az adatot olyan módon modellezi és dolgozza fel, ahogy az létrejött, valós-időbeli események alapján
-\item nem sorrendben érkezett adatokból származó hibák kiküszöbölése azzal, hogy esemény alapú ablakok létrehozását támogatja
-\item biztosítja, hogy a lehető leghamarabb de szükségszerűen legkésőbb történjen az adatfeldolgozás, szem előtt tartva a még meg nem érkezett adatokat
+\item Egyszerűsített adatfeldolgozó csővezeték (pipeline), amely az adat megkapásától az adat feldolgozásáig tart
+\item Az adatot olyan módon modellezi és dolgozza fel, ahogy az létrejött, valós-időbeli események alapján
+\item Nem sorrendben érkezett adatokból származó hibák kiküszöbölése azzal, hogy esemény alapú ablakok létrehozását támogatja
+\item Biztosítja, hogy a lehető leghamarabb de szükségszerűen legkésőbb történjen az adatfeldolgozás, szem előtt tartva a még meg nem érkezett adatokat
 \end{itemize}
+
+Az eddig elterjedt megoldások többségében csak kötegelt (Apache Spark) \ref{spark} vagy csak adatfolyam feldolgozásra (Apache Storm\ref{storm}, IBM Infosphere\ref{infosphere}) használhatóak. Flink alapvetően váltja meg ezt a paradigmát, egyszerre képes kötegelt és adatfolyam feldolgozásra is, úgy, hogy a programozási modell és futtató környezet is megegyezik a két esetnél. A megismert esemény és feldolgozási idő mellett egy új fogalmat is bevezet: belépési idő? (ingestion time)\ref{ingestion} ami egy olyan hibrid megoldás, ami azt mutatja, hogy mikor került a FLink-be az adott esemény.
+Ez alacsonyabb késleltetést biztosít mint az esemény idő, és pontosabb eredményt mint a feldolgozási idő. \linebreak
+
+A kötegelt feldolgozást egy, az adatfolyam specifikus részének tekinti, így tudja megvalósítani a közös architektúrát. Négy fő részről beszélhetünk, a bevezetés (deployment), központ (core), API és könyvtárak. A központi részben találhatjuk meg az elosztott adatfolyam motort, ami végrehajtja a az adatfolyam programokat. Futtatási időben, egy irányított körmentes gráf (DAG) állapotartó operátorokhoz csatlakozik az adatfolyamokon. Az API DataSet és DataStream részekre van osztva melyek a kötegelt és folytonos adatfeldolgozásért felelnek. Különböző domain specifikus nyelvekkel (DSL) oldották meg felsőbb rétegű függvénykönyvtárak alkalmazását: FlinkML (gépi tanulás), Gelly (gráf feldolgozás) és Table (SQL jellegű lekérdezések) könyvtárak állnak a felhasználók rendelkezésére.  Futásidőben három típusú folyamatot kezelünk:
+ 
+\begin{itemize}
+\item Kliens: program kódot átalakítja adatfolyam gráffá, és elküldi a Job Managernek
+\item Job Manager: felel az elosztottságért és nyilvántartja a program állapotát és előrehaladását minden operátornak és adatnak, e mellett új operátorok időzítéséért, ellenőrző pontok felállításáért és a rendszer felállításáért is felel.
+\item Task Manager: adatfeldolgozás a fő feladata
+\end{itemize}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=80mm]{img/flink.png}
+\caption{Apache Flink felépítése \ref{flink} \label{apache_flink}}
+\end{figure}
+
 
 \section{Fejlesztési lehetőségek}
 
-Konvergencia minél gyorsabb elérése (accelerated sgd)
+Konvergencia minél gyorsabb elérése (accelerated sgd). 
 
 
 
