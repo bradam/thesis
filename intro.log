@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  8 JAN 2016 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  19 JAN 2016 14:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,27 +717,22 @@ LaTeX Info: Redefining \cal on input line 511.
 LaTeX Info: Redefining \mit on input line 512.
 )
 
-LaTeX Warning: Citation 'ori' on page 1 undefined on input line 19.
+LaTeX Warning: Reference `ori' on page 1 undefined on input line 19.
 
 
-LaTeX Warning: Citation 'oria' on page 1 undefined on input line 20.
+LaTeX Warning: Reference `oria' on page 1 undefined on input line 20.
 
 
-LaTeX Warning: Citation 'varian' on page 1 undefined on input line 20.
+LaTeX Warning: Reference `varian' on page 1 undefined on input line 20.
 
 
-LaTeX Warning: Citation '3v' on page 1 undefined on input line 20.
+LaTeX Warning: Reference `3v' on page 1 undefined on input line 20.
 
 
-LaTeX Warning: Citation '7v' on page 1 undefined on input line 20.
+LaTeX Warning: Reference `7v' on page 1 undefined on input line 20.
 
 
-LaTeX Warning: Citation '2020' on page 1 undefined on input line 21.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--23
-\T1/cmr/m/n/12 mennyi-sé-get.
- []
+LaTeX Warning: Reference `2020' on page 1 undefined on input line 21.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
@@ -745,39 +740,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--23
  []
 
 
-LaTeX Warning: Citation 'brk' on page 1 undefined on input line 24.
+LaTeX Warning: Reference `brk' on page 1 undefined on input line 24.
 
 
 LaTeX Warning: Citation 'dst' on page 1 undefined on input line 26.
 
 
-LaTeX Warning: Citation 'rta' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `rta' on page 1 undefined on input line 29.
 
 
-LaTeX Warning: Citation 'fraud' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `fraud' on page 1 undefined on input line 29.
 
 
-LaTeX Warning: Citation 'iot' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `iot' on page 1 undefined on input line 29.
 
 
-LaTeX Warning: Citation 'ganalitycs' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `ganalitycs' on page 1 undefined on input line 29.
 
 
-LaTeX Warning: Citation 'ucl' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `ucl' on page 1 undefined on input line 29.
 
 
-LaTeX Warning: Citation 'flink' on page 1 undefined on input line 29.
-
-
-Overfull \hbox (32.42834pt too wide) in paragraph at lines 29--30
-\T1/cmr/m/n/12 tés [[]], "dol-gok" in-ter-ne-te (IoT) [[]] vagy al-kal-ma-zás m
-o-ni-tor-ing [[]].
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-\T1/cmr/m/n/12 má-sod-per-cen-ként. [[]].
- []
+LaTeX Warning: Reference `flink_intro' on page 1 undefined on input line 29.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
@@ -788,23 +772,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation 'ml' on page 2 undefined on input line 31.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
 
-LaTeX Warning: Citation 'sgd' on page 2 undefined on input line 34.
+LaTeX Warning: Reference `sgd' on page 2 undefined on input line 34.
 
 
-LaTeX Warning: Citation 'cocke' on page 2 undefined on input line 37.
+LaTeX Warning: Reference `cocke' on page 2 undefined on input line 37.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--39
-\T1/cmr/m/n/12 a pár-hu-za-mos prog-ra-mo-zás.
+\T1/cmr/m/n/12 pár-hu-za-mos prog-ra-mo-zás.
  []
 
 
@@ -817,358 +797,388 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
+[2]
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+LaTeX Warning: Reference `chandy' on page 3 undefined on input line 40.
+
+<img/distSys.png, id=13, 987.69pt x 604.2575pt>
+File: img/distSys.png Graphic file (type png)
+ <use img/distSys.png>
+Package pdftex.def Info: img/distSys.png used on input line 44.
+(pdftex.def)             Requested size: 284.52756pt x 174.06844pt.
+
+
+LaTeX Warning: Reference `chandy' on page 3 undefined on input line 46.
+
+
+LaTeX Warning: Reference `chandy' on page 3 undefined on input line 46.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+\T1/cmr/m/n/12 rend-szer összes fo-lya-ma-tá-nak és csa-tor-ná-já-nak ál-la-po-
+tát.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-[2]
 
-LaTeX Warning: Citation 'hdfs' on page 3 undefined on input line 40.
+LaTeX Warning: Reference `balazinska' on page 3 undefined on input line 54.
 
 
-LaTeX Warning: Citation 'szemantika' on page 3 undefined on input line 45.
+LaTeX Warning: Reference `szemantika' on page 3 undefined on input line 54.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
+[3 <./img/distSys.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
+
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
- [3]
-
-LaTeX Warning: Citation 'akka' on page 4 undefined on input line 54.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
-\T1/cmr/m/n/12 tén tá-jé-koz-tat-ja a kli-enst a je-len-le-gi ál-la-po-tá-ról.
- []
+LaTeX Warning: Reference `akka' on page 4 undefined on input line 63.
 
 
-Overfull \hbox (6.84848pt too wide) in paragraph at lines 53--55
-\T1/cmr/m/n/12 Kü-lön-bö-z® hi-ba-t¶-ré-si szin-te-ket vál-lal-ha-tunk a hi-ba-
-t¶-rö rend-sze-rünk-kel:  [[]] 
- []
-
-
-Overfull \hbox (3.33423pt too wide) in paragraph at lines 64--67
-[]\T1/cmr/m/n/12 Nem min-den al-kal-ma-zás/szolgáltatás szeg-mens-nek van szük-
-sé-ge ar-ra, hogy
- []
-
-
-LaTeX Warning: Citation 'gfs' on page 4 undefined on input line 69.
-
-<img/gfs.png, id=18, 1776.6375pt x 656.4525pt>
-File: img/gfs.png Graphic file (type png)
- <use img/gfs.png>
-Package pdftex.def Info: img/gfs.png used on input line 74.
-(pdftex.def)             Requested size: 369.87889pt x 136.66711pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
-[]\T1/cmr/m/n/12 1. áb-ra. Go-og-le fájl rend-szer fel-épí-té-se
- []
-
-
-Overfull \hbox (26.63138pt too wide) in paragraph at lines 76--76
-\T1/cmr/m/n/12 http://static.googleusercontent.com/media/research.google.com/en
-//archive/gfs-
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+\T1/cmr/m/n/12 tén tá-jé-koz-tat-ja a kli-enst a je-len-le-gi stá-tusz-ról.
  []
 
 [4]
 
-LaTeX Warning: Citation 'cap' on page 5 undefined on input line 88.
+LaTeX Warning: Reference `balazinska' on page 5 undefined on input line 73.
 
+[5] <img/gfs.png, id=30, 1776.6375pt x 656.4525pt>
+File: img/gfs.png Graphic file (type png)
+ <use img/gfs.png>
+Package pdftex.def Info: img/gfs.png used on input line 88.
+(pdftex.def)             Requested size: 369.87889pt x 136.66711pt.
 
-LaTeX Warning: Citation 'ecap' on page 5 undefined on input line 88.
-
-[5 <./img/gfs.png>]
-
-LaTeX Warning: Citation 'batch' on page 6 undefined on input line 91.
-
-
-LaTeX Warning: Citation 'mapreduce' on page 6 undefined on input line 94.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
-\T1/cmr/m/n/12 kulcs-hoz az összes ér-té-ket.
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]\T1/cmr/m/n/12 2. áb-ra. Go-og-le fájl rend-szer fel-épí-té-se
  []
 
-<img/wordcountflow.jpg, id=27, 967.615pt x 634.37pt>
+
+Overfull \hbox (26.63138pt too wide) in paragraph at lines 90--90
+\T1/cmr/m/n/12 http://static.googleusercontent.com/media/research.google.com/en
+//archive/gfs-
+ []
+
+[6 <./img/gfs.png>]
+
+LaTeX Warning: Reference `cap' on page 7 undefined on input line 102.
+
+
+LaTeX Warning: Reference `ecap' on page 7 undefined on input line 102.
+
+
+LaTeX Warning: Reference `batch' on page 7 undefined on input line 105.
+
+
+LaTeX Warning: Reference `mapreduce' on page 7 undefined on input line 108.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+\T1/cmr/m/n/12 ér-té-ket.
+ []
+
+<img/wordcountflow.jpg, id=35, 967.615pt x 634.37pt>
 File: img/wordcountflow.jpg Graphic file (type jpg)
 
 <use img/wordcountflow.jpg>
-Package pdftex.def Info: img/wordcountflow.jpg used on input line 99.
+Package pdftex.def Info: img/wordcountflow.jpg used on input line 113.
 (pdftex.def)             Requested size: 227.62204pt x 149.22215pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]\T1/cmr/m/n/12 2. áb-ra. Ma-pRe-du-ce al-kal-ma-zá-sa szó-szá-mo-ló pél-dán k
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[]\T1/cmr/m/n/12 3. áb-ra. Ma-pRe-du-ce al-kal-ma-zá-sa szó-szá-mo-ló pél-dán k
 e-resz-tül.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
 \T1/cmr/m/n/12 (forrás:http://kickstarthadoop.blogspot.hu/2011/04/word-count-ha
 doop-
  []
 
 
-LaTeX Warning: Citation 'hadoop' on page 6 undefined on input line 106.
+LaTeX Warning: Reference `hadoop' on page 7 undefined on input line 120.
+
+[7]
+
+LaTeX Warning: Reference `tyler' on page 8 undefined on input line 124.
 
 
-LaTeX Warning: Citation 'summingbird' on page 6 undefined on input line 111.
+LaTeX Warning: Reference `summingbird' on page 8 undefined on input line 125.
 
 
-LaTeX Warning: Citation 'tyler' on page 6 undefined on input line 112.
-
-[6] [7 <./img/wordcountflow.jpg>]
-
-LaTeX Warning: Citation 'microbatch' on page 8 undefined on input line 118.
+LaTeX Warning: Reference `tyler' on page 8 undefined on input line 126.
 
 
-Overfull \hbox (29.04352pt too wide) in paragraph at lines 118--119
-\T1/cmr/m/n/12 lép-ni a Lamb-da ar-chi-tek-tú-ra (és a fej-let-tebb micro-batch
- rend-sze-rek [[]])
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+\T1/cmr/m/n/12 sze-re-pel.
  []
 
-<img/skew.png, id=36, 592.2125pt x 728.7225pt>
+[8 <./img/wordcountflow.jpg>]
+
+LaTeX Warning: Reference `microbatch' on page 9 undefined on input line 132.
+
+<img/skew.png, id=44, 592.2125pt x 728.7225pt>
 File: img/skew.png Graphic file (type png)
  <use img/skew.png>
-Package pdftex.def Info: img/skew.png used on input line 127.
+Package pdftex.def Info: img/skew.png used on input line 141.
 (pdftex.def)             Requested size: 170.71652pt x 210.06761pt.
-
-
-LaTeX Warning: Citation 'lambda' on page 8 undefined on input line 140.
-
-[8] <img/lambda.png, id=40, 2409.0pt x 1188.44pt>
+ [9]
+<img/lambda.png, id=48, 2409.0pt x 1188.44pt>
 File: img/lambda.png Graphic file (type png)
  <use img/lambda.png>
-Package pdftex.def Info: img/lambda.png used on input line 145.
+Package pdftex.def Info: img/lambda.png used on input line 159.
 (pdftex.def)             Requested size: 256.0748pt x 126.3222pt.
 
 
-LaTeX Warning: Citation 'mapreduce' on page 9 undefined on input line 154.
+LaTeX Warning: Reference `tyler' on page 10 undefined on input line 165.
 
-[9 <./img/skew.png>] <img/batch.png, id=45, 642.4pt x 481.8pt>
+[10 <./img/skew.png>]
+
+LaTeX Warning: Reference `mapreduce' on page 11 undefined on input line 168.
+
+<img/batch.png, id=53, 642.4pt x 481.8pt>
 File: img/batch.png Graphic file (type png)
-
-<use img/batch.png>
-Package pdftex.def Info: img/batch.png used on input line 158.
+ <use img/batch.png>
+Package pdftex.def Info: img/batch.png used on input line 172.
 (pdftex.def)             Requested size: 256.0748pt x 192.06227pt.
 
-Underfull \hbox (badness 2261) in paragraph at lines 160--160
-[]\T1/cmr/m/n/12 5. áb-ra. Bal ol-da-lon ta-lál-ha-tó ent-ró-pi-kus ada-tok-ból
+Underfull \hbox (badness 2261) in paragraph at lines 174--174
+[]\T1/cmr/m/n/12 6. áb-ra. Bal ol-da-lon ta-lál-ha-tó ent-ró-pi-kus ada-tok-ból
  Ma-pRe-du-ce se-
  []
 
 
-Underfull \hbox (badness 5302) in paragraph at lines 160--160
+Underfull \hbox (badness 5302) in paragraph at lines 174--174
 \T1/cmr/m/n/12 gít-sé-gé-vel struk-túrált, in-for-má-ci-ó-val ren-del-ke-z® ada
 -to-kat ge-ne-rá-lunk.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 \T1/cmr/m/n/12 http://radar.oreilly.com/2015/08/the-world-beyond-batch-streamin
 g-
  []
 
-[10 <./img/lambda.png> <./img/batch.png>]
+[11 <./img/lambda.png> <./img/batch.png>]
 
-LaTeX Warning: Citation 'topn' on page 11 undefined on input line 175.
-
-[11]
-
-LaTeX Warning: Citation 'mckinsey' on page 12 undefined on input line 190.
-
-
-LaTeX Warning: Citation 'watson' on page 12 undefined on input line 190.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
-\T1/cmr/m/n/12 tül).
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
-
- []
+LaTeX Warning: Reference `topn' on page 12 undefined on input line 189.
 
 [12]
 
-LaTeX Warning: Citation 'overfit' on page 13 undefined on input line 201.
+LaTeX Warning: Reference `mckinsey' on page 13 undefined on input line 204.
 
-<img/ml.png, id=58, 985.6825pt x 407.5225pt>
+
+LaTeX Warning: Reference `watson' on page 13 undefined on input line 204.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+
+ []
+
+[13]
+
+LaTeX Warning: Reference `overfit' on page 14 undefined on input line 215.
+
+<img/ml.png, id=66, 985.6825pt x 407.5225pt>
 File: img/ml.png Graphic file (type png)
  <use img/ml.png>
-Package pdftex.def Info: img/ml.png used on input line 206.
+Package pdftex.def Info: img/ml.png used on input line 220.
 (pdftex.def)             Requested size: 256.0748pt x 105.87251pt.
 
 
-LaTeX Warning: Reference `UlmannSupervised' on page 13 undefined on input line 
-207.
+LaTeX Warning: Reference `UlmannSupervised' on page 14 undefined on input line 
+221.
 
 
-LaTeX Warning: Citation 'unsupervised' on page 13 undefined on input line 212.
-
-[13 <./img/ml.png>]
-
-LaTeX Warning: Citation 'knearest' on page 14 undefined on input line 218.
+LaTeX Warning: Reference `unsupervised' on page 14 undefined on input line 226.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[14 <./img/ml.png>]
+
+LaTeX Warning: Reference `knearest' on page 15 undefined on input line 232.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 \T1/cmr/m/n/12 fel-hasz-ná-lók-nak nyúj-tott aján-lá-so-kat vesszük ala-pul.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-<img/um.png, id=68, 623.32875pt x 179.67125pt>
+<img/um.png, id=74, 623.32875pt x 179.67125pt>
 File: img/um.png Graphic file (type png)
  <use img/um.png>
-Package pdftex.def Info: img/um.png used on input line 226.
+Package pdftex.def Info: img/um.png used on input line 240.
 (pdftex.def)             Requested size: 256.0748pt x 73.81372pt.
 
 
-LaTeX Warning: Reference `UlmannMatrix' on page 14 undefined on input line 227.
+LaTeX Warning: Reference `UlmannMatrix' on page 15 undefined on input line 241.
 
 
 
-LaTeX Warning: Reference `UlmannMatrix' on page 14 undefined on input line 227.
+LaTeX Warning: Reference `UlmannMatrix' on page 15 undefined on input line 241.
 
 
 
-LaTeX Warning: Citation 'longtail' on page 14 undefined on input line 234.
+LaTeX Warning: Reference `longtail' on page 15 undefined on input line 248.
 
-[14 <./img/um.png>]
+[15 <./img/um.png>]
 
-LaTeX Warning: Citation 'imdb' on page 15 undefined on input line 239.
-
-
-LaTeX Warning: Citation 'introspection' on page 15 undefined on input line 239.
+LaTeX Warning: Reference `imdb' on page 16 undefined on input line 253.
 
 
+LaTeX Warning: Reference `introspection' on page 16 undefined on input line 253
+.
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--246
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 \T1/cmr/m/n/12 kat fak-to-rok-ra, rész-mát-ri-xok-ra bont-juk.
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
 
-LaTeX Warning: Citation 'andrewml' on page 16 undefined on input line 274.
+LaTeX Warning: Reference `andrewml' on page 17 undefined on input line 288.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--277
-\T1/cmr/m/n/12 mét-lés (up-date) kö-zött az összes pa-ra-mé-tert vál-toz-ta-tom
-.
+Underfull \hbox (badness 10000) in paragraph at lines 288--291
+\T1/cmr/m/n/12 kö-zött az összes pa-ra-mé-tert vál-toz-ta-tom.
  []
 
-[16] <img/alfa.png, id=80, 953.5625pt x 424.58624pt>
+[17] <img/alfa.png, id=86, 953.5625pt x 424.58624pt>
 File: img/alfa.png Graphic file (type png)
  <use img/alfa.png>
-Package pdftex.def Info: img/alfa.png used on input line 280.
+Package pdftex.def Info: img/alfa.png used on input line 294.
 (pdftex.def)             Requested size: 256.0748pt x 114.01787pt.
 
 
-LaTeX Warning: Reference `learningrate' on page 17 undefined on input line 281.
+LaTeX Warning: Reference `learningrate' on page 18 undefined on input line 295.
 
 
 
-LaTeX Warning: Citation 'stoch1951' on page 17 undefined on input line 286.
+LaTeX Warning: Reference `stoch1951' on page 18 undefined on input line 300.
 
 
-LaTeX Warning: Citation 'asgd' on page 17 undefined on input line 287.
+LaTeX Warning: Reference `asgd' on page 18 undefined on input line 301.
 
 
-LaTeX Warning: Citation 'gatsby' on page 17 undefined on input line 287.
+LaTeX Warning: Reference `gatsby' on page 18 undefined on input line 301.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
-\T1/cmr/m/n/12 tett, egy-sze-r¶-sí-tett vál-to-za-ta.
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
+\T1/cmr/m/n/12 r¶-sí-tett vál-to-za-ta.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
+\T1/cmr/m/n/12 hogy a za-jos és re-dun-dáns ada-to-kat ki-sz¶r-je.  []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
 
  []
 
-<img/sgd_bgd.png, id=81, 1160.335pt x 1055.945pt>
+[18 <./img/alfa.png>] <img/sgd_bgd.png, id=91, 1160.335pt x 1055.945pt>
 File: img/sgd_bgd.png Graphic file (type png)
- <use img/sgd_bgd.png>
-Package pdftex.def Info: img/sgd_bgd.png used on input line 293.
+
+<use img/sgd_bgd.png>
+Package pdftex.def Info: img/sgd_bgd.png used on input line 307.
 (pdftex.def)             Requested size: 227.62204pt x 207.14104pt.
 
 
-LaTeX Warning: Reference `learningrate' on page 17 undefined on input line 294.
+LaTeX Warning: Reference `convergence' on page 19 undefined on input line 308.
 
 
-[17 <./img/alfa.png>]
-
-LaTeX Warning: Citation 'bottou' on page 18 undefined on input line 302.
+LaTeX Warning: Reference `convergence' on page 19 undefined on input line 308.
 
 
-LaTeX Warning: Citation 'asf' on page 18 undefined on input line 310.
-
-[18 <./img/sgd_bgd.png>]
-
-LaTeX Warning: Citation 'tiobe' on page 19 undefined on input line 316.
+LaTeX Warning: Reference `bottou' on page 19 undefined on input line 316.
 
 
-LaTeX Warning: Citation 'odersky' on page 19 undefined on input line 319.
+LaTeX Warning: Reference `asf' on page 19 undefined on input line 324.
+
+[19 <./img/sgd_bgd.png>]
+
+LaTeX Warning: Reference `tiobe' on page 20 undefined on input line 330.
 
 
-LaTeX Warning: Citation 'toptal' on page 19 undefined on input line 319.
+LaTeX Warning: Reference `odersky' on page 20 undefined on input line 333.
 
 
-LaTeX Warning: Citation 'flink' on page 19 undefined on input line 322.
-
-[19]
-
-LaTeX Warning: Reference `spark' on page 20 undefined on input line 330.
+LaTeX Warning: Reference `toptal' on page 20 undefined on input line 333.
 
 
-LaTeX Warning: Reference `storm' on page 20 undefined on input line 330.
+LaTeX Warning: Reference `flink_artisans' on page 20 undefined on input line 33
+6.
+
+[20]
+
+LaTeX Warning: Reference `spark' on page 21 undefined on input line 344.
 
 
-LaTeX Warning: Reference `infosphere' on page 20 undefined on input line 330.
+LaTeX Warning: Reference `storm' on page 21 undefined on input line 344.
 
 
-LaTeX Warning: Reference `ingestion' on page 20 undefined on input line 330.
+LaTeX Warning: Reference `infosphere' on page 21 undefined on input line 344.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+LaTeX Warning: Reference `ingestion' on page 21 undefined on input line 344.
+
+
+Overfull \hbox (9.28864pt too wide) in paragraph at lines 344--346
+[]\T1/cmr/m/n/12 Az ed-dig el-ter-jedt meg-ol-dá-sok több-sé-gé-ben csak kö-te-
+gelt (Apache Spark) []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
 
  []
 
-<img/flink.png, id=94, 386.44376pt x 301.125pt>
+[21] <img/flink.png, id=103, 386.44376pt x 301.125pt>
 File: img/flink.png Graphic file (type png)
  <use img/flink.png>
-Package pdftex.def Info: img/flink.png used on input line 342.
+Package pdftex.def Info: img/flink.png used on input line 357.
 (pdftex.def)             Requested size: 227.62204pt x 177.36813pt.
 
 
-LaTeX Warning: Reference `flink' on page 20 undefined on input line 343.
+LaTeX Warning: Reference `flink' on page 22 undefined on input line 358.
 
 
-LaTeX Warning: Empty bibliography on input line 353.
+! LaTeX Error: Can be used only in preamble.
 
-[20] [21 <./img/flink.png>] (./intro.aux)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.367 \bibliography
+                   {references}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[22 <./img/flink.png>] (./intro.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1180,13 +1190,13 @@ Package logreq Info: Writing requests to 'intro.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9830 strings out of 493089
- 160179 string characters out of 6134842
- 584506 words of memory out of 5000000
- 13180 multiletter control sequences out of 15000+600000
- 12499 words of font info for 33 fonts, out of 8000000 for 9000
+ 9886 strings out of 493089
+ 160700 string characters out of 6134842
+ 585212 words of memory out of 5000000
+ 13234 multiletter control sequences out of 15000+600000
+ 13183 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,7n,35p,1250b,982s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,7n,35p,1267b,911s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -1199,11 +1209,12 @@ texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb>
-Output written on intro.pdf (21 pages, 937311 bytes).
+2015/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on intro.pdf (22 pages, 1011237 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
