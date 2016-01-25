@@ -2235,6 +2235,9 @@
     <bcf:datasource type="file" datatype="bibtex">intro.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">dst</bcf:citekey>
+    <bcf:citekey order="1">ori</bcf:citekey>
+    <bcf:citekey order="2">oria</bcf:citekey>
+    <bcf:citekey order="3">dst</bcf:citekey>
+    <bcf:citekey order="4">koren</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>

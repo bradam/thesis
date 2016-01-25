@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  19 JAN 2016 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  25 JAN 2016 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,10 +717,10 @@ LaTeX Info: Redefining \cal on input line 511.
 LaTeX Info: Redefining \mit on input line 512.
 )
 
-LaTeX Warning: Reference `ori' on page 1 undefined on input line 19.
+LaTeX Warning: Citation 'ori' on page 1 undefined on input line 19.
 
 
-LaTeX Warning: Reference `oria' on page 1 undefined on input line 20.
+LaTeX Warning: Citation 'oria' on page 1 undefined on input line 20.
 
 
 LaTeX Warning: Reference `varian' on page 1 undefined on input line 20.
@@ -733,6 +733,11 @@ LaTeX Warning: Reference `7v' on page 1 undefined on input line 20.
 
 
 LaTeX Warning: Reference `2020' on page 1 undefined on input line 21.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+\T1/cmr/m/n/12 get.
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
@@ -957,8 +962,8 @@ Underfull \hbox (badness 2261) in paragraph at lines 174--174
 
 
 Underfull \hbox (badness 5302) in paragraph at lines 174--174
-\T1/cmr/m/n/12 gít-sé-gé-vel struk-túrált, in-for-má-ci-ó-val ren-del-ke-z® ada
--to-kat ge-ne-rá-lunk.
+\T1/cmr/m/n/12 gít-sé-gé-vel struk-tu-rált, in-for-má-ci-ó-val ren-del-ke-z® ad
+a-to-kat ge-ne-rá-lunk.
  []
 
 
@@ -1046,54 +1051,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 258--260
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+\T1/cmr/m/n/12 át-ugor-juk az op-ti-má-lis meg-ol-dást.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
+LaTeX Warning: Citation 'koren' on page 17 undefined on input line 269.
 
- []
+[17]
+
+LaTeX Warning: Reference `andrewml' on page 18 undefined on input line 274.
 
 
-LaTeX Warning: Reference `andrewml' on page 17 undefined on input line 288.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--291
+Underfull \hbox (badness 10000) in paragraph at lines 274--277
 \T1/cmr/m/n/12 kö-zött az összes pa-ra-mé-tert vál-toz-ta-tom.
  []
 
-[17] <img/alfa.png, id=86, 953.5625pt x 424.58624pt>
+<img/alfa.png, id=85, 953.5625pt x 424.58624pt>
 File: img/alfa.png Graphic file (type png)
  <use img/alfa.png>
-Package pdftex.def Info: img/alfa.png used on input line 294.
+Package pdftex.def Info: img/alfa.png used on input line 280.
 (pdftex.def)             Requested size: 256.0748pt x 114.01787pt.
 
 
-LaTeX Warning: Reference `learningrate' on page 18 undefined on input line 295.
+LaTeX Warning: Reference `learningrate' on page 18 undefined on input line 281.
 
 
 
-LaTeX Warning: Reference `stoch1951' on page 18 undefined on input line 300.
+LaTeX Warning: Reference `stoch1951' on page 18 undefined on input line 286.
 
 
-LaTeX Warning: Reference `asgd' on page 18 undefined on input line 301.
+LaTeX Warning: Reference `asgd' on page 18 undefined on input line 287.
 
 
-LaTeX Warning: Reference `gatsby' on page 18 undefined on input line 301.
+LaTeX Warning: Reference `gatsby' on page 18 undefined on input line 287.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--302
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 \T1/cmr/m/n/12 r¶-sí-tett vál-to-za-ta.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--302
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 \T1/cmr/m/n/12 hogy a za-jos és re-dun-dáns ada-to-kat ki-sz¶r-je.  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--302
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
@@ -1101,80 +1110,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--302
 File: img/sgd_bgd.png Graphic file (type png)
 
 <use img/sgd_bgd.png>
-Package pdftex.def Info: img/sgd_bgd.png used on input line 307.
+Package pdftex.def Info: img/sgd_bgd.png used on input line 293.
 (pdftex.def)             Requested size: 227.62204pt x 207.14104pt.
 
 
-LaTeX Warning: Reference `convergence' on page 19 undefined on input line 308.
+LaTeX Warning: Reference `convergence' on page 19 undefined on input line 294.
 
 
-LaTeX Warning: Reference `convergence' on page 19 undefined on input line 308.
+LaTeX Warning: Reference `convergence' on page 19 undefined on input line 294.
 
 
-LaTeX Warning: Reference `bottou' on page 19 undefined on input line 316.
+LaTeX Warning: Reference `bottou' on page 19 undefined on input line 297.
 
 
-LaTeX Warning: Reference `asf' on page 19 undefined on input line 324.
+Underfull \hbox (badness 10000) in paragraph at lines 297--299
+
+ []
 
 [19 <./img/sgd_bgd.png>]
 
-LaTeX Warning: Reference `tiobe' on page 20 undefined on input line 330.
+LaTeX Warning: Reference `asf' on page 20 undefined on input line 314.
 
 
-LaTeX Warning: Reference `odersky' on page 20 undefined on input line 333.
+LaTeX Warning: Reference `tiobe' on page 20 undefined on input line 320.
 
 
-LaTeX Warning: Reference `toptal' on page 20 undefined on input line 333.
+LaTeX Warning: Reference `odersky' on page 20 undefined on input line 323.
 
 
-LaTeX Warning: Reference `flink_artisans' on page 20 undefined on input line 33
-6.
+LaTeX Warning: Reference `toptal' on page 20 undefined on input line 323.
 
 [20]
 
-LaTeX Warning: Reference `spark' on page 21 undefined on input line 344.
+LaTeX Warning: Reference `flink_artisans' on page 21 undefined on input line 32
+6.
 
 
-LaTeX Warning: Reference `storm' on page 21 undefined on input line 344.
+LaTeX Warning: Reference `spark' on page 21 undefined on input line 334.
 
 
-LaTeX Warning: Reference `infosphere' on page 21 undefined on input line 344.
+LaTeX Warning: Reference `storm' on page 21 undefined on input line 334.
 
 
-LaTeX Warning: Reference `ingestion' on page 21 undefined on input line 344.
+LaTeX Warning: Reference `infosphere' on page 21 undefined on input line 334.
 
 
-Overfull \hbox (9.28864pt too wide) in paragraph at lines 344--346
+LaTeX Warning: Reference `ingestion' on page 21 undefined on input line 334.
+
+
+Overfull \hbox (9.28864pt too wide) in paragraph at lines 334--336
 []\T1/cmr/m/n/12 Az ed-dig el-ter-jedt meg-ol-dá-sok több-sé-gé-ben csak kö-te-
 gelt (Apache Spark) []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--346
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
 
 [21] <img/flink.png, id=103, 386.44376pt x 301.125pt>
 File: img/flink.png Graphic file (type png)
  <use img/flink.png>
-Package pdftex.def Info: img/flink.png used on input line 357.
+Package pdftex.def Info: img/flink.png used on input line 347.
 (pdftex.def)             Requested size: 227.62204pt x 177.36813pt.
 
 
-LaTeX Warning: Reference `flink' on page 22 undefined on input line 358.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.367 \bibliography
-                   {references}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Reference `flink' on page 22 undefined on input line 348.
 
 [22 <./img/flink.png>] (./intro.aux)
 
@@ -1190,13 +1191,13 @@ Package logreq Info: Writing requests to 'intro.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9886 strings out of 493089
- 160700 string characters out of 6134842
- 585212 words of memory out of 5000000
- 13234 multiletter control sequences out of 15000+600000
+ 9884 strings out of 493089
+ 160689 string characters out of 6134842
+ 583227 words of memory out of 5000000
+ 13232 multiletter control sequences out of 15000+600000
  13183 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,7n,35p,1267b,911s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,5n,35p,1266b,911s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -1211,7 +1212,7 @@ ive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on intro.pdf (22 pages, 1011237 bytes).
+Output written on intro.pdf (22 pages, 1014152 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
