@@ -5,6 +5,31 @@
 \usepackage{algorithm}
 \usepackage[magyar]{babel}
 \usepackage{indentfirst}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstdefinestyle{Scala}{
+  frame=tb,
+  language=scala,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+}
+\lstset{language=Scala,texcl=true}
 \usepackage{biblatex}
 \bibliography{intro}
 \usepackage{amsmath}
@@ -231,7 +256,15 @@ Az ajánlórendszerek olyan, főként webes rendszerek, ahol a különböző for
 \item Youtube, ahol az nézettségi történet alapján kapja az ajánlásokat a felhasználó
 \item Amazon, ahol az a cél, hogy a felhasználónak olyan termékeket ajánljunk, amit a hozzá hasonló felhasználók (k-legközelebbi analízis segítségével) is preferálnak. ~\ref{knearest}
 \end{itemize}
-Két fő fajtáját különböztetjük meg az ajánló rendszereknek. A Content-based (tartalom alapú) ahol az item tulajdonságait vizsgáljuk, illetve a collaborative filtering (együttműködésen alapuló szűrés), ahol a hasonló érdeklődésű felhasználóknak nyújtott ajánlásokat vesszük alapul. \linebreak
+Két fő fajtáját különböztetjük meg az ajánló rendszereknek. A Content-based (tartalom alapú) ahol az item tulajdonságait vizsgáljuk, illetve a Collaborative Filtering (együttműködésen alapuló szűrés), ahol a hasonló érdeklődésű felhasználóknak nyújtott ajánlásokat vesszük alapul. \linebreak
+
+Az általam vizsgált Collaborative Filtering-en alapuló ajánláshoz szükségünk van egy modellre (mátrix faktorizáció), egy célfüggvényre aminek a minimumát keressük (RMSE) illetve egy algoritmusra (DSGD).
+
+\subsubsection{Hosszú farok}
+
+Amikor bemegyünk egy könyvesboltba, többféle módon is választhatunk egyes könyvek közül. Vannak kiemelt könyvek, amikre nagy az érdeklődés, ezért a könyvesbolt jobban reklámozza ezeket. Személyes ajánlásra nincs lehetőség, a választék korlátozott, erőforrás hiányában az összes könyvnek csak egy szűk szeletét mutatja meg egy könyvesbolt. Ezzel szemben egy online bolt bármit ajánlhat, ami létezhet, nem csak a populárisabbakat, hanem a kevésbé keresetteket is. Ezt a megkülönböztetést nevezzük \textsl{hosszú farok}-nak~\ref{longtail}, és ez az, ami létrehozta az ajánlórendszerek igényét. Muszáj ajánlanunk a felhasználónak termékeket --mivel nincs olyan nyilvánvaló módon prezentálva, mint a fizikai boltoknál-- ahhoz, hogy nagyobb eséllyel vásároljon belőlük.
+
+\subsubsection{Rating mátrix}
 
 Az ajánlórendszerek alapja az ún. rating mátrix, ami tartalmazza a felhasználókat és hozzájuk kapcsolt elemek adatait. Minden felhasználó, elem párhoz egy értéket rendelünk, ami jellemzi, hogy mennyire preferálja az adott elemet. Ez az érték általában egy rendezett skáláról (pl.: 5 elemű skála, 1-től 5-ig számozva, ahol az 1 a legkevésbé, az 5 pedig a legjobban kedvelt elemet jelöli) kerül ki. Alapfeltevés, hogy a mátrixunk ritka (nincs teljesen kitöltve), mivel nem értékel minden felhasználó minden elemet. A hiányzó, nem ismert értékekről semmilyen explicit információval nem rendelkezünk.
 
@@ -243,20 +276,20 @@ Az ajánlórendszerek alapja az ún. rating mátrix, ami tartalmazza a felhaszn�
 
 Célunk az, hogy hiányzó értékeket a mátrixban minél jobban megjósoljuk. Természetesen nem fontos, hogy az összes elemét kitöltsük, törekednünk kell arra, hogy az ajánlás a preferált filmek/cikkek körében legyen, mivel ezek eladása/elolvasása racionalizálható gazdasági szempontból. Jelen esetben, kíváncsiak lehetünk, hogy $A$ felhasználónak ajánlhatjuk-e Harry Potter 2. részét. Láthatjuk, hogy HP 1. részét kedvelte, és tudjuk, hogy a két film kapcsolatban van egymással (rendezők, színészek, történet, stb.) ezért gyaníthatjuk, hogy a második részt is kedvelni fogja.
 
-\subsubsection{Hosszú farok}
-
-Amikor bemegyünk egy könyvesboltba, többféle módon is választhatunk egyes könyvek közül. Vannak kiemelt könyvek, amikre nagy az érdeklődés, ezért a könyvesbolt jobban reklámozza ezeket. Személyes ajánlásra nincs lehetőség, a választék korlátozott, erőforrás hiányában az összes könyvnek csak egy szűk szeletét mutatja meg egy könyvesbolt. Ezzel szemben egy online bolt bármit ajánlhat, ami létezhet, nem csak a populárisabbakat, hanem a kevésbé keresetteket is. Ezt a megkülönböztetést nevezzük \textsl{hosszú farok}-nak~\ref{longtail}, és ez az, ami létrehozta az ajánlórendszerek igényét. Muszáj ajánlanunk a felhasználónak termékeket --mivel nincs olyan nyilvánvaló módon prezentálva, mint a fizikai boltoknál-- ahhoz, hogy nagyobb eséllyel vásároljon belőlük.
 
 \subsubsection{Rating mátrix feltöltése}
-Utilty mátrix nélkül nem lehetséges a felhasználóknak ajánlattétel. Ahhoz, hogy feltudjuk tölteni, két általános megközelítés létezik.
+Rating mátrix nélkül nem lehetséges a felhasználóknak ajánlattétel. Ahhoz, hogy feltudjuk tölteni, két általános megközelítés létezik.
 \begin{enumerate}
-\item Megkérdezzük a felhasználót a véleményéről (pl.: IMDb, ahol a felhasználók a filmeket értékelhetik egy 1-10-es skálán:)~\ref{imdb}: Ebben az esetben a sikerességünk limitált, mivel a felhasználónak nem származik rövid távon gazdasági előnye abból, hogy értékel (természetesen, ha minden film után reális értékelést adna, akkor hosszú távon jobb ajánlásokat kapna). Másrészt az emberi irracionalitás miatt előfordulhat, hogy részrehajlóan (akár pozitív, akár negatív irányban) értékel, ami eltorzíthatja a rating mátrixot. ~\ref{introspection}
-\item Megvizsgáljuk a viselkedését: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette (implicit feedback) az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a rating mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak {0, 1} intervallum skálán dolgozunk.
+\item Megkérdezzük a felhasználót a véleményéről (pl.: IMDb, ahol a felhasználók a filmeket értékelhetik egy 1-10-es skálán)~\ref{imdb}: Ebben az esetben a sikerességünk limitált, mivel a felhasználónak nem származik rövid távon gazdasági előnye abból, hogy értékel (természetesen, ha minden film után reális értékelést adna, akkor hosszú távon jobb ajánlásokat kapna). Másrészt az emberi irracionalitás miatt előfordulhat, hogy részrehajlóan (akár pozitív, akár negatív irányban) értékel, ami eltorzíthatja a rating mátrixot. ~\ref{introspection}
+\item Histórikus adatokat elemzünk: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette (implicit feedback) az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a rating mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak {0, 1} intervallum skálán dolgozunk.
 \end{enumerate}
 
+\subsubsection{Mátrix faktorizáció}
+A mátrix faktorizáció egy olyan modell, ahol az $M$ rating mátrixunkat faktorokra, részmátrixokra bontjuk. 
+Legyen $U$ és $I$ a felhasználók és elemeik sorozata. $U={\{1, ..., U\}}$ és $I={\{1, ..., I\}}$.  Feltöltött rating mátrix legyen $M$, ahol a kitöltött elemek $r_{ui}$, az üresek (amire szeretnénk ajánlást adni) pedig $\hat{r}_{ui}$. $M$-et felbonthatjuk két részmátrixra, $P$ és $Q$, és inicializáljuk elemeiket megfelelően kis $k$-val. 
+
 \subsubsection{ALS}
-Mikor ajánlásokat adunk a felhasználónak, a célunk az, hogy a rating mátrixban a hiányzó elemeket megkeressük. Feltételezhetjük, hogy a felhasználó elemei között kapcsolat van (mivel a felhasználó preferenciája vélhetően \textsl{rögzített} egy rövid időszakon belül), ezért különböző optimalizációs eljárásokat alkalmazhatunk. Az egyik legismertebb ilyen eljárás a mátrix faktorizáció egy fajtája az ALS (ALS, Alternating Least Squares), ahol az $M$ rating mátrixunkat faktorokra, részmátrixokra bontjuk. \linebreak
-Legyen $U$ és $I$ a felhasználók és elemeik sorozata. $U={\{1, ..., U\}}$ és $I={\{1, ..., I\}}$.  Feltöltött rating mátrix legyen $M$, ahol a kitöltött elemek $r_{ui}$, az üresek (amire szeretnénk ajánlást adni) pedig $\hat{r}_{ui}$. $M$-et felbonthatjuk két részmátrixra, $P$ és $Q$, és inicializáljuk elemeiket megfelelően kis $k$-val. Válasszuk $M$ egy ismert elemét, legyen $X$. Ha ez a választott $X$ eltér a megfelelő $P$ és $Q$ elem szorzatától, akkor változtassuk meg az eltérés irányában. Ha $X$ értéke megegyezik a vizsgált $P$ és $Q$ faktor szorzatával, akkor válasszunk másik $X$-et. A célunk tehát, hogy találjunk két olyan $U$ és $I$ részmátrixot, ahol $U$ x $I^T$ = $\hat{M}$, ahol $\hat{M}$ nagyjából megegyezik $M$-el.
+Mikor ajánlásokat adunk a felhasználónak, a célunk az, hogy a rating mátrixban a hiányzó elemeket megkeressük. Feltételezhetjük, hogy a felhasználó elemei között kapcsolat van (mivel a felhasználó preferenciája vélhetően \textsl{rögzített} egy rövid időszakon belül), ezért különböző optimalizációs eljárásokat alkalmazhatunk. Az egyik legismertebb ilyen eljárás a mátrix faktorizáció egy fajtája az ALS (ALS, Alternating Least Squares).Válasszuk $M$ egy ismert elemét, legyen $X$. Ha ez a választott $X$ eltér a megfelelő $P$ és $Q$ elem szorzatától, akkor változtassuk meg az eltérés irányában. Ha $X$ értéke megegyezik a vizsgált $P$ és $Q$ faktor szorzatával, akkor válasszunk másik $X$-et. A célunk tehát, hogy találjunk két olyan $U$ és $I$ részmátrixot, ahol $U$ x $I^T$ = $\hat{M}$, ahol $\hat{M}$ nagyjából megegyezik $M$-el.
 
 Ha egyszerre változtatjuk a két részmátrix elemeit, akkor az NP-nehéz probléma, ezért mindig csak a $P$ részmátrixon iterálunk végig amíg $P$ értékei rögzítve vannak. Ha megfelelően jó eredményt kapunk, akkor váltunk a $Q$-ra, ahol megismételjük ezt a műveletet, amíg el nem érjük a konvergencia állapotát. Alapvető probléma még emellett, hogy ha a részmátrixon a változtatás túl kicsi, akkor rengeteg erőforrást elpazarlunk, ha túl nagy, akkor lehet, hogy átugorjuk az optimális megoldást. \linebreak
 
@@ -283,7 +316,7 @@ Az $\alpha$ tanulási ráta megadja, hogy mekkora lépésközökkel operál az a
 
 \subsubsection{Sztochasztikus Gradiens leszállás}
 
-Gradiens leszállás egy jól működő, egyszerű algoritmus, mellyel lineárisan tudok konvergenciára jutni. Azonban alapvető probléma vele, hogy nagy adatmennyiségnél (,,big data'') költséges a megvalósítása, mivel minden egyes paramétert ki kell számolnunk ahhoz, hogy a következő iterációra jussunk. Robbins és Monroe 1951-ben~\ref{stoch1951} írták a tanulmányukat, melyben az úgynevezett sztochasztikus optimalizációs eljárást vizsgálták. Ebben arra jutottak, hogy nem szükséges minden lépésben az összes paramétert kiszámolni, elég véletlenszerűen venni mintákat az adatsorból. Ezt nevezzük sztochasztikus gradiens leszállásnak (SGD), ami a gradiens algoritmus egy bővített, egyszerűsített változata. \linebreak
+Gradiens leszállás egy jól működő, egyszerű algoritmus, mellyel lineárisan tudunk konvergenciára jutni. Azonban alapvető probléma vele, hogy nagy adatmennyiségnél (,,big data'') költséges a megvalósítása, mivel minden egyes paramétert ki kell számolnunk ahhoz, hogy a következő iterációra jussunk. Robbins és Monroe 1951-ben~\ref{stoch1951} írták a tanulmányukat, melyben az úgynevezett sztochasztikus optimalizációs eljárást vizsgálták. Ebben arra jutottak, hogy nem szükséges minden lépésben az összes paramétert kiszámolni, elég véletlenszerűen venni mintákat az adatsorból. Ezt nevezzük sztochasztikus gradiens leszállásnak (SGD), ami a gradiens algoritmus egy bővített, egyszerűsített változata. \linebreak
 Miért jó ez? Ha minden lépésünk csak 1 deriválttól függ (tehát 2 iteráció között csak 1 paraméter változásával számolunk), az jelentősen megtudja gyorsítani (illetve a számítási költségeket csökkenteni) a folyamatot, mivel a gradienshez képest $1/n$-es komplexitásról beszélünk, ha $n$ jelöli a tanuló adatsorunk számosságát.~\ref{asgd}. E mellett arra is alkalmas a véletlenszerű mintavétel, hogy a zajos és redundáns adatokat kiszűrje. ~\ref{gatsby} \linebreak
 
 A \ref{sgd_bgd} ábrán láthatjuk, hogyan alakulhat a konvergencia elérés a két vizsgált algoritmusnál. 
@@ -306,7 +339,11 @@ Vegyük észre a squared norm-ot ami az ún. regularizációs kifejezés, ami a 
 \[(u, i) \leftarrow rand \]
 \[P_{u} \leftarrow P_{u} - \alpha((r_{ui}-P_{u}Q_{u}^T)Q_{i} - \lambda P_{u})\]
 \[Q_{i} \leftarrow Q_{i} - \alpha((r_{ui}-P_{u}Q_{u}^T)P_{u} - \lambda Q_{i})\]
-%
+
+\subsubsection{Célfüggvény}
+A gradiens leszállásnál láthattunk egy példát a célfüggvényre. A célfüggvények lényege, hogy kiértékelési metrikaként működjenek, lehetőséget adjanak arra, hogy értékelni tudjuk az implementált algoritmusunkat. Az ajánlórendszereknél az egyik leggyakrabban használt célfüggvény (melynek a minimumát keressük) a Root Mean Square Error, ami a függvény mért és becsült adatok négyzetes átlagának hibáját vizsgálja. Előnye, hogy a mért és ajánlott értékeket egy dimenzióban vizsgálja~\ref{vikas}:  
+
+\[RMSE =   \sqrt{\frac{ \sum_{\{u,i\}} (P_{u,i} - r_{u,i})^2}{N}}\] 
 
 \section{Megvalósítás}
 
@@ -348,6 +385,46 @@ A kötegelt feldolgozást egy, az adatfolyam specifikus részének tekinti, így
 \caption{Apache Flink felépítése \ref{flink} \label{apache_flink}}
 \end{figure}
 
+\subsection{Flink DataStream és DataSet}
+
+
+
+
+\subsection{FlinkML motiváció, tervezés}
+
+A Flinkben használt FlinkML (gépi tanulás, machine learning) egy olyan keretrendszer a Flinkhez, mely biztosítja a skálázható gépi tanulás eszközöket. Tervezése és megvalósítása során fő szempont, hogy minimálisra redukálják a "glue code"-ot, amely az end-to-end gépi tanulás rendszerekben lévő technológia megoldások összekötésénél járulékos. Ennek a glue code-nak a csökkentésével hozzájárulnak a manapság széles körben elterjedt technológiai adósság (technical debt) csökkentéséhez, amely egy idő után feleslegesen megnöveli a projekt és kódbázis komplexitását.\ref{mldebt} E mellett biztosítják, hogy Flink tartalmazzon olyan adatkezelő lehetőségeket, melyek biztosítják az adatfeldolgozást, adatmanipulációt és eredmény kiértékelését a keretrendszer korlátain belül. Szempont volt még a fejlesztés során, hogy a szélesebb körben elterjedt, már ismert terminológiát és ötleteket használják, ezzel lecsökkentve a tanulási görbét. Ilyen keretrendszerek pl.: Apache Spark-ban használt MLlib\ref{mllib} illetve a Python-hoz használt tudományos körökben is elismert scikit-learn.\ref{scikit} \linebreak
+
+A képesség, hogy több művelete egy sorozatba kapcsoljunk (pipeline) egy olyan elvárás, amit manapság minden modern gépi tanulással foglalkozó keretrendszernek tudnia kell. Ilyen művelet sorozat esetén a bemenő adatunk lehetnek adatok, vagy egy megelőző művelet sorozat kimenete. A kimenetünk pedig a transzformált adat, melyet használhatunk elemzéshez, vagy tovább adhatjuk egy következő feldolgozási rétegnek.  A könnyű kezelhetőséget és alkalmazásprogramozási interfészt a scikit-learnből\ref{sciapi} ismert módon implementálták: 
+\begin{itemize}
+\item Estimator, az ősosztály, mely tartalmazza a fit() metódust, ami a modell tanítását végzi
+\item Transformer, amely az átalakító műveleteket végzi a bemeneten
+\item Predictor, amely végrehajtja a tanulást, és az előrejelzést ad
+\end{itemize}
+
+A (Scala) API általános formája a következő:
+
+\begin{lstlisting}[style=Scala]
+//Tanitó adat beolvasása
+val input: DataSet[LabeledVector] = ...
+// Teszt adat beolvasása
+val unlabeled: DataSet[Vector] = ...
+
+val scaler = StandardScaler()
+val polyFeatures = PolynomialFeatures()
+val mlr = MultipleLinearRegression()
+
+// Pipeline létrehozása
+val pipeline = scaler
+  .chainTransformer(polyFeatures)
+  .chainPredictor(mlr)
+
+// Pipeline tanítása
+pipeline.fit(input)
+
+// Előrejelzés kiszámítása a teszt adaton
+val predictions: DataSet[LabeledVector] = pipeline.predict(unlabeled)
+\end{lstlisting}
+
 \subsection{Elosztott sztochasztikus gradiens leszállás}
 
 \section{Fejlesztési lehetőségek}
@@ -356,7 +433,6 @@ Konvergencia minél gyorsabb elérése (accelerated sgd).
 
 
 \iffalse
-\subsection{RMSE}
 \section{Dcg,nDCG}
 \fi
 

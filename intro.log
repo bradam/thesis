@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  25 JAN 2016 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  27 JAN 2016 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,6 +302,73 @@ Package babel Info: Making ` an active character on input line 2732.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+\lst@mode=\count99
+\lst@gtempboxa=\box28
+\lst@token=\toks20
+\lst@length=\count100
+\lst@currlwidth=\dimen104
+\lst@column=\count101
+\lst@pos=\count102
+\lst@lostspace=\dimen105
+\lst@width=\dimen106
+\lst@newlines=\count103
+\lst@lineno=\count104
+\lst@maxwidth=\dimen107
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count105
+\lst@skipnumbers=\count106
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count107
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2014/09/06 1.5e listings language file
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
 
@@ -316,24 +383,14 @@ B)
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count99
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks19
+\etb@tempcnta=\count108
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
@@ -348,7 +405,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count100
+\lrq@indent=\count109
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -357,44 +414,44 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count101
-\c@listtotal=\count102
-\c@listcount=\count103
-\c@liststart=\count104
-\c@liststop=\count105
-\c@citecount=\count106
-\c@citetotal=\count107
-\c@multicitecount=\count108
-\c@multicitetotal=\count109
-\c@instcount=\count110
-\c@maxnames=\count111
-\c@minnames=\count112
-\c@maxitems=\count113
-\c@minitems=\count114
-\c@citecounter=\count115
-\c@savedcitecounter=\count116
-\c@uniquelist=\count117
-\c@uniquename=\count118
-\c@refsection=\count119
-\c@refsegment=\count120
-\c@maxextratitle=\count121
-\c@maxextratitleyear=\count122
-\c@maxextrayear=\count123
-\c@maxextraalpha=\count124
-\c@abbrvpenalty=\count125
-\c@highnamepenalty=\count126
-\c@lownamepenalty=\count127
-\c@maxparens=\count128
-\c@parenlevel=\count129
-\blx@tempcnta=\count130
-\blx@tempcntb=\count131
-\blx@tempcntc=\count132
-\blx@maxsection=\count133
-\blx@maxsegment@0=\count134
-\blx@notetype=\count135
-\blx@parenlevel@text=\count136
-\blx@parenlevel@foot=\count137
-\blx@sectionciteorder@0=\count138
+\c@tabx@nest=\count110
+\c@listtotal=\count111
+\c@listcount=\count112
+\c@liststart=\count113
+\c@liststop=\count114
+\c@citecount=\count115
+\c@citetotal=\count116
+\c@multicitecount=\count117
+\c@multicitetotal=\count118
+\c@instcount=\count119
+\c@maxnames=\count120
+\c@minnames=\count121
+\c@maxitems=\count122
+\c@minitems=\count123
+\c@citecounter=\count124
+\c@savedcitecounter=\count125
+\c@uniquelist=\count126
+\c@uniquename=\count127
+\c@refsection=\count128
+\c@refsegment=\count129
+\c@maxextratitle=\count130
+\c@maxextratitleyear=\count131
+\c@maxextrayear=\count132
+\c@maxextraalpha=\count133
+\c@abbrvpenalty=\count134
+\c@highnamepenalty=\count135
+\c@lownamepenalty=\count136
+\c@maxparens=\count137
+\c@parenlevel=\count138
+\blx@tempcnta=\count139
+\blx@tempcntb=\count140
+\blx@tempcntc=\count141
+\blx@maxsection=\count142
+\blx@maxsegment@0=\count143
+\blx@notetype=\count144
+\blx@parenlevel@text=\count145
+\blx@parenlevel@foot=\count146
+\blx@sectionciteorder@0=\count147
 \labelnumberwidth=\skip46
 \labelalphawidth=\skip47
 \biblabelsep=\skip48
@@ -405,81 +462,81 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip53
 \blx@bcfin=\read1
 \blx@bcfout=\write3
-\c@mincomprange=\count139
-\c@maxcomprange=\count140
-\c@mincompwidth=\count141
+\c@mincomprange=\count148
+\c@maxcomprange=\count149
+\c@mincompwidth=\count150
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/blx-dm.def)
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count142
-\c@savedafterword=\count143
-\c@annotator=\count144
-\c@savedannotator=\count145
-\c@author=\count146
-\c@savedauthor=\count147
-\c@bookauthor=\count148
-\c@savedbookauthor=\count149
-\c@commentator=\count150
-\c@savedcommentator=\count151
-\c@editor=\count152
-\c@savededitor=\count153
-\c@editora=\count154
-\c@savededitora=\count155
-\c@editorb=\count156
-\c@savededitorb=\count157
-\c@editorc=\count158
-\c@savededitorc=\count159
-\c@foreword=\count160
-\c@savedforeword=\count161
-\c@holder=\count162
-\c@savedholder=\count163
-\c@introduction=\count164
-\c@savedintroduction=\count165
-\c@namea=\count166
-\c@savednamea=\count167
-\c@nameb=\count168
-\c@savednameb=\count169
-\c@namec=\count170
-\c@savednamec=\count171
-\c@translator=\count172
-\c@savedtranslator=\count173
-\c@shortauthor=\count174
-\c@savedshortauthor=\count175
-\c@shorteditor=\count176
-\c@savedshorteditor=\count177
-\c@labelname=\count178
-\c@savedlabelname=\count179
-\c@institution=\count180
-\c@savedinstitution=\count181
-\c@lista=\count182
-\c@savedlista=\count183
-\c@listb=\count184
-\c@savedlistb=\count185
-\c@listc=\count186
-\c@savedlistc=\count187
-\c@listd=\count188
-\c@savedlistd=\count189
-\c@liste=\count190
-\c@savedliste=\count191
-\c@listf=\count192
-\c@savedlistf=\count193
-\c@location=\count194
-\c@savedlocation=\count195
-\c@organization=\count196
-\c@savedorganization=\count197
-\c@origlocation=\count198
-\c@savedoriglocation=\count199
-\c@origpublisher=\count200
-\c@savedorigpublisher=\count201
-\c@publisher=\count202
-\c@savedpublisher=\count203
-\c@language=\count204
-\c@savedlanguage=\count205
-\c@pageref=\count206
-\c@savedpageref=\count207
+\c@afterword=\count151
+\c@savedafterword=\count152
+\c@annotator=\count153
+\c@savedannotator=\count154
+\c@author=\count155
+\c@savedauthor=\count156
+\c@bookauthor=\count157
+\c@savedbookauthor=\count158
+\c@commentator=\count159
+\c@savedcommentator=\count160
+\c@editor=\count161
+\c@savededitor=\count162
+\c@editora=\count163
+\c@savededitora=\count164
+\c@editorb=\count165
+\c@savededitorb=\count166
+\c@editorc=\count167
+\c@savededitorc=\count168
+\c@foreword=\count169
+\c@savedforeword=\count170
+\c@holder=\count171
+\c@savedholder=\count172
+\c@introduction=\count173
+\c@savedintroduction=\count174
+\c@namea=\count175
+\c@savednamea=\count176
+\c@nameb=\count177
+\c@savednameb=\count178
+\c@namec=\count179
+\c@savednamec=\count180
+\c@translator=\count181
+\c@savedtranslator=\count182
+\c@shortauthor=\count183
+\c@savedshortauthor=\count184
+\c@shorteditor=\count185
+\c@savedshorteditor=\count186
+\c@labelname=\count187
+\c@savedlabelname=\count188
+\c@institution=\count189
+\c@savedinstitution=\count190
+\c@lista=\count191
+\c@savedlista=\count192
+\c@listb=\count193
+\c@savedlistb=\count194
+\c@listc=\count195
+\c@savedlistc=\count196
+\c@listd=\count197
+\c@savedlistd=\count198
+\c@liste=\count199
+\c@savedliste=\count200
+\c@listf=\count201
+\c@savedlistf=\count202
+\c@location=\count203
+\c@savedlocation=\count204
+\c@organization=\count205
+\c@savedorganization=\count206
+\c@origlocation=\count207
+\c@savedoriglocation=\count208
+\c@origpublisher=\count209
+\c@savedorigpublisher=\count210
+\c@publisher=\count211
+\c@savedpublisher=\count212
+\c@language=\count213
+\c@savedlanguage=\count214
+\c@pageref=\count215
+\c@savedpageref=\count216
 \shorthandwidth=\skip54
 \shortjournalwidth=\skip55
 \shortserieswidth=\skip56
@@ -497,13 +554,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 
-\c@textcitecount=\count208
-\c@textcitetotal=\count209
-\c@textcitemaxnames=\count210
-\c@biburlnumpenalty=\count211
-\c@biburlucpenalty=\count212
-\c@biburllcpenalty=\count213
-\c@smartand=\count214
+\c@textcitecount=\count217
+\c@textcitetotal=\count218
+\c@textcitemaxnames=\count219
+\c@biburlnumpenalty=\count220
+\c@biburlucpenalty=\count221
+\c@biburllcpenalty=\count222
+\c@smartand=\count223
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -515,8 +572,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count215
-\c@bbx:relatedtotal=\count216
+\c@bbx:relatedcount=\count224
+\c@bbx:relatedtotal=\count225
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -551,51 +608,51 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks20
-\ex@=\dimen104
+\@emptytoks=\toks21
+\ex@=\dimen108
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen105
+\pmbraise@=\dimen109
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count217
+\inf@bad=\count226
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count218
-\leftroot@=\count219
+\uproot@=\count227
+\leftroot@=\count228
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count220
-\DOTSCASE@=\count221
+\classnum@=\count229
+\DOTSCASE@=\count230
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
-\big@size=\dimen106
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen110
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count222
-\c@MaxMatrixCols=\count223
+\macc@depth=\count231
+\c@MaxMatrixCols=\count232
 \dotsspace@=\muskip11
-\c@parentequation=\count224
-\dspbrk@lvl=\count225
-\tag@help=\toks21
-\row@=\count226
-\column@=\count227
-\maxfields@=\count228
-\andhelp@=\toks22
-\eqnshift@=\dimen107
-\alignsep@=\dimen108
-\tagshift@=\dimen109
-\tagwidth@=\dimen110
-\totwidth@=\dimen111
-\lineht@=\dimen112
-\@envbody=\toks23
+\c@parentequation=\count233
+\dspbrk@lvl=\count266
+\tag@help=\toks22
+\row@=\count267
+\column@=\count268
+\maxfields@=\count269
+\andhelp@=\toks23
+\eqnshift@=\dimen111
+\alignsep@=\dimen112
+\tagshift@=\dimen113
+\tagwidth@=\dimen114
+\totwidth@=\dimen115
+\lineht@=\dimen116
+\@envbody=\toks24
 \multlinegap=\skip61
 \multlinetaggap=\skip62
-\mathdisplay@stack=\toks24
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -612,20 +669,16 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count229
-))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
+)
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
 )
 Package biblatex Info: Trying to load language 'magyar'...
 Package biblatex Info: ... file 'magyar.lbx' not found.
 
 
 Package biblatex Warning: Language 'magyar' not supported.
-(biblatex)                Using fallback language 'english' on input line 16.
+(biblatex)                Using fallback language 'english' on input line 41.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -636,28 +689,43 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count230
-\@quotereset=\count231
+\@quotelevel=\count270
+\@quotereset=\count271
 (./intro.aux)
 \openout1 = `intro.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 
 LaTeX Warning: Please use \usepackage[latin2]{inputenc} with
                \usepackage[magyar]{babel}.
 
+\c@lstlisting=\count272
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count273
+\scratchdimen=\dimen119
+\scratchbox=\box32
+\nofMPsegments=\count274
+\nofMParguments=\count275
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count276
+\MPscratchDim=\dimen120
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
+\everyMPtoPDFconversion=\toks27
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -665,23 +733,11 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'intro.bbl' not found.
+
 No file intro.bbl.
-Package biblatex Info: Reference section=0 on input line 16.
-Package biblatex Info: Reference segment=0 on input line 16.
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count232
-\scratchdimen=\dimen115
-\scratchbox=\box30
-\nofMPsegments=\count233
-\nofMParguments=\count266
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count267
-\MPscratchDim=\dimen116
-\MPnumerator=\count268
-\makeMPintoPDFobject=\count269
-\everyMPtoPDFconversion=\toks26
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package biblatex Info: Reference section=0 on input line 41.
+Package biblatex Info: Reference segment=0 on input line 41.
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
@@ -717,59 +773,59 @@ LaTeX Info: Redefining \cal on input line 511.
 LaTeX Info: Redefining \mit on input line 512.
 )
 
-LaTeX Warning: Citation 'ori' on page 1 undefined on input line 19.
+LaTeX Warning: Citation 'ori' on page 1 undefined on input line 44.
 
 
-LaTeX Warning: Citation 'oria' on page 1 undefined on input line 20.
+LaTeX Warning: Citation 'oria' on page 1 undefined on input line 45.
 
 
-LaTeX Warning: Reference `varian' on page 1 undefined on input line 20.
+LaTeX Warning: Reference `varian' on page 1 undefined on input line 45.
 
 
-LaTeX Warning: Reference `3v' on page 1 undefined on input line 20.
+LaTeX Warning: Reference `3v' on page 1 undefined on input line 45.
 
 
-LaTeX Warning: Reference `7v' on page 1 undefined on input line 20.
+LaTeX Warning: Reference `7v' on page 1 undefined on input line 45.
 
 
-LaTeX Warning: Reference `2020' on page 1 undefined on input line 21.
+LaTeX Warning: Reference `2020' on page 1 undefined on input line 46.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--23
+Underfull \hbox (badness 10000) in paragraph at lines 43--48
 \T1/cmr/m/n/12 get.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--23
+Underfull \hbox (badness 10000) in paragraph at lines 43--48
 
  []
 
 
-LaTeX Warning: Reference `brk' on page 1 undefined on input line 24.
+LaTeX Warning: Reference `brk' on page 1 undefined on input line 49.
 
 
-LaTeX Warning: Citation 'dst' on page 1 undefined on input line 26.
+LaTeX Warning: Citation 'dst' on page 1 undefined on input line 51.
 
 
-LaTeX Warning: Reference `rta' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `rta' on page 1 undefined on input line 54.
 
 
-LaTeX Warning: Reference `fraud' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `fraud' on page 1 undefined on input line 54.
 
 
-LaTeX Warning: Reference `iot' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `iot' on page 1 undefined on input line 54.
 
 
-LaTeX Warning: Reference `ganalitycs' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `ganalitycs' on page 1 undefined on input line 54.
 
 
-LaTeX Warning: Reference `ucl' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `ucl' on page 1 undefined on input line 54.
 
 
-LaTeX Warning: Reference `flink_intro' on page 1 undefined on input line 29.
+LaTeX Warning: Reference `flink_intro' on page 1 undefined on input line 54.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
@@ -777,116 +833,116 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
 
-LaTeX Warning: Reference `sgd' on page 2 undefined on input line 34.
+LaTeX Warning: Reference `sgd' on page 2 undefined on input line 59.
 
 
-LaTeX Warning: Reference `cocke' on page 2 undefined on input line 37.
+LaTeX Warning: Reference `cocke' on page 2 undefined on input line 62.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 \T1/cmr/m/n/12 pár-hu-za-mos prog-ra-mo-zás.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 \T1/cmr/m/n/12 rend-szer ese-tén.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
 [2]
 
-LaTeX Warning: Reference `chandy' on page 3 undefined on input line 40.
+LaTeX Warning: Reference `chandy' on page 3 undefined on input line 65.
 
 <img/distSys.png, id=13, 987.69pt x 604.2575pt>
 File: img/distSys.png Graphic file (type png)
  <use img/distSys.png>
-Package pdftex.def Info: img/distSys.png used on input line 44.
+Package pdftex.def Info: img/distSys.png used on input line 69.
 (pdftex.def)             Requested size: 284.52756pt x 174.06844pt.
 
 
-LaTeX Warning: Reference `chandy' on page 3 undefined on input line 46.
+LaTeX Warning: Reference `chandy' on page 3 undefined on input line 71.
 
 
-LaTeX Warning: Reference `chandy' on page 3 undefined on input line 46.
+LaTeX Warning: Reference `chandy' on page 3 undefined on input line 71.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 \T1/cmr/m/n/12 rend-szer összes fo-lya-ma-tá-nak és csa-tor-ná-já-nak ál-la-po-
 tát.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-LaTeX Warning: Reference `balazinska' on page 3 undefined on input line 54.
+LaTeX Warning: Reference `balazinska' on page 3 undefined on input line 79.
 
 
-LaTeX Warning: Reference `szemantika' on page 3 undefined on input line 54.
+LaTeX Warning: Reference `szemantika' on page 3 undefined on input line 79.
 
 [3 <./img/distSys.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
 
 
-LaTeX Warning: Reference `akka' on page 4 undefined on input line 63.
+LaTeX Warning: Reference `akka' on page 4 undefined on input line 88.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
 \T1/cmr/m/n/12 tén tá-jé-koz-tat-ja a kli-enst a je-len-le-gi stá-tusz-ról.
  []
 
 [4]
 
-LaTeX Warning: Reference `balazinska' on page 5 undefined on input line 73.
+LaTeX Warning: Reference `balazinska' on page 5 undefined on input line 98.
 
 [5] <img/gfs.png, id=30, 1776.6375pt x 656.4525pt>
 File: img/gfs.png Graphic file (type png)
  <use img/gfs.png>
-Package pdftex.def Info: img/gfs.png used on input line 88.
+Package pdftex.def Info: img/gfs.png used on input line 113.
 (pdftex.def)             Requested size: 369.87889pt x 136.66711pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
 []\T1/cmr/m/n/12 2. áb-ra. Go-og-le fájl rend-szer fel-épí-té-se
  []
 
 
-Overfull \hbox (26.63138pt too wide) in paragraph at lines 90--90
+Overfull \hbox (26.63138pt too wide) in paragraph at lines 115--115
 \T1/cmr/m/n/12 http://static.googleusercontent.com/media/research.google.com/en
 //archive/gfs-
  []
 
 [6 <./img/gfs.png>]
 
-LaTeX Warning: Reference `cap' on page 7 undefined on input line 102.
+LaTeX Warning: Reference `cap' on page 7 undefined on input line 127.
 
 
-LaTeX Warning: Reference `ecap' on page 7 undefined on input line 102.
+LaTeX Warning: Reference `ecap' on page 7 undefined on input line 127.
 
 
-LaTeX Warning: Reference `batch' on page 7 undefined on input line 105.
+LaTeX Warning: Reference `batch' on page 7 undefined on input line 130.
 
 
-LaTeX Warning: Reference `mapreduce' on page 7 undefined on input line 108.
+LaTeX Warning: Reference `mapreduce' on page 7 undefined on input line 133.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--110
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 \T1/cmr/m/n/12 ér-té-ket.
  []
 
@@ -894,215 +950,213 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--110
 File: img/wordcountflow.jpg Graphic file (type jpg)
 
 <use img/wordcountflow.jpg>
-Package pdftex.def Info: img/wordcountflow.jpg used on input line 113.
+Package pdftex.def Info: img/wordcountflow.jpg used on input line 138.
 (pdftex.def)             Requested size: 227.62204pt x 149.22215pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []\T1/cmr/m/n/12 3. áb-ra. Ma-pRe-du-ce al-kal-ma-zá-sa szó-szá-mo-ló pél-dán k
 e-resz-tül.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 \T1/cmr/m/n/12 (forrás:http://kickstarthadoop.blogspot.hu/2011/04/word-count-ha
 doop-
  []
 
 
-LaTeX Warning: Reference `hadoop' on page 7 undefined on input line 120.
+LaTeX Warning: Reference `hadoop' on page 7 undefined on input line 145.
 
 [7]
 
-LaTeX Warning: Reference `tyler' on page 8 undefined on input line 124.
+LaTeX Warning: Reference `tyler' on page 8 undefined on input line 149.
 
 
-LaTeX Warning: Reference `summingbird' on page 8 undefined on input line 125.
+LaTeX Warning: Reference `summingbird' on page 8 undefined on input line 150.
 
 
-LaTeX Warning: Reference `tyler' on page 8 undefined on input line 126.
+LaTeX Warning: Reference `tyler' on page 8 undefined on input line 151.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--127
+Underfull \hbox (badness 10000) in paragraph at lines 149--152
 \T1/cmr/m/n/12 sze-re-pel.
  []
 
 [8 <./img/wordcountflow.jpg>]
 
-LaTeX Warning: Reference `microbatch' on page 9 undefined on input line 132.
+LaTeX Warning: Reference `microbatch' on page 9 undefined on input line 157.
 
 <img/skew.png, id=44, 592.2125pt x 728.7225pt>
 File: img/skew.png Graphic file (type png)
  <use img/skew.png>
-Package pdftex.def Info: img/skew.png used on input line 141.
+Package pdftex.def Info: img/skew.png used on input line 166.
 (pdftex.def)             Requested size: 170.71652pt x 210.06761pt.
  [9]
 <img/lambda.png, id=48, 2409.0pt x 1188.44pt>
 File: img/lambda.png Graphic file (type png)
  <use img/lambda.png>
-Package pdftex.def Info: img/lambda.png used on input line 159.
+Package pdftex.def Info: img/lambda.png used on input line 184.
 (pdftex.def)             Requested size: 256.0748pt x 126.3222pt.
 
 
-LaTeX Warning: Reference `tyler' on page 10 undefined on input line 165.
+LaTeX Warning: Reference `tyler' on page 10 undefined on input line 190.
 
 [10 <./img/skew.png>]
 
-LaTeX Warning: Reference `mapreduce' on page 11 undefined on input line 168.
+LaTeX Warning: Reference `mapreduce' on page 11 undefined on input line 193.
 
 <img/batch.png, id=53, 642.4pt x 481.8pt>
 File: img/batch.png Graphic file (type png)
  <use img/batch.png>
-Package pdftex.def Info: img/batch.png used on input line 172.
+Package pdftex.def Info: img/batch.png used on input line 197.
 (pdftex.def)             Requested size: 256.0748pt x 192.06227pt.
 
-Underfull \hbox (badness 2261) in paragraph at lines 174--174
+Underfull \hbox (badness 2261) in paragraph at lines 199--199
 []\T1/cmr/m/n/12 6. áb-ra. Bal ol-da-lon ta-lál-ha-tó ent-ró-pi-kus ada-tok-ból
  Ma-pRe-du-ce se-
  []
 
 
-Underfull \hbox (badness 5302) in paragraph at lines 174--174
+Underfull \hbox (badness 5302) in paragraph at lines 199--199
 \T1/cmr/m/n/12 gít-sé-gé-vel struk-tu-rált, in-for-má-ci-ó-val ren-del-ke-z® ad
 a-to-kat ge-ne-rá-lunk.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 \T1/cmr/m/n/12 http://radar.oreilly.com/2015/08/the-world-beyond-batch-streamin
 g-
  []
 
 [11 <./img/lambda.png> <./img/batch.png>]
 
-LaTeX Warning: Reference `topn' on page 12 undefined on input line 189.
+LaTeX Warning: Reference `topn' on page 12 undefined on input line 214.
 
 [12]
 
-LaTeX Warning: Reference `mckinsey' on page 13 undefined on input line 204.
+LaTeX Warning: Reference `mckinsey' on page 13 undefined on input line 229.
 
 
-LaTeX Warning: Reference `watson' on page 13 undefined on input line 204.
+LaTeX Warning: Reference `watson' on page 13 undefined on input line 229.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
 [13]
 
-LaTeX Warning: Reference `overfit' on page 14 undefined on input line 215.
+LaTeX Warning: Reference `overfit' on page 14 undefined on input line 240.
 
 <img/ml.png, id=66, 985.6825pt x 407.5225pt>
 File: img/ml.png Graphic file (type png)
  <use img/ml.png>
-Package pdftex.def Info: img/ml.png used on input line 220.
+Package pdftex.def Info: img/ml.png used on input line 245.
 (pdftex.def)             Requested size: 256.0748pt x 105.87251pt.
 
 
 LaTeX Warning: Reference `UlmannSupervised' on page 14 undefined on input line 
-221.
+246.
 
 
-LaTeX Warning: Reference `unsupervised' on page 14 undefined on input line 226.
+LaTeX Warning: Reference `unsupervised' on page 14 undefined on input line 251.
 
 
 [14 <./img/ml.png>]
 
-LaTeX Warning: Reference `knearest' on page 15 undefined on input line 232.
+LaTeX Warning: Reference `knearest' on page 15 undefined on input line 257.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 \T1/cmr/m/n/12 fel-hasz-ná-lók-nak nyúj-tott aján-lá-so-kat vesszük ala-pul.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
+
+
+LaTeX Warning: Reference `longtail' on page 15 undefined on input line 265.
 
 <img/um.png, id=74, 623.32875pt x 179.67125pt>
 File: img/um.png Graphic file (type png)
  <use img/um.png>
-Package pdftex.def Info: img/um.png used on input line 240.
+Package pdftex.def Info: img/um.png used on input line 273.
 (pdftex.def)             Requested size: 256.0748pt x 73.81372pt.
 
 
-LaTeX Warning: Reference `UlmannMatrix' on page 15 undefined on input line 241.
+LaTeX Warning: Reference `UlmannMatrix' on page 15 undefined on input line 274.
 
 
 
-LaTeX Warning: Reference `UlmannMatrix' on page 15 undefined on input line 241.
+LaTeX Warning: Reference `UlmannMatrix' on page 15 undefined on input line 274.
 
 
+[15]
 
-LaTeX Warning: Reference `longtail' on page 15 undefined on input line 248.
-
-[15 <./img/um.png>]
-
-LaTeX Warning: Reference `imdb' on page 16 undefined on input line 253.
+LaTeX Warning: Reference `imdb' on page 16 undefined on input line 283.
 
 
-LaTeX Warning: Reference `introspection' on page 16 undefined on input line 253
+LaTeX Warning: Reference `introspection' on page 16 undefined on input line 283
 .
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
-\T1/cmr/m/n/12 kat fak-to-rok-ra, rész-mát-ri-xok-ra bont-juk.
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+[16 <./img/um.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 \T1/cmr/m/n/12 át-ugor-juk az op-ti-má-lis meg-ol-dást.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
 
-LaTeX Warning: Citation 'koren' on page 17 undefined on input line 269.
+LaTeX Warning: Reference `koren' on page 17 undefined on input line 296.
+
+
+LaTeX Warning: Reference `koren' on page 17 undefined on input line 302.
 
 [17]
 
-LaTeX Warning: Reference `andrewml' on page 18 undefined on input line 274.
+LaTeX Warning: Reference `andrewml' on page 18 undefined on input line 307.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--277
+Underfull \hbox (badness 10000) in paragraph at lines 307--310
 \T1/cmr/m/n/12 kö-zött az összes pa-ra-mé-tert vál-toz-ta-tom.
  []
 
 <img/alfa.png, id=85, 953.5625pt x 424.58624pt>
 File: img/alfa.png Graphic file (type png)
  <use img/alfa.png>
-Package pdftex.def Info: img/alfa.png used on input line 280.
+Package pdftex.def Info: img/alfa.png used on input line 313.
 (pdftex.def)             Requested size: 256.0748pt x 114.01787pt.
 
 
-LaTeX Warning: Reference `learningrate' on page 18 undefined on input line 281.
+LaTeX Warning: Reference `learningrate' on page 18 undefined on input line 314.
 
 
 
-LaTeX Warning: Reference `stoch1951' on page 18 undefined on input line 286.
+LaTeX Warning: Reference `stoch1951' on page 18 undefined on input line 319.
 
 
-LaTeX Warning: Reference `asgd' on page 18 undefined on input line 287.
+LaTeX Warning: Reference `asgd' on page 18 undefined on input line 320.
 
 
-LaTeX Warning: Reference `gatsby' on page 18 undefined on input line 287.
+LaTeX Warning: Reference `gatsby' on page 18 undefined on input line 320.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 \T1/cmr/m/n/12 r¶-sí-tett vál-to-za-ta.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 \T1/cmr/m/n/12 hogy a za-jos és re-dun-dáns ada-to-kat ki-sz¶r-je.  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--288
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 
  []
 
@@ -1110,74 +1164,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--288
 File: img/sgd_bgd.png Graphic file (type png)
 
 <use img/sgd_bgd.png>
-Package pdftex.def Info: img/sgd_bgd.png used on input line 293.
+Package pdftex.def Info: img/sgd_bgd.png used on input line 326.
 (pdftex.def)             Requested size: 227.62204pt x 207.14104pt.
 
 
-LaTeX Warning: Reference `convergence' on page 19 undefined on input line 294.
+LaTeX Warning: Reference `convergence' on page 19 undefined on input line 327.
 
 
-LaTeX Warning: Reference `convergence' on page 19 undefined on input line 294.
+LaTeX Warning: Reference `convergence' on page 19 undefined on input line 327.
 
 
-LaTeX Warning: Reference `bottou' on page 19 undefined on input line 297.
+LaTeX Warning: Reference `bottou' on page 19 undefined on input line 330.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--299
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
 
  []
 
 [19 <./img/sgd_bgd.png>]
 
-LaTeX Warning: Reference `asf' on page 20 undefined on input line 314.
+LaTeX Warning: Reference `vikas' on page 20 undefined on input line 344.
 
 
-LaTeX Warning: Reference `tiobe' on page 20 undefined on input line 320.
-
-
-LaTeX Warning: Reference `odersky' on page 20 undefined on input line 323.
-
-
-LaTeX Warning: Reference `toptal' on page 20 undefined on input line 323.
+LaTeX Warning: Reference `asf' on page 20 undefined on input line 351.
 
 [20]
 
-LaTeX Warning: Reference `flink_artisans' on page 21 undefined on input line 32
-6.
+LaTeX Warning: Reference `tiobe' on page 21 undefined on input line 357.
 
 
-LaTeX Warning: Reference `spark' on page 21 undefined on input line 334.
+LaTeX Warning: Reference `odersky' on page 21 undefined on input line 360.
 
 
-LaTeX Warning: Reference `storm' on page 21 undefined on input line 334.
+LaTeX Warning: Reference `toptal' on page 21 undefined on input line 360.
 
 
-LaTeX Warning: Reference `infosphere' on page 21 undefined on input line 334.
+LaTeX Warning: Reference `flink_artisans' on page 21 undefined on input line 36
+3.
+
+[21]
+
+LaTeX Warning: Reference `spark' on page 22 undefined on input line 371.
 
 
-LaTeX Warning: Reference `ingestion' on page 21 undefined on input line 334.
+LaTeX Warning: Reference `storm' on page 22 undefined on input line 371.
 
 
-Overfull \hbox (9.28864pt too wide) in paragraph at lines 334--336
+LaTeX Warning: Reference `infosphere' on page 22 undefined on input line 371.
+
+
+LaTeX Warning: Reference `ingestion' on page 22 undefined on input line 371.
+
+
+Overfull \hbox (9.28864pt too wide) in paragraph at lines 371--373
 []\T1/cmr/m/n/12 Az ed-dig el-ter-jedt meg-ol-dá-sok több-sé-gé-ben csak kö-te-
 gelt (Apache Spark) []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--336
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
 
  []
 
-[21] <img/flink.png, id=103, 386.44376pt x 301.125pt>
+<img/flink.png, id=103, 386.44376pt x 301.125pt>
 File: img/flink.png Graphic file (type png)
  <use img/flink.png>
-Package pdftex.def Info: img/flink.png used on input line 347.
+Package pdftex.def Info: img/flink.png used on input line 384.
 (pdftex.def)             Requested size: 227.62204pt x 177.36813pt.
 
 
-LaTeX Warning: Reference `flink' on page 22 undefined on input line 348.
+LaTeX Warning: Reference `flink' on page 22 undefined on input line 385.
 
-[22 <./img/flink.png>] (./intro.aux)
+[22]
+
+LaTeX Warning: Reference `mldebt' on page 23 undefined on input line 395.
+
+
+LaTeX Warning: Reference `mllib' on page 23 undefined on input line 395.
+
+
+LaTeX Warning: Reference `scikit' on page 23 undefined on input line 395.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
+\T1/cmr/m/n/12 scikit-learn.[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
+
+ []
+
+
+LaTeX Warning: Reference `sciapi' on page 23 undefined on input line 397.
+
+[23 <./img/flink.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 406.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [24] (./intro.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1191,13 +1278,13 @@ Package logreq Info: Writing requests to 'intro.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9884 strings out of 493089
- 160689 string characters out of 6134842
- 583227 words of memory out of 5000000
- 13232 multiletter control sequences out of 15000+600000
- 13183 words of font info for 34 fonts, out of 8000000 for 9000
+ 12162 strings out of 493089
+ 190434 string characters out of 6134842
+ 631256 words of memory out of 5000000
+ 15477 multiletter control sequences out of 15000+600000
+ 14266 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,5n,35p,1266b,911s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,6n,44p,1266b,1249s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -1211,11 +1298,12 @@ xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on intro.pdf (22 pages, 1014152 bytes).
+15/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on intro.pdf (24 pages, 1053094 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 161 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
