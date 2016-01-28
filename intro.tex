@@ -251,18 +251,16 @@ Nem felügyelt tanítás esetén adottak: $(x_1, x_2, ..., x_n)$ adataink, és n
 Egyszerűbb esetekben, ahol az bemenet sorrend irreleváns, lehet modellt építeni az adatra, ahol $(x_1, x_2, ...)$ az adatsorunk, és ezek függetlenül de egyöntetűen származnak a $P(x)^2$-ból.~\ref{unsupervised}
 
 \subsection{Ajánlórendszerek}
-Az ajánlórendszerek olyan, főként webes rendszerek, ahol a különböző forrásból származó adatok alapján ajánlunk olyan lehetőségeket a felhasználóknak, ami nagy valószínűséggel megfelel a preferenciájának. Például:
+Amikor bemegyünk egy könyvesboltba, többféle módon is választhatunk egyes könyvek közül. Vannak kiemelt könyvek, amikre nagy az érdeklődés, ezért a könyvesbolt jobban reklámozza ezeket. Személyes ajánlásra nincs lehetőség, a választék korlátozott, erőforrás hiányában az összes könyvnek csak egy szűk szeletét mutatja meg egy könyvesbolt. Ezzel szemben egy online bolt bármit ajánlhat, ami létezhet, nem csak a populárisabbakat, hanem a kevésbé keresetteket is. Ezt a megkülönböztetést nevezzük \textsl{hosszú farok}-nak~\ref{longtail}, és ez az, ami létrehozta az ajánlórendszerek igényét. Muszáj ajánlanunk a felhasználónak termékeket --mivel nincs olyan nyilvánvaló módon prezentálva, mint a fizikai boltoknál-- ahhoz, hogy nagyobb eséllyel vásároljon belőlük. \linebreak
+
+Az ajánlórendszereket definiálhatjuk olyan, főként webes rendszernek, ahol a különböző forrásból származó adatok alapján ajánlunk olyan lehetőségeket a felhasználóknak, ami nagy valószínűséggel megfelel a preferenciájának. Például:
 \begin{itemize}
 \item Youtube, ahol az nézettségi történet alapján kapja az ajánlásokat a felhasználó
 \item Amazon, ahol az a cél, hogy a felhasználónak olyan termékeket ajánljunk, amit a hozzá hasonló felhasználók (k-legközelebbi analízis segítségével) is preferálnak. ~\ref{knearest}
 \end{itemize}
 Két fő fajtáját különböztetjük meg az ajánló rendszereknek. A Content-based (tartalom alapú) ahol az item tulajdonságait vizsgáljuk, illetve a Collaborative Filtering (együttműködésen alapuló szűrés), ahol a hasonló érdeklődésű felhasználóknak nyújtott ajánlásokat vesszük alapul. \linebreak
 
-Az általam vizsgált Collaborative Filtering-en alapuló ajánláshoz szükségünk van egy modellre (mátrix faktorizáció), egy célfüggvényre aminek a minimumát keressük (RMSE) illetve egy algoritmusra (DSGD).
-
-\subsubsection{Hosszú farok}
-
-Amikor bemegyünk egy könyvesboltba, többféle módon is választhatunk egyes könyvek közül. Vannak kiemelt könyvek, amikre nagy az érdeklődés, ezért a könyvesbolt jobban reklámozza ezeket. Személyes ajánlásra nincs lehetőség, a választék korlátozott, erőforrás hiányában az összes könyvnek csak egy szűk szeletét mutatja meg egy könyvesbolt. Ezzel szemben egy online bolt bármit ajánlhat, ami létezhet, nem csak a populárisabbakat, hanem a kevésbé keresetteket is. Ezt a megkülönböztetést nevezzük \textsl{hosszú farok}-nak~\ref{longtail}, és ez az, ami létrehozta az ajánlórendszerek igényét. Muszáj ajánlanunk a felhasználónak termékeket --mivel nincs olyan nyilvánvaló módon prezentálva, mint a fizikai boltoknál-- ahhoz, hogy nagyobb eséllyel vásároljon belőlük.
+Az általam vizsgált Collaborative Filtering-en alapuló ajánláshoz szükségünk van egy modellre (mátrix faktorizáció), egy célfüggvényre aminek a minimumát keressük (RMSE) illetve egy algoritmusra (SGD).
 
 \subsubsection{Rating mátrix}
 
@@ -280,8 +278,8 @@ Célunk az, hogy hiányzó értékeket a mátrixban minél jobban megjósoljuk. 
 \subsubsection{Rating mátrix feltöltése}
 Rating mátrix nélkül nem lehetséges a felhasználóknak ajánlattétel. Ahhoz, hogy feltudjuk tölteni, két általános megközelítés létezik.
 \begin{enumerate}
-\item Megkérdezzük a felhasználót a véleményéről (pl.: IMDb, ahol a felhasználók a filmeket értékelhetik egy 1-10-es skálán)~\ref{imdb}: Ebben az esetben a sikerességünk limitált, mivel a felhasználónak nem származik rövid távon gazdasági előnye abból, hogy értékel (természetesen, ha minden film után reális értékelést adna, akkor hosszú távon jobb ajánlásokat kapna). Másrészt az emberi irracionalitás miatt előfordulhat, hogy részrehajlóan (akár pozitív, akár negatív irányban) értékel, ami eltorzíthatja a rating mátrixot. ~\ref{introspection}
-\item Histórikus adatokat elemzünk: ebben az esetben azt vizsgáljuk, hogy a felhasználó megtekintette/megvette (implicit feedback) az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a rating mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak {0, 1} intervallum skálán dolgozunk.
+\item \textsl{Explicit:} megkérdezzük a felhasználót a véleményéről (pl.: IMDb, ahol a felhasználók a filmeket értékelhetik egy 1-10-es skálán)~\ref{imdb}: Ebben az esetben a sikerességünk limitált, mivel a felhasználónak nem származik rövid távon gazdasági előnye abból, hogy értékel (természetesen, ha minden film után reális értékelést adna, akkor hosszú távon jobb ajánlásokat kapna). Másrészt az emberi irracionalitás miatt előfordulhat, hogy részrehajlóan (akár pozitív, akár negatív irányban) értékel, ami eltorzíthatja a rating mátrixot. ~\ref{introspection}
+\item \textsl{Implicit:} Historikus adatokat elemzünk, azt vizsgáljuk, hogy a felhasználó megtekintette/megvette (implicit feedback) az adott terméket. Ha igen, explicit 1-el töltjük fel a mátrixot, ha nem akkor 0-val. Tehát, ha megveszünk (vagy csak megnézünk) egy könyvet az Amazonon, akkor 1-el fogja értékelni a rating mátrixban az algoritmus. Így kiküszöbölhetjük azt, hogy a felhasználó, nem szeretne vagy nem tud helyesen értékelni. Hátránya, hogy nehéz súlyozni a különböző véleményeket, mivel csak {0, 1} intervallum skálán dolgozunk.
 \end{enumerate}
 
 \subsubsection{Mátrix faktorizáció}
@@ -299,11 +297,11 @@ Alapvető probléma a ma létező ajánló rendszereknél az explicitség (felha
 \item Nincs negatív értékelés, ezért az értékelés hiányát negatív súllyal kell számításba vennünk.
 \end{itemize}
 
-Yahoo és AT\&T \ref{koren} által kidolgozott metódus alapján a bevezetünk $P_{ui}$ változót, ami a pozitív (=1) vagy negatív (=0) kapcsolatot fejezi ki, illetve $C_{ui}$ változót, ami a $P_{ui}$-be "vetett" bizalom. Legyen $P_{ui} = 1$, ha $r_{ui}\geq1$ egyébként 0. $C_{ui}$ pedig növekvő függvénye $r_{ui}$-nek, pl.: $C_{ui}=1+\alpha*r_{ui}$.
+Yahoo és AT\&T \ref{koren} által kidolgozott metódus alapján (implicit ALS) a bevezetünk $P_{ui}$ változót, ami a pozitív (1) vagy negatív (0) kapcsolatot fejezi ki, illetve $C_{ui}$ változót, ami a $P_{ui}$-be "vetett" bizalom. Legyen $P_{ui} = 1$, ha $r_{ui}\geq1$ egyébként 0. $C_{ui}$ pedig növekvő függvénye $r_{ui}$-nek, pl.: $C_{ui}=1+\alpha*r_{ui}$.
 
 \subsubsection{Gradiens leszállás}
 
-Ahhoz, hogy nagy adatmennyiségben a lehető legkevesebb költséggel (idő, számítási) tudjunk dolgozni, különböző optimalizációs eljárásokat alkalmazunk. A dolgozatomban vizsgált gradiens leszállás egy olyan metódus, aminek a feladata, hogy egy általában konvex célfüggvény lokális (vagy optimális esetben globális) minimumát megtalálja. Legyen $J(\theta)$ a célfüggvény, aminek a minimumát keressük, $\alpha$ a tanulási ráta és $j=0, 1, ..., n$ pedig a függvény paraméterei:
+A dolgozatomban vizsgált gradiens leszállás egy olyan metódus, aminek a feladata, hogy egy általában konvex célfüggvény lokális (vagy optimális esetben globális) minimumát megtalálja. Legyen $J(\theta)$ a célfüggvény, aminek a minimumát keressük, $\alpha$ a tanulási ráta és $j=0, 1, ..., n$ pedig a függvény paraméterei:
 \[\theta_j:=\theta_j-\alpha\sum\limits_{i=1}^n\frac{\delta}{\delta\theta_j}J(\theta)\]~\ref{andrewml}
 Veszek egy kezdeti véletlenszerű értéket, ami a függvény paraméter(einek) értéke lesz. Az algoritmus megvizsgálja a paraméterek gradiensét (parciális deriváltját), ami megadja, hogy milyen irányban kell csökkentenem a paramétert ahhoz, hogy a célfüggvényem is csökkenjen. Ezután kiválasztok egy lépésközt (tanulási ráta), ami megadja, hogy mekkora mértékben változtatom a paramétereket. Addig ismétlem a folyamatot, míg konvergenciára nem jutok vagy elérem az előre definiált $\epsilon$ küszöböt. Fontos, hogy két ismétlés (update) között az összes paramétert változtatom. \linebreak
 Az $\alpha$ tanulási ráta megadja, hogy mekkora lépésközökkel operál az algoritmusom, tehát mekkorát csökkentek (vagy növelek) az adott változóm értékén. Ha túl nagyra veszem, akkor lehet, hogy váltakozva fogok divergálni és konvergálni, míg ha túl kicsire veszem, lehet, hogy csak a lokális minimumot találom meg.
@@ -334,14 +332,14 @@ Az SGD ajánló rendszereknél használt modellje:
 
 \[\sum\limits_{u,i} = (r_{ui}-P_{u}Q_{u}^T)^2 + \lambda (\parallel P_{u}\parallel^2 +\parallel Q_{u}\parallel^2)\]
 
-Vegyük észre a squared norm-ot ami az ún. regularizációs kifejezés, ami a túltanulást hivatott megakadályozni, $\lambda$ a regularizációs koefficiens. Az algoritmus pedig a következőképpen működik egy iterációnál: 
+Vegyük észre a jobb oldali négyzetes kifejezést, ami az ún. regularizációs kifejezés, ami a túltanulást hivatott megakadályozni, $\lambda$ a regularizációs koefficiens. Az algoritmus pedig a következőképpen működik egy iterációnál: 
 
 \[(u, i) \leftarrow rand \]
 \[P_{u} \leftarrow P_{u} - \alpha((r_{ui}-P_{u}Q_{u}^T)Q_{i} - \lambda P_{u})\]
 \[Q_{i} \leftarrow Q_{i} - \alpha((r_{ui}-P_{u}Q_{u}^T)P_{u} - \lambda Q_{i})\]
 
 \subsubsection{Célfüggvény}
-A gradiens leszállásnál láthattunk egy példát a célfüggvényre. A célfüggvények lényege, hogy kiértékelési metrikaként működjenek, lehetőséget adjanak arra, hogy értékelni tudjuk az implementált algoritmusunkat. Az ajánlórendszereknél az egyik leggyakrabban használt célfüggvény (melynek a minimumát keressük) a Root Mean Square Error, ami a függvény mért és becsült adatok négyzetes átlagának hibáját vizsgálja. Előnye, hogy a mért és ajánlott értékeket egy dimenzióban vizsgálja~\ref{vikas}:  
+A gradiens leszállásnál láthattunk egy példát a célfüggvényre. Az ajánlórendszereknél az egyik leggyakrabban használt célfüggvény (melynek a minimumát keressük) a Root Mean Square Error, ami a függvény mért és becsült adatok négyzetes átlagának hibáját vizsgálja. Előnye, hogy a mért és ajánlott értékeket egy dimenzióban vizsgálja, így megkönnyítve a kiértékelést~\ref{vikas}:  
 
 \[RMSE =   \sqrt{\frac{ \sum_{\{u,i\}} (P_{u,i} - r_{u,i})^2}{N}}\] 
 
@@ -394,7 +392,7 @@ A kötegelt feldolgozást egy, az adatfolyam specifikus részének tekinti, így
 
 A Flinkben használt FlinkML (gépi tanulás, machine learning) egy olyan keretrendszer a Flinkhez, mely biztosítja a skálázható gépi tanulás eszközöket. Tervezése és megvalósítása során fő szempont, hogy minimálisra redukálják a "glue code"-ot, amely az end-to-end gépi tanulás rendszerekben lévő technológia megoldások összekötésénél járulékos. Ennek a glue code-nak a csökkentésével hozzájárulnak a manapság széles körben elterjedt technológiai adósság (technical debt) csökkentéséhez, amely egy idő után feleslegesen megnöveli a projekt és kódbázis komplexitását.\ref{mldebt} E mellett biztosítják, hogy Flink tartalmazzon olyan adatkezelő lehetőségeket, melyek biztosítják az adatfeldolgozást, adatmanipulációt és eredmény kiértékelését a keretrendszer korlátain belül. Szempont volt még a fejlesztés során, hogy a szélesebb körben elterjedt, már ismert terminológiát és ötleteket használják, ezzel lecsökkentve a tanulási görbét. Ilyen keretrendszerek pl.: Apache Spark-ban használt MLlib\ref{mllib} illetve a Python-hoz használt tudományos körökben is elismert scikit-learn.\ref{scikit} \linebreak
 
-A képesség, hogy több művelete egy sorozatba kapcsoljunk (pipeline) egy olyan elvárás, amit manapság minden modern gépi tanulással foglalkozó keretrendszernek tudnia kell. Ilyen művelet sorozat esetén a bemenő adatunk lehetnek adatok, vagy egy megelőző művelet sorozat kimenete. A kimenetünk pedig a transzformált adat, melyet használhatunk elemzéshez, vagy tovább adhatjuk egy következő feldolgozási rétegnek.  A könnyű kezelhetőséget és alkalmazásprogramozási interfészt a scikit-learnből\ref{sciapi} ismert módon implementálták: 
+A képesség, hogy több műveletet egy sorozatba kapcsoljunk (pipeline) egy olyan elvárás, amit manapság minden modern gépi tanulással foglalkozó keretrendszernek tudnia kell. Ilyen művelet sorozat esetén a bemenő adatunk lehetnek adatok, vagy egy megelőző művelet sorozat kimenete. A kimenetünk pedig a transzformált adat, melyet használhatunk elemzéshez, vagy tovább adhatjuk egy következő feldolgozási rétegnek.  A könnyű kezelhetőséget és alkalmazásprogramozási interfészt a scikit-learnből\ref{sciapi} ismert módon implementálták: 
 \begin{itemize}
 \item Estimator, az ősosztály, mely tartalmazza a fit() metódust, ami a modell tanítását végzi
 \item Transformer, amely az átalakító műveleteket végzi a bemeneten
