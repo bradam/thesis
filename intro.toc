@@ -1,3 +1,79 @@
-\select@language {magyar} \contentsline {section}{\numberline {1}Bevezet\IeC {\'e}s}{1}
-\select@language {magyar} \contentsline {section}{\numberline {2}G\IeC {\'e}pi tanul\IeC {\'a}s}{1}
-\select@language {magyar} \contentsline {section}{\numberline {3}Aj\IeC {\'a}nl\IeC {\'o}rendszerek}{1}
+\select@language {magyar} \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {1}Bevezet\IeC {\'e}s}{2}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {2}A dolgozat c\IeC {\'e}lja}{3}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {3}Elosztotts\IeC {\'a}g}{3}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1}Hibat\IeC {\H u}r\IeC {\'e}s}{5}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2}Google f\IeC {\'a}jl rendszer}{6}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3}CAP t\IeC {\'e}tel}{7}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4}P\IeC {\'a}rhuzamos k\IeC {\"o}tegelt adatfeldolgoz\IeC {\'a}s}{8}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.5}MapReduce}{8}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.6}Adatfolyam alap\IeC {\'u} feldolgoz\IeC {\'a}s}{9}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.7}Lambda architekt\IeC {\'u}ra}{10}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.8}Adatfeldolgoz\IeC {\'o} mint\IeC {\'a}zatok}{12}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.8.1}K\IeC {\"o}tegelt feldolgoz\IeC {\'a}s v\IeC {\'e}ges adaton}{12}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.8.2}K\IeC {\"o}tegelt feldolgoz\IeC {\'a}s v\IeC {\'e}gtelen adaton}{13}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {paragraph}{R\IeC {\"o}gz\IeC {\'\i }tett windowing}{13}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {paragraph}{Sessionn\IeC {\'e}l}{13}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {3.8.3}Adatfolyam feldolgoz\IeC {\'a}s v\IeC {\'e}gtelen adaton}{13}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {paragraph}{Id\IeC {\H o}f\IeC {\"u}ggetlen feldolgoz\IeC {\'a}s}{13}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {paragraph}{K\IeC {\"o}zel\IeC {\'\i }t\IeC {\H o} algoritmusok}{13}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {paragraph}{Windowing}{14}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {4}G\IeC {\'e}pi tanul\IeC {\'a}s}{14}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1}Fel\IeC {\"u}gyelt tan\IeC {\'\i }t\IeC {\'a}s}{15}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2}Nem fel\IeC {\"u}gyelt tan\IeC {\'\i }t\IeC {\'a}s}{15}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3}Aj\IeC {\'a}nl\IeC {\'o}rendszerek}{16}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.1}Rating m\IeC {\'a}trix}{16}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.2}Egy\IeC {\"u}ttm\IeC {\H u}k\IeC {\"o}d\IeC {\'e}sen alapul\IeC {\'o} sz\IeC {\H u}r\IeC {\'e}s}{17}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.3}M\IeC {\'a}trix faktoriz\IeC {\'a}ci\IeC {\'o}}{18}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.4}Rating m\IeC {\'a}trix felt\IeC {\"o}lt\IeC {\'e}se}{19}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.5}ALS}{19}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.6}Gradiens lesz\IeC {\'a}ll\IeC {\'a}s}{20}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.7}Sztochasztikus Gradiens lesz\IeC {\'a}ll\IeC {\'a}s}{21}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.8}C\IeC {\'e}lf\IeC {\"u}ggv\IeC {\'e}ny}{23}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {5}Megval\IeC {\'o}s\IeC {\'\i }t\IeC {\'a}s}{23}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {5.1}Java, Scala}{23}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {paragraph}{Scala}{23}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {5.2}Flink}{24}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {5.3}Flink DataStream}{25}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {5.4}FlinkML motiv\IeC {\'a}ci\IeC {\'o}, tervez\IeC {\'e}s}{26}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {5.5}Elosztott sztochasztikus gradiens lesz\IeC {\'a}ll\IeC {\'a}s}{27}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {6}Fejleszt\IeC {\'e}si lehet\IeC {\H o}s\IeC {\'e}gek}{27}

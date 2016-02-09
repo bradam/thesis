@@ -1,0 +1,1125 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{flink}{online}{}
+  \field{sortinit}{A}
+  \field{title}{Apache Flink}
+  \verb{url}
+  \verb http://flink.apache.org
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{microbatch}{online}{}
+  \field{sortinit}{A}
+  \field{title}{Apache Storm Design Pattern—Micro Batching}
+  \verb{url}
+  \verb http://hortonworks.com/blog/apache-storm-design-pattern-micro-batching/
+  \endverb
+  \field{urlday}{17}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{mckinsey}{online}{}
+  \field{sortinit}{B}
+  \field{title}{Big data: The next frontier for innovation, competition, and
+  productivity}
+  \verb{url}
+  \verb http://www.mckinsey.com/insights/business_technology/big_data_the_next_
+  \verb frontier_for_innovation
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{bottou}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bottou}{B.}%
+     {Léon}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BL1}
+  \strng{fullhash}{BL1}
+  \field{sortinit}{B}
+  \field{title}{Large-Scale Machine Learning with Stochastic Gradient Descent}
+  \field{year}{2010}
+\endentry
+
+\entry{sgd}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bottou}{B.}%
+     {Léon}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BL1}
+  \strng{fullhash}{BL1}
+  \field{sortinit}{B}
+  \field{title}{Stochastic Gradient Descent Tricks}
+  \verb{url}
+  \verb http://research.microsoft.com/pubs/192769/tricks-2012.pdf
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{cap}{online}{}
+  \field{sortinit}{B}
+  \field{title}{Brewer's Conjecture and the Feasibility of Consistent,
+  Available, Partition-Tolerant Web Services}
+  \verb{url}
+  \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.20.1495&rep=re
+  \verb p1&type=pdf
+  \endverb
+  \field{urlday}{30}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{sciapi}{article}{}
+  \name{author}{15}{}{%
+    {{}%
+     {Buitinck}{B.}%
+     {Lars}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Louppe}{L.}%
+     {Gilles}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Blondel}{B.}%
+     {Mathieu}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pedregosa}{P.}%
+     {Fabian}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mueller}{M.}%
+     {Andreas}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Grisel}{G.}%
+     {Olivier}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Niculae}{N.}%
+     {Vlad}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Prettenhofer}{P.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gramfort}{G.}%
+     {Alexandre}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Grobler}{G.}%
+     {Jaques}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Layton}{L.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {VanderPlas}{V.}%
+     {Jake}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Joly}{J.}%
+     {Arnaud}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Holt}{H.}%
+     {Brian}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Varoquaux}{V.}%
+     {Gaél}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BL+1}
+  \strng{fullhash}{BLLGBMPFMAGONVPPGAGJLRVJJAHBVG1}
+  \field{sortinit}{B}
+  \field{title}{{API} design for machine learning software: experiences from
+  the scikit-learn project}
+  \verb{url}
+  \verb http://arxiv.org/abs/1309.0238
+  \endverb
+  \field{volume}{abs/1309.0238}
+  \field{journaltitle}{CoRR}
+  \field{year}{2013}
+\endentry
+
+\entry{ecap}{online}{}
+  \field{sortinit}{C}
+  \field{title}{CAP Twelve Years Later: How the "Rules" Have Changed}
+  \verb{url}
+  \verb http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have
+  \verb -changed
+  \endverb
+  \field{urlday}{30}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{andrewml}{online}{}
+  \field{sortinit}{C}
+  \field{title}{CS229 Lecture notes}
+  \verb{url}
+  \verb http://cs229.stanford.edu/notes/cs229-notes1.pdf
+  \endverb
+  \field{urlday}{21}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{mapreduce}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Dean}{D.}%
+     {Jeffrey}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ghemawat}{G.}%
+     {Sanjay}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {USENIX Association}%
+  }
+  \strng{namehash}{DJGS1}
+  \strng{fullhash}{DJGS1}
+  \field{sortinit}{D}
+  \field{booktitle}{Proceedings of the 6th Conference on Symposium on Opearting
+  Systems Design \& Implementation - Volume 6}
+  \field{pages}{10\bibrangedash 10}
+  \field{series}{OSDI'04}
+  \field{title}{MapReduce: Simplified Data Processing on Large Clusters}
+  \verb{url}
+  \verb http://dl.acm.org/citation.cfm?id=1251254.1251264
+  \endverb
+  \field{year}{2004}
+\endentry
+
+\entry{ucl}{online}{}
+  \field{sortinit}{D}
+  \field{title}{Distributed System Principles}
+  \verb{url}
+  \verb http://www0.cs.ucl.ac.uk/staff/ucacwxe/lectures/ds98-99/dsee3.pdf
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{introspection}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Emily~Pronin}{E.~P.}%
+     {Matthew B.~Kugler}{M.~B.~K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{EPMBK1}
+  \strng{fullhash}{EPMBK1}
+  \field{sortinit}{E}
+  \field{title}{Valuing thoughts, ignoring behavior: The introspection illusion
+  as a source of the bias blind spot}
+  \list{institution}{1}{%
+    {Princeton University}%
+  }
+  \field{journaltitle}{Journal of Experimental Social Psychology}
+  \field{year}{2006}
+\endentry
+
+\entry{unsupervised}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ghahramani}{G.}%
+     {Zoubin}{Z.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GZ1}
+  \strng{fullhash}{GZ1}
+  \field{sortinit}{G}
+  \field{title}{Unsupervised Learning}
+  \verb{url}
+  \verb http://mlg.eng.cam.ac.uk/zoubin/papers/ul.pdf
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{stoch1951}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Herbert~Robbins}{H.~R.}%
+     {Sutton~Monro}{S.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HRSM1}
+  \strng{fullhash}{HRSM1}
+  \field{sortinit}{H}
+  \field{title}{A Stochastic Approximation Method}
+  \field{journaltitle}{The Annals of Mathematical Statistics}
+  \field{year}{1951}
+\endentry
+
+\entry{toptal}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hicks}{H.}%
+     {Matt}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HM1}
+  \strng{fullhash}{HM1}
+  \field{sortinit}{H}
+  \field{title}{Why Should I Learn Scala?}
+  \verb{url}
+  \verb http://www.toptal.com/scala/why-should-i-learn-scala
+  \endverb
+  \field{urlday}{05}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{asf}{online}{}
+  \field{sortinit}{H}
+  \field{title}{How Apache Flink enables new streaming applications}
+  \verb{url}
+  \verb https://projects.apache.org/projects.html?language/
+  \endverb
+  \field{urlday}{05}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{fraud}{online}{}
+  \field{sortinit}{H}
+  \field{title}{How Big Data is Revolutionizing Fraud Detection in Financial
+  Services}
+  \verb{url}
+  \verb http://www.pactera.com/resources/blog/how-big-data-is-revolutionizing-f
+  \verb raud-detection-in-financial-services/
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{infosphere}{online}{}
+  \field{sortinit}{I}
+  \field{title}{IBM InfoSphere Streams}
+  \verb{url}
+  \verb http://www-03.ibm.com/software/products/en/ibm-streams
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{imdb}{online}{}
+  \field{sortinit}{I}
+  \field{title}{IMDb Votes/Ratings Top Frequently Asked Questions}
+  \verb{url}
+  \verb http://www.imdb.com/help/show_leaf?votestopfaq
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{brk}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Jackson}{J.}%
+     {William}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JW1}
+  \strng{fullhash}{JW1}
+  \field{sortinit}{J}
+  \field{title}{Big Data Disease Breakthroughs}
+  \verb{url}
+  \verb http://www.informationweek.com/government/big-data-analytics/big-data-d
+  \verb isease-breakthroughs/d/d-id/1316310
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{cocke}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {J.Cocke}{J.}%
+     {D.S.~Slotnick}{D.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JDS1}
+  \strng{fullhash}{JDS1}
+  \field{sortinit}{J}
+  \field{title}{THE USE OF PARALLELISM IN NUMERICAL CALCULATIONS}
+  \list{institution}{1}{%
+    {IBM RESEARCH CENTER}%
+  }
+  \field{year}{1958}
+\endentry
+
+\entry{knearest}{online}{}
+  \field{sortinit}{K}
+  \field{title}{k-legközelebbi szomszéd modell}
+  \verb{url}
+  \verb https://mialmanach.mit.bme.hu/fogalomtar/k-legkozelebbi_szomszed_modell
+  \endverb
+  \field{urlday}{22}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{chandy}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {K.~MANI~CHANDY}{K.~M.~C.}%
+     {LESLIE~LAMPORT}{L.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KMCLL1}
+  \strng{fullhash}{KMCLL1}
+  \field{sortinit}{K}
+  \field{title}{Distributed Snapshots: Determining Global States of Distributed
+  Systems}
+  \verb{url}
+  \verb http://research.microsoft.com/en-us/um/people/lamport/pubs/chandy.pdf
+  \endverb
+  \field{year}{1985}
+\endentry
+
+\entry{korenmf}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Koren}{K.}%
+     {Yehuda}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bell}{B.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Volinsky}{V.}%
+     {Chris}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KYBRVC1}
+  \strng{fullhash}{KYBRVC1}
+  \field{sortinit}{K}
+  \field{title}{MATRIX FACTORIZATION TECHNIQUES FOR RECOMMENDER SYSTEMS}
+  \field{year}{2009}
+\endentry
+
+\entry{lambda}{online}{}
+  \field{sortinit}{L}
+  \field{title}{Lambda Architecture}
+  \verb{url}
+  \verb http://lambda-architecture.net
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{3v}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Laney}{L.}%
+     {Doug}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LD1}
+  \strng{fullhash}{LD1}
+  \field{sortinit}{L}
+  \field{title}{Application Delivery Strategies}
+  \verb{url}
+  \verb http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Managem
+  \verb ent-Controlling-Data-Volume-Velocity-and-Variety.pdf
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{scikit}{online}{}
+  \field{sortinit}{M}
+  \field{title}{Machine Learning in Python}
+  \verb{url}
+  \verb http://scikit-learn.org/stable/
+  \endverb
+  \field{urlday}{27}
+  \field{urlmonth}{01}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{mllib}{online}{}
+  \field{sortinit}{M}
+  \field{title}{Machine Learning Library (MLlib) Guide}
+  \verb{url}
+  \verb http://spark.apache.org/docs/latest/mllib-guide.html
+  \endverb
+  \field{urlday}{27}
+  \field{urlmonth}{01}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{ml}{online}{}
+  \field{sortinit}{M}
+  \field{title}{Machine Learning: What it is and why it matters}
+  \verb{url}
+  \verb http://www.sas.com/en_us/insights/analytics/machine-learning.html
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{balazinska}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Magdalena~Balazinska}{M.~B.}%
+     {Mehul A.~Shah}{M.~A.~S.}%
+     {}{}%
+     {Jeong-Hyon~Hwang}{J.-H.~H.}}%
+  }
+  \strng{namehash}{MBJHHMAS1}
+  \strng{fullhash}{MBJHHMAS1}
+  \field{sortinit}{M}
+  \field{title}{Fault-tolerance and high availability in data stream management
+  systems}
+  \verb{url}
+  \verb https://homes.cs.washington.edu/~magda/encyclopedia-short.pdf
+  \endverb
+  \field{year}{2009}
+\endentry
+
+\entry{batch}{online}{}
+  \field{sortinit}{M}
+  \field{title}{Mainframes working after hours: Batch processing}
+  \verb{url}
+  \verb http://www-01.ibm.com/support/knowledgecenter/#!/zosbasics/com.ibm.zos.
+  \verb zmainframe/zconc_batchproc.htm
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{akka}{online}{}
+  \field{sortinit}{M}
+  \field{title}{Message Delivery Reliability}
+  \verb{url}
+  \verb http://doc.akka.io/docs/akka/2.3.7/general/message-delivery-reliability
+  \verb .html
+  \endverb
+  \field{urlday}{06}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{overfit}{inbook}{}
+  \field{sortinit}{M}
+  \field{chapter}{CHAPTER 9. RECOMMENDATION SYSTEMS}
+  \field{title}{Mining of Massive Datasets}
+  \field{year}{2014}
+\endentry
+
+\entry{UlmannSupervised}{inbook}{}
+  \field{sortinit}{M}
+  \field{chapter}{CHAPTER 9. RECOMMENDATION SYSTEMS}
+  \field{title}{Mining of Massive Datasets}
+  \field{year}{2014}
+\endentry
+
+\entry{UlmannMatrix}{inbook}{}
+  \field{sortinit}{M}
+  \field{chapter}{CHAPTER 9. RECOMMENDATION SYSTEMS}
+  \field{title}{Mining of Massive Datasets}
+  \field{year}{2014}
+\endentry
+
+\entry{ganalitycs}{online}{}
+  \field{sortinit}{M}
+  \field{title}{Monitor activity as it happens on your site or app}
+  \verb{url}
+  \verb https://support.google.com/analytics/answer/1638635?hl=en
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{mf_databricks}{online}{}
+  \field{sortinit}{M}
+  \field{title}{Movie Recommendation with MLlib}
+  \verb{url}
+  \verb https://databricks-training.s3.amazonaws.com/movie-recommendation-with-
+  \verb mllib.html
+  \endverb
+  \field{urlday}{28}
+  \field{urlmonth}{01}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{odersky}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Odersky}{O.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{OM1}
+  \strng{fullhash}{OM1}
+  \field{sortinit}{O}
+  \field{title}{A Scalable language}
+  \verb{url}
+  \verb http://www.scala-lang.org/what-is-scala.html
+  \endverb
+  \field{urlday}{05}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{vikas}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Prem~Melville}{P.~M.}%
+     {Vikas~Sindhwani}{V.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PMVS1}
+  \strng{fullhash}{PMVS1}
+  \field{sortinit}{P}
+  \field{title}{Recommender Systems}
+  \verb{url}
+  \verb http://vikas.sindhwani.org/recommender.pdf
+  \endverb
+  \field{year}{2008}
+\endentry
+
+\entry{learningrate}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Raschka}{R.}%
+     {Sebastian}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RS1}
+  \strng{fullhash}{RS1}
+  \field{sortinit}{R}
+  \field{title}{How Machine Learning Algorithms Work Part 1}
+  \verb{url}
+  \verb http://sebastianraschka.com/Articles/2015_singlelayer_neurons.html
+  \endverb
+  \field{year}{2015}
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{iot}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Real-Time Analytics and the Internet of Things are a Perfect
+  Match}
+  \verb{url}
+  \verb https://datafloq.com/read/real-time-analytics-internet-of-things/943
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{rta}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Real-time business intelligence}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Real-time_business_intelligence
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{topn}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Realtime Trending Analysis with Approximate Algorithms}
+  \verb{url}
+  \verb https://pkghosh.wordpress.com/2014/09/10/realtime-trending-analysis-wit
+  \verb h-approximate-algorithms/
+  \endverb
+  \field{urlday}{17}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{alfa}{online}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Recht}{R.}%
+     {Benjamin}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wright}{W.}%
+     {Stephen}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RBWS1}
+  \strng{fullhash}{RBWS1}
+  \field{sortinit}{R}
+  \field{title}{Optimization}
+  \verb{url}
+  \verb https://simons.berkeley.edu/sites/default/files/docs/522/rechtslides.pd
+  \verb f
+  \endverb
+  \field{year}{2013}
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{longtail}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Rethinking the Long Tail Theory: How to Define Hits and Niches}
+  \verb{url}
+  \verb http://knowledge.wharton.upenn.edu/article/rethinking-the-long-tail-the
+  \verb ory-how-to-define-hits-and-niches/
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{ingestion}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Rework windowing logic}
+  \verb{url}
+  \verb https://issues.apache.org/jira/browse/FLINK-2674
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{7v}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rijmenam}{R.}%
+     {Mark}{M.}%
+     {van}{v.}%
+     {}{}}%
+  }
+  \strng{namehash}{RMv1}
+  \strng{fullhash}{RMv1}
+  \field{sortinit}{R}
+  \field{title}{Why The 3V’s Are Not Sufficient To Describe Big Data}
+  \verb{url}
+  \verb https://datafloq.com/read/3vs-sufficient-describe-big-data/166
+  \endverb
+  \field{urlday}{22}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{gatsby}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Roux}{R.}%
+     {Nicolas~Le}{N.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RNL1}
+  \strng{fullhash}{RNL1}
+  \field{sortinit}{R}
+  \field{title}{Using Gradient Descent for Optimization and Learning}
+  \verb{url}
+  \verb http://www.gatsby.ucl.ac.uk/teaching/courses/ml2-2008/graddescent.pdf
+  \endverb
+  \field{year}{2009}
+  \field{urlday}{06}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{gfs}{report}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Sanjay~Ghemawat}{S.~G.}%
+     {Howard~Gobioff}{H.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Leung}{L.}%
+     {Shun-Tak}{S.-T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SGHGLST1}
+  \strng{fullhash}{SGHGLST1}
+  \field{sortinit}{S}
+  \field{title}{The Google File System}
+  \list{institution}{1}{%
+    {Google}%
+  }
+  \field{year}{2003}
+\endentry
+
+\entry{mldebt}{inproceedings}{}
+  \name{author}{8}{}{%
+    {{}%
+     {Sculley}{S.}%
+     {D.}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Holt}{H.}%
+     {Gary}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Golovin}{G.}%
+     {Daniel}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Davydov}{D.}%
+     {Eugene}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Phillips}{P.}%
+     {Todd}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ebner}{E.}%
+     {Dietmar}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chaudhary}{C.}%
+     {Vinay}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Young}{Y.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SD+1}
+  \strng{fullhash}{SDHGGDDEPTEDCVYM1}
+  \field{sortinit}{S}
+  \field{booktitle}{SE4ML: Software Engineering for Machine Learning (NIPS 2014
+  Workshop)}
+  \field{title}{Machine Learning: The High Interest Credit Card of Technical
+  Debt}
+  \field{year}{2014}
+\endentry
+
+\entry{szemantika}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Shenoy}{S.}%
+     {Prashant}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SP1}
+  \strng{fullhash}{SP1}
+  \field{sortinit}{S}
+  \field{title}{Failure Semantics}
+  \verb{url}
+  \verb http://lass.cs.umass.edu/~shenoy/courses/spring13/lectures/Lec07.pdf
+  \endverb
+  \field{urlday}{06}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{ori}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Sikerhez és boldogsághoz vezet a big data}
+  \verb{url}
+  \verb http://www.origo.hu/techbazis/20151020-big-data-adatok-elemzes-siker-ce
+  \verb g-startup.html
+  \endverb
+  \field{urlday}{14}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{spark}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Spark Lightning-fast cluster computing}
+  \verb{url}
+  \verb http://spark.apache.org
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{flinkartisans}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Stephan~Ewen}{S.~E.}%
+     {Kostas~Tzoumas}{K.~T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SEKT1}
+  \strng{fullhash}{SEKT1}
+  \field{sortinit}{S}
+  \field{title}{How Apache Flink enables new streaming applications}
+  \verb{url}
+  \verb http://data-artisans.com/how-apache-flink-enables-new-streaming-applica
+  \verb tions-part-1/
+  \endverb
+  \field{urlday}{30}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{storm}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Storm}
+  \verb{url}
+  \verb http://storm.apache.org
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{flinkintro}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Streaming}
+  \verb{url}
+  \verb http://flink.apache.org/features.html
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{summingbird}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Streaming MapReduce with Scalding and Storm}
+  \verb{url}
+  \verb https://github.com/twitter/summingbird
+  \endverb
+  \field{urlday}{17}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{oria}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Tamás}{T.}%
+     {Simon}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TS1}
+  \strng{fullhash}{TS1}
+  \field{sortinit}{T}
+  \field{title}{Új korszak kezd{\H o}dött a tudományban}
+  \verb{url}
+  \verb http://www.origo.hu/tudomany/20131014-big-data-adatelemzes-tudomany-ada
+  \verb tbanyaszat-informatika.html
+  \endverb
+  \field{urlday}{14}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{2020}{online}{}
+  \field{sortinit}{T}
+  \field{title}{The Digital Universe of Opportunities: Rich Data and the
+  Increasing Value of the Internet of Things}
+  \verb{url}
+  \verb http://www.emc.com/leadership/digital-universe/2014iview/executive-summ
+  \verb ary.htm
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{tyler}{online}{}
+  \field{sortinit}{T}
+  \field{title}{The world beyond batch: Streaming 101}
+  \verb{url}
+  \verb http://radar.oreilly.com/2015/08/the-world-beyond-batch-streaming-101.h
+  \verb tml
+  \endverb
+  \field{urlday}{17}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{varian}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Thomas H.~Davenport}{T.~H.~D.}%
+     {D.J.~Patil}{D.~P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{THDDP1}
+  \strng{fullhash}{THDDP1}
+  \field{sortinit}{T}
+  \field{title}{Data Scientist: The Sexiest Job of the 21st Century}
+  \verb{url}
+  \verb https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-cent
+  \verb ury/
+  \endverb
+  \field{urlday}{29}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{tiobe}{online}{}
+  \field{sortinit}{T}
+  \field{title}{TIOBE Index for January 2016}
+  \verb{url}
+  \verb http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
+  \endverb
+  \field{urlday}{05}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{skew}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Tyler~Akidau}{T.~A.}%
+     {Craig Chambers Slava Chernyak Rafael J. Fernandez-Moctezuma Reuven Lax
+  Sam McVeety Daniel Mills Frances Perry Eric Schmidt Sam~Whittle}{C.~C. S. C.
+  R. J. F.-M. R. L. S. M. D. M. F. P. E. S. S.~W.}%
+     {}{}%
+     {Robert~Bradshaw}{R.~B.}}%
+  }
+  \strng{namehash}{TARBCCSCRJFMRLSMDMFPESSW1}
+  \strng{fullhash}{TARBCCSCRJFMRLSMDMFPESSW1}
+  \field{sortinit}{T}
+  \field{title}{The Dataflow Model: A Practical Approach to Balancing
+  Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data
+  Processing}
+  \verb{url}
+  \verb http://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf
+  \endverb
+  \field{year}{2015}
+\endentry
+
+\entry{watson}{online}{}
+  \field{sortinit}{W}
+  \field{title}{Watson – A System Designed for Answers}
+  \verb{url}
+  \verb http://www-03.ibm.com/innovation/us/engines/assets/9442_Watson_A_System
+  \verb _White_Paper_POW03061-USEN-00_Final_Feb10_11.pdf
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{hadoop}{online}{}
+  \field{sortinit}{W}
+  \field{title}{What Is Apache Hadoop?}
+  \verb{url}
+  \verb https://hadoop.apache.org/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{koren}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Yifan~Hu}{Y.~H.}%
+     {Chris~Volinsky}{C.~V.}%
+     {}{}%
+     {Yehuda~Koren}{Y.~K.}}%
+  }
+  \strng{namehash}{YHYKCV1}
+  \strng{fullhash}{YHYKCV1}
+  \field{sortinit}{Y}
+  \field{title}{Collaborative Filtering for Implicit Feedback Datasets}
+  \verb{url}
+  \verb http://yifanhu.net/PUB/cf.pdf
+  \endverb
+  \field{year}{2008}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
