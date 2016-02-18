@@ -63,7 +63,6 @@
   \strng{fullhash}{BL1}
   \field{sortinit}{B}
   \field{title}{Large-Scale Machine Learning with Stochastic Gradient Descent}
-  \field{year}{2010}
 \endentry
 
 \entry{sgd}{article}{}
@@ -178,8 +177,8 @@
   \strng{namehash}{BL+1}
   \strng{fullhash}{BLLGBMPFMAGONVPPGAGJLRVJJAHBVG1}
   \field{sortinit}{B}
-  \field{title}{{API} design for machine learning software: experiences from
-  the scikit-learn project}
+  \field{title}{API design for machine learning software: experiences from the
+  scikit-learn project}
   \verb{url}
   \verb http://arxiv.org/abs/1309.0238
   \endverb
@@ -207,6 +206,32 @@
   \verb http://cs229.stanford.edu/notes/cs229-notes1.pdf
   \endverb
   \field{urlday}{21}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{varian}{online}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Davenport}{D.}%
+     {Thomas~H.}{T.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Patil}{P.}%
+     {D.J.}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DTHPD1}
+  \strng{fullhash}{DTHPD1}
+  \field{sortinit}{D}
+  \field{title}{Data Scientist: The Sexiest Job of the 21st Century}
+  \verb{url}
+  \verb https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-cent
+  \verb ury/
+  \endverb
+  \field{urlday}{29}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
 \endentry
@@ -350,6 +375,34 @@
   \field{urlday}{15}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
+\endentry
+
+\entry{koren}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Hu}{H.}%
+     {Yifan}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Koren}{K.}%
+     {Yehuda}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Volinsky}{V.}%
+     {Chris}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HYKYVC1}
+  \strng{fullhash}{HYKYVC1}
+  \field{sortinit}{H}
+  \field{title}{Collaborative Filtering for Implicit Feedback Datasets}
+  \verb{url}
+  \verb http://yifanhu.PUB/cf.pdf
+  \endverb
+  \field{year}{2008}
 \endentry
 
 \entry{infosphere}{online}{}
@@ -1024,27 +1077,6 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{varian}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Thomas H.~Davenport}{T.~H.~D.}%
-     {D.J.~Patil}{D.~P.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{THDDP1}
-  \strng{fullhash}{THDDP1}
-  \field{sortinit}{T}
-  \field{title}{Data Scientist: The Sexiest Job of the 21st Century}
-  \verb{url}
-  \verb https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-cent
-  \verb ury/
-  \endverb
-  \field{urlday}{29}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
 \entry{tiobe}{online}{}
   \field{sortinit}{T}
   \field{title}{TIOBE Index for January 2016}
@@ -1101,22 +1133,16 @@
   \field{urlyear}{2016}
 \endentry
 
-\entry{koren}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Yifan~Hu}{Y.~H.}%
-     {Chris~Volinsky}{C.~V.}%
-     {}{}%
-     {Yehuda~Koren}{Y.~K.}}%
-  }
-  \strng{namehash}{YHYKCV1}
-  \strng{fullhash}{YHYKCV1}
-  \field{sortinit}{Y}
-  \field{title}{Collaborative Filtering for Implicit Feedback Datasets}
+\entry{hapreduce}{online}{}
+  \field{sortinit}{W}
+  \field{title}{Word Count - Hadoop Map Reduce Example}
   \verb{url}
-  \verb http://yifanhu.net/PUB/cf.pdf
+  \verb http://kickstarthadoop.blogspot.hu/2011/04/word-count-hadoop-map-reduce
+  \verb -example.html
   \endverb
-  \field{year}{2008}
+  \field{urlday}{21}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
 \endentry
 
 \lossort

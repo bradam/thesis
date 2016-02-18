@@ -13,9 +13,14 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 14452 items from 5000.
+Reallocated field_info (elt_size=4) to 14591 items from 5000.
 Database file #1: intro-blx.bib
 Database file #2: intro.bib
+I was expecting a `,' or a `}'---line 186 of file intro.bib
+ : 
+ : year = {2010}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Repeated entry---line 260 of file intro.bib
  : @online{fraud
  :              ,
@@ -834,45 +839,45 @@ Too many commas in name 1 of "Tyler Akidau, Robert Bradshaw, Craig Chambers, Sla
 while executing---line 2659 of file biblatex.bst
 Too many commas in name 1 of "Tyler Akidau, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernandez-Moctezuma, Reuven Lax, Sam McVeety, Daniel Mills, Frances Perry, Eric Schmidt, Sam Whittle" for entry skew
 while executing---line 2659 of file biblatex.bst
-You've used 67 entries,
+You've used 68 entries,
             6047 wiz_defined-function locations,
-            1383 strings with 16651 characters,
-and the built_in function-call counts, 210844 in all, are:
-= -- 5331
-> -- 15487
-< -- 2018
-+ -- 12287
-- -- 12212
-* -- 9198
-:= -- 19059
+            1385 strings with 16785 characters,
+and the built_in function-call counts, 215024 in all, are:
+= -- 5407
+> -- 15849
+< -- 2062
++ -- 12572
+- -- 12507
+* -- 9493
+:= -- 19463
 add.period$ -- 0
-call.type$ -- 67
-change.case$ -- 465
-chr.to.int$ -- 1186
-cite$ -- 132
-duplicate$ -- 21221
-empty$ -- 20825
-format.name$ -- 1711
-if$ -- 37689
+call.type$ -- 68
+change.case$ -- 468
+chr.to.int$ -- 1210
+cite$ -- 134
+duplicate$ -- 21597
+empty$ -- 21165
+format.name$ -- 1774
+if$ -- 38413
 int.to.chr$ -- 0
-int.to.str$ -- 100
+int.to.str$ -- 101
 missing$ -- 0
-newline$ -- 1109
+newline$ -- 1135
 num.names$ -- 1229
-pop$ -- 21253
+pop$ -- 21595
 preamble$ -- 1
-purify$ -- 486
+purify$ -- 494
 quote$ -- 0
-skip$ -- 8796
+skip$ -- 8951
 stack$ -- 0
-substring$ -- 5427
-swap$ -- 6693
-text.length$ -- 1718
-text.prefix$ -- 66
+substring$ -- 5527
+swap$ -- 6821
+text.length$ -- 1759
+text.prefix$ -- 67
 top$ -- 1
-type$ -- 2534
+type$ -- 2572
 warning$ -- 0
-while$ -- 1502
+while$ -- 1523
 width$ -- 0
-write$ -- 1041
-(There were 406 error messages)
+write$ -- 1066
+(There were 407 error messages)
