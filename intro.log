@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.1)  26 APR 2016 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.1)  26 APR 2016 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -845,13 +845,6 @@ LaTeX Info: Redefining \mit on input line 512.
 
 
 [2]
-
-LaTeX Warning: Citation 'economist' on page 3 undefined on input line 50.
-
-
-LaTeX Warning: Citation 'nature' on page 3 undefined on input line 51.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
@@ -914,10 +907,6 @@ File: img/lambda.png Graphic file (type png)
 Package pdftex.def Info: img/lambda.png used on input line 190.
 (pdftex.def)             Requested size: 256.0748pt x 138.15193pt.
 
-
-LaTeX Warning: Citation 'lambdaarch' on page 12 undefined on input line 191.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
@@ -934,10 +923,6 @@ Overfull \hbox (12.80505pt too wide) in paragraph at lines 214--215
  []
 
 [13 <./img/batch.png>]
-
-LaTeX Warning: Citation 'millwheel' on page 14 undefined on input line 227.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
@@ -1020,15 +1005,6 @@ File: img/flink.png Graphic file (type png)
 Package pdftex.def Info: img/flink.png used on input line 428.
 (pdftex.def)             Requested size: 227.62204pt x 177.36813pt.
  [25]
-
-LaTeX Warning: Citation 'streamprocessing' on page 26 undefined on input line 4
-32.
-
-
-LaTeX Warning: Citation 'datastreamapi' on page 26 undefined on input line 436.
-
-
-
 Overfull \hbox (99.35231pt too wide) in paragraph at lines 440--441
 \T1/cmr/m/n/12 transz-for-má-ci-ó-kat egy szá-lon tud-juk fut-tat-ni. $\OML/cmm
 /m/it/12 someStream:filter\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 :::\OT1/cmr/m/n/12 
@@ -1036,9 +1012,6 @@ Overfull \hbox (99.35231pt too wide) in paragraph at lines 440--441
 L/cmm/m/it/12 :startNewChain\OT1/cmr/m/n/12 ()\OML/cmm/m/it/12 :map\OT1/cmr/m/n
 /12 (\OML/cmm/m/it/12 :::\OT1/cmr/m/n/12 );$
  []
-
-
-LaTeX Warning: Citation 'kafka' on page 26 undefined on input line 442.
 
 [26 <./img/flink.png>]
 Overfull \hbox (54.80724pt too wide) in paragraph at lines 443--444
@@ -1070,64 +1043,58 @@ Package pdftex.def Info: img/linreg.png used on input line 524.
 (pdftex.def)             Requested size: 369.88582pt x 181.46803pt.
 
 [29] [30 <./img/linreg.png>] [31] [32]
-Overfull \hbox (4.57582pt too wide) in paragraph at lines 552--552
+Overfull \hbox (4.57582pt too wide) in paragraph at lines 557--557
 []\T1/cmr/m/n/12 Léon Bot-tou. \T1/cmr/bx/n/12 ?  \T1/cmr/m/n/12 Sto-chas-tic G
 ra-di-ent Des-cent Tricks\T1/cmr/bx/n/12 ? \T1/cmr/m/n/12 In: (2012). \T1/cmr/m
 /sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 http : / / research .
  []
 
 [33]
-Overfull \hbox (12.13345pt too wide) in paragraph at lines 552--552
+Overfull \hbox (4.77612pt too wide) in paragraph at lines 557--557
+[]\T1/cmr/m/it/12 Flink Da-ta-Stream API Program-ming Guide\T1/cmr/m/n/12 . \T1
+/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 https : / / ci . apache . org
+ / projects /
+ []
+
+[34]
+Overfull \hbox (12.13345pt too wide) in paragraph at lines 557--557
 []\T1/cmr/m/n/12 William Jack-son. \T1/cmr/m/it/12 Big Da-ta Di-se-a-se Bre-akt
 h-ro-ughs\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 
 http : / / www . informationweek .
  []
 
 
-Overfull \hbox (0.20784pt too wide) in paragraph at lines 552--552
+Overfull \hbox (0.20784pt too wide) in paragraph at lines 557--557
 []\T1/cmr/m/it/12 k-legközelebbi szom-széd mo-dell\T1/cmr/m/n/12 . \T1/cmr/m/sc
 /12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 https : / / mialmanach . mit . bme . h
 u / fogalomtar /
  []
 
 
-Overfull \hbox (2.39178pt too wide) in paragraph at lines 552--552
+Overfull \hbox (2.39178pt too wide) in paragraph at lines 557--557
 []\T1/cmr/m/n/12 Yehuda Ko-ren, Ro-bert Bell, and Ch-ris Vo-lin-sky. \T1/cmr/bx
 /n/12 ?  \T1/cmr/m/n/12 MAT-RIX FAC-TORI-ZA-TI-ON TECH-
  []
 
 
-Overfull \hbox (10.03609pt too wide) in paragraph at lines 552--552
+Overfull \hbox (10.03609pt too wide) in paragraph at lines 557--557
 []\T1/cmr/m/it/12 Lambda Ar-chi-tec-tu-re\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T
 1/cmr/m/n/12 : $\T1/cmtt/m/n/12 http : / / lambda -[] architecture . net$ \T1/c
 mr/m/n/12 (vi-si-ted on 12/16/2015). 
  []
 
-[34] [35] [36]
-Overfull \hbox (9.13351pt too wide) in paragraph at lines 552--552
+[35] [36]
+Overfull \hbox (9.13351pt too wide) in paragraph at lines 557--557
 []\T1/cmr/m/it/12 Watson ^^U A Sys-tem De-sign-ed for Ans-wers\T1/cmr/m/n/12 . 
 \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 http : / / www -[] 03 . ib
 m . com / innovation /
  []
 
 
-Overfull \hbox (6.06447pt too wide) in paragraph at lines 552--552
+Overfull \hbox (6.06447pt too wide) in paragraph at lines 557--557
 []\T1/cmr/m/it/12 What Is Apache Ha-do-op? \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : 
 $\T1/cmtt/m/n/12 https : / / hadoop . apache . org/$ \T1/cmr/m/n/12 (vi-si-ted 
 on 01/04/2016). 
- []
-
-
-Overfull \hbox (12.66864pt too wide) in paragraph at lines 552--552
-[]\T1/cmr/m/it/12 Word Count - Ha-do-op Map Re-du-ce Examp-le\T1/cmr/m/n/12 . \
-T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 http : / / kickstarthadoop 
-. blogspot .
- []
-
-
-Overfull \hbox (11.16368pt too wide) in paragraph at lines 552--552
-\T1/cmtt/m/n/12 hu / 2011 / 04 / word -[] count -[] hadoop -[] map -[] reduce -
-[] example . html$ \T1/cmr/m/n/12 (vi-si-ted on 12/21/2015). 
  []
 
 [37] (./intro.aux)
@@ -1144,13 +1111,13 @@ Package logreq Info: Writing requests to 'intro.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12749 strings out of 493089
- 195399 string characters out of 6134843
+ 12754 strings out of 493089
+ 195515 string characters out of 6134843
  394372 words of memory out of 5000000
- 16040 multiletter control sequences out of 15000+600000
+ 16045 multiletter control sequences out of 15000+600000
  15254 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,7n,49p,1285b,2399s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,7n,49p,1285b,2428s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -1168,7 +1135,7 @@ e/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on intro.pdf (37 pages, 1036006 bytes).
+Output written on intro.pdf (37 pages, 1037251 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  135 compressed objects within 2 object streams

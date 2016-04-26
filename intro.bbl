@@ -16,6 +16,159 @@
   {}
 \endgroup
 
+\entry{tyler}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Akidau}{A.}%
+     {Tyler}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AT1}
+  \strng{fullhash}{AT1}
+  \field{sortinit}{A}
+  \field{title}{The world beyond batch: Streaming 101}
+  \verb{url}
+  \verb http://radar.oreilly.com/2015/08/the-world-beyond-batch-streaming-101.h
+  \verb tml
+  \endverb
+  \field{urlday}{17}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{millwheel}{inproceedings}{}
+  \name{author}{10}{}{%
+    {{}%
+     {Akidau}{A.}%
+     {Tyler}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Balikov}{B.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bekiroglu}{B.}%
+     {Kaya}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chernyak}{C.}%
+     {Slava}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Haberman}{H.}%
+     {Josh}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lax}{L.}%
+     {Reuven}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {McVeety}{M.}%
+     {Sam}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mills}{M.}%
+     {Daniel}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nordstrom}{N.}%
+     {Paul}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Whittle}{W.}%
+     {Sam}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AT+1}
+  \strng{fullhash}{ATBABKCSHJLRMSMDNPWS1}
+  \field{sortinit}{A}
+  \field{booktitle}{Very Large Data Bases}
+  \field{pages}{734\bibrangedash 746}
+  \field{title}{MillWheel: Fault-Tolerant Stream Processing at Internet Scale}
+  \field{year}{2013}
+\endentry
+
+\entry{skew}{article}{}
+  \name{author}{11}{}{%
+    {{}%
+     {Akidau}{A.}%
+     {Tyler}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bradshaw}{B.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chambers}{C.}%
+     {Craig}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chernyak}{C.}%
+     {Slava}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fernandez-Moctezuma}{F.-M.}%
+     {Rafael~J.}{R.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lax}{L.}%
+     {Reuven}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {McVeety}{M.}%
+     {Sam}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mills}{M.}%
+     {Daniel}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Perry}{P.}%
+     {Frances}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schmidt}{S.}%
+     {Eric}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Whittle}{W.}%
+     {Sam}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AT+1}
+  \strng{fullhash}{ATBRCCCSFMRJLRMSMDPFSEWS1}
+  \field{sortinit}{A}
+  \field{title}{The Dataflow Model: A Practical Approach to Balancing
+  Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data
+  Processing}
+  \verb{url}
+  \verb http://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf
+  \endverb
+  \field{year}{2015}
+\endentry
+
 \entry{flink}{online}{}
   \field{sortinit}{A}
   \field{title}{Apache Flink}
@@ -36,6 +189,35 @@
   \field{urlday}{17}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
+\endentry
+
+\entry{balazinska}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Balazinska}{B.}%
+     {Magdalena}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hwang}{H.}%
+     {Jeong-Hyon}{J.-H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shah}{S.}%
+     {Mehul~A.}{M.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BMHJHSMA1}
+  \strng{fullhash}{BMHJHSMA1}
+  \field{sortinit}{B}
+  \field{title}{Fault-tolerance and high availability in data stream management
+  systems}
+  \verb{url}
+  \verb https://homes.cs.washington.edu/~magda/encyclopedia-short.pdf
+  \endverb
+  \field{year}{2009}
 \endentry
 
 \entry{mckinsey}{online}{}
@@ -199,6 +381,53 @@
   \field{urlyear}{2015}
 \endentry
 
+\entry{chandy}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Chandy}{C.}%
+     {K.~Mani}{K.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lamport}{L.}%
+     {Leslie}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CKMLL1}
+  \strng{fullhash}{CKMLL1}
+  \field{sortinit}{C}
+  \field{title}{Distributed Snapshots: Determining Global States of Distributed
+  Systems}
+  \verb{url}
+  \verb http://research.microsoft.com/en-us/um/people/lamport/pubs/chandy.pdf
+  \endverb
+  \field{year}{1985}
+\endentry
+
+\entry{cocke}{report}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Cocke}{C.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Slotnick}{S.}%
+     {D.S.}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CJSD1}
+  \strng{fullhash}{CJSD1}
+  \field{sortinit}{C}
+  \field{title}{THE USE OF PARALLELISM IN NUMERICAL CALCULATIONS}
+  \list{institution}{1}{%
+    {IBM RESEARCH CENTER}%
+  }
+  \field{year}{1958}
+\endentry
+
 \entry{andrewml}{online}{}
   \field{sortinit}{C}
   \field{title}{CS229 Lecture notes}
@@ -208,6 +437,17 @@
   \field{urlday}{21}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
+\endentry
+
+\entry{economist}{online}{}
+  \field{sortinit}{D}
+  \field{title}{Data, data everywhere}
+  \verb{url}
+  \verb http://www.economist.com/node/15557443
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{02}
+  \field{urlyear}{2016}
 \endentry
 
 \entry{varian}{online}{}
@@ -277,24 +517,75 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{introspection}{article}{}
-  \name{author}{1}{}{%
+\entry{flinkartisans}{online}{}
+  \name{author}{2}{}{%
     {{}%
-     {Emily~Pronin}{E.~P.}%
-     {Matthew B.~Kugler}{M.~B.~K.}%
+     {Ewen}{E.}%
+     {Stephan}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tzoumas}{T.}%
+     {Kostas}{K.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{EPMBK1}
-  \strng{fullhash}{EPMBK1}
+  \strng{namehash}{ESTK1}
+  \strng{fullhash}{ESTK1}
   \field{sortinit}{E}
-  \field{title}{Valuing thoughts, ignoring behavior: The introspection illusion
-  as a source of the bias blind spot}
-  \list{institution}{1}{%
-    {Princeton University}%
+  \field{title}{How Apache Flink enables new streaming applications}
+  \verb{url}
+  \verb http://data-artisans.com/how-apache-flink-enables-new-streaming-applica
+  \verb tions-part-1/
+  \endverb
+  \field{urlday}{30}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{nature}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Felice}{F.}%
+     {Frankel}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rosalind}{R.}%
+     {Reid}{R.}%
+     {}{}%
+     {}{}}%
   }
-  \field{journaltitle}{Journal of Experimental Social Psychology}
-  \field{year}{2006}
+  \strng{namehash}{FFRR1}
+  \strng{fullhash}{FFRR1}
+  \field{sortinit}{F}
+  \field{title}{Big data: Distilling meaning from data}
+  \field{journaltitle}{Nature}
+  \field{year}{2008}
+\endentry
+
+\entry{datastreamapi}{online}{}
+  \field{sortinit}{F}
+  \field{title}{Flink DataStream API Programming Guide}
+  \verb{url}
+  \verb https://ci.apache.org/projects/flink/flink-docs-master/apis/streaming/i
+  \verb ndex.html#task-chaining-and-resource-groups
+  \endverb
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{streamprocessing}{online}{}
+  \field{sortinit}{F}
+  \field{title}{Flink Stream Processing API}
+  \verb{url}
+  \verb https://ci.apache.org/projects/flink/flink-docs-release-0.8/streaming_g
+  \verb uide.html
+  \endverb
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2015}
 \endentry
 
 \entry{unsupervised}{online}{}
@@ -317,20 +608,32 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{stoch1951}{article}{}
-  \name{author}{1}{}{%
+\entry{gfs}{report}{}
+  \name{author}{3}{}{%
     {{}%
-     {Herbert~Robbins}{H.~R.}%
-     {Sutton~Monro}{S.~M.}%
+     {Ghemawat}{G.}%
+     {Sanjay}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gobioff}{G.}%
+     {Howard}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Leung}{L.}%
+     {Shun-Tak}{S.-T.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{HRSM1}
-  \strng{fullhash}{HRSM1}
-  \field{sortinit}{H}
-  \field{title}{A Stochastic Approximation Method}
-  \field{journaltitle}{The Annals of Mathematical Statistics}
-  \field{year}{1951}
+  \strng{namehash}{GSGHLST1}
+  \strng{fullhash}{GSGHLST1}
+  \field{sortinit}{G}
+  \field{title}{The Google File System}
+  \list{institution}{1}{%
+    {Google}%
+  }
+  \field{year}{2003}
 \endentry
 
 \entry{toptal}{online}{}
@@ -448,24 +751,6 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{cocke}{report}{}
-  \name{author}{1}{}{%
-    {{}%
-     {J.Cocke}{J.}%
-     {D.S.~Slotnick}{D.~S.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{JDS1}
-  \strng{fullhash}{JDS1}
-  \field{sortinit}{J}
-  \field{title}{THE USE OF PARALLELISM IN NUMERICAL CALCULATIONS}
-  \list{institution}{1}{%
-    {IBM RESEARCH CENTER}%
-  }
-  \field{year}{1958}
-\endentry
-
 \entry{knearest}{online}{}
   \field{sortinit}{K}
   \field{title}{k-legközelebbi szomszéd modell}
@@ -477,23 +762,15 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{chandy}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {K.~MANI~CHANDY}{K.~M.~C.}%
-     {LESLIE~LAMPORT}{L.~L.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{KMCLL1}
-  \strng{fullhash}{KMCLL1}
+\entry{kafka}{online}{}
   \field{sortinit}{K}
-  \field{title}{Distributed Snapshots: Determining Global States of Distributed
-  Systems}
+  \field{title}{Kafka + Flink: A practical, how-to guide}
   \verb{url}
-  \verb http://research.microsoft.com/en-us/um/people/lamport/pubs/chandy.pdf
+  \verb http://data-artisans.com/kafka-flink-a-practical-how-to/
   \endverb
-  \field{year}{1985}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2015}
 \endentry
 
 \entry{korenmf}{article}{}
@@ -529,6 +806,17 @@
   \endverb
   \field{urlday}{16}
   \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{lambdaarch}{online}{}
+  \field{sortinit}{L}
+  \field{title}{Lambda architecture}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Lambda_architecture
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{02}
   \field{urlyear}{2015}
 \endentry
 
@@ -586,25 +874,6 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{balazinska}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Magdalena~Balazinska}{M.~B.}%
-     {Mehul A.~Shah}{M.~A.~S.}%
-     {}{}%
-     {Jeong-Hyon~Hwang}{J.-H.~H.}}%
-  }
-  \strng{namehash}{MBJHHMAS1}
-  \strng{fullhash}{MBJHHMAS1}
-  \field{sortinit}{M}
-  \field{title}{Fault-tolerance and high availability in data stream management
-  systems}
-  \verb{url}
-  \verb https://homes.cs.washington.edu/~magda/encyclopedia-short.pdf
-  \endverb
-  \field{year}{2009}
-\endentry
-
 \entry{batch}{online}{}
   \field{sortinit}{M}
   \field{title}{Mainframes working after hours: Batch processing}
@@ -615,6 +884,29 @@
   \field{urlday}{16}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
+\endentry
+
+\entry{vikas}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Melville}{M.}%
+     {Prem}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sindhwani}{S.}%
+     {Vikas}{V.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MPSV1}
+  \strng{fullhash}{MPSV1}
+  \field{sortinit}{M}
+  \field{title}{Recommender Systems}
+  \verb{url}
+  \verb http://vikas.sindhwani.org/recommender.pdf
+  \endverb
+  \field{year}{2008}
 \endentry
 
 \entry{akka}{online}{}
@@ -693,22 +985,29 @@
   \field{urlyear}{2016}
 \endentry
 
-\entry{vikas}{article}{}
-  \name{author}{1}{}{%
+\entry{introspection}{article}{}
+  \name{author}{2}{}{%
     {{}%
-     {Prem~Melville}{P.~M.}%
-     {Vikas~Sindhwani}{V.~S.}%
+     {Pronin}{P.}%
+     {Emily}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kugler}{K.}%
+     {Matthew~B.}{M.~B.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{PMVS1}
-  \strng{fullhash}{PMVS1}
+  \strng{namehash}{PEKMB1}
+  \strng{fullhash}{PEKMB1}
   \field{sortinit}{P}
-  \field{title}{Recommender Systems}
-  \verb{url}
-  \verb http://vikas.sindhwani.org/recommender.pdf
-  \endverb
-  \field{year}{2008}
+  \field{title}{Valuing thoughts, ignoring behavior: The introspection illusion
+  as a source of the bias blind spot}
+  \list{institution}{1}{%
+    {Princeton University}%
+  }
+  \field{journaltitle}{Journal of Experimental Social Psychology}
+  \field{year}{2006}
 \endentry
 
 \entry{learningrate}{online}{}
@@ -837,6 +1136,27 @@
   \field{urlyear}{2015}
 \endentry
 
+\entry{stoch1951}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Robbins}{R.}%
+     {Herbert}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Monro}{M.}%
+     {Sutton}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RHMS1}
+  \strng{fullhash}{RHMS1}
+  \field{sortinit}{R}
+  \field{title}{A Stochastic Approximation Method}
+  \field{journaltitle}{The Annals of Mathematical Statistics}
+  \field{year}{1951}
+\endentry
+
 \entry{gatsby}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -856,29 +1176,6 @@
   \field{urlday}{06}
   \field{urlmonth}{01}
   \field{urlyear}{2016}
-\endentry
-
-\entry{gfs}{report}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Sanjay~Ghemawat}{S.~G.}%
-     {Howard~Gobioff}{H.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Leung}{L.}%
-     {Shun-Tak}{S.-T.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SGHGLST1}
-  \strng{fullhash}{SGHGLST1}
-  \field{sortinit}{S}
-  \field{title}{The Google File System}
-  \list{institution}{1}{%
-    {Google}%
-  }
-  \field{year}{2003}
 \endentry
 
 \entry{mldebt}{inproceedings}{}
@@ -954,18 +1251,6 @@
   \field{urlyear}{2016}
 \endentry
 
-\entry{ori}{online}{}
-  \field{sortinit}{S}
-  \field{title}{Sikerhez és boldogsághoz vezet a big data}
-  \verb{url}
-  \verb http://www.origo.hu/techbazis/20151020-big-data-adatok-elemzes-siker-ce
-  \verb g-startup.html
-  \endverb
-  \field{urlday}{14}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
 \entry{spark}{online}{}
   \field{sortinit}{S}
   \field{title}{Spark Lightning-fast cluster computing}
@@ -975,27 +1260,6 @@
   \field{urlday}{08}
   \field{urlmonth}{01}
   \field{urlyear}{2016}
-\endentry
-
-\entry{flinkartisans}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Stephan~Ewen}{S.~E.}%
-     {Kostas~Tzoumas}{K.~T.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SEKT1}
-  \strng{fullhash}{SEKT1}
-  \field{sortinit}{S}
-  \field{title}{How Apache Flink enables new streaming applications}
-  \verb{url}
-  \verb http://data-artisans.com/how-apache-flink-enables-new-streaming-applica
-  \verb tions-part-1/
-  \endverb
-  \field{urlday}{30}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{storm}{online}{}
@@ -1031,27 +1295,6 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{oria}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Tamás}{T.}%
-     {Simon}{S.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{TS1}
-  \strng{fullhash}{TS1}
-  \field{sortinit}{T}
-  \field{title}{Új korszak kezd{\H o}dött a tudományban}
-  \verb{url}
-  \verb http://www.origo.hu/tudomany/20131014-big-data-adatelemzes-tudomany-ada
-  \verb tbanyaszat-informatika.html
-  \endverb
-  \field{urlday}{14}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
 \entry{2020}{online}{}
   \field{sortinit}{T}
   \field{title}{The Digital Universe of Opportunities: Rich Data and the
@@ -1065,18 +1308,6 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{tyler}{online}{}
-  \field{sortinit}{T}
-  \field{title}{The world beyond batch: Streaming 101}
-  \verb{url}
-  \verb http://radar.oreilly.com/2015/08/the-world-beyond-batch-streaming-101.h
-  \verb tml
-  \endverb
-  \field{urlday}{17}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
 \entry{tiobe}{online}{}
   \field{sortinit}{T}
   \field{title}{TIOBE Index for January 2016}
@@ -1086,28 +1317,6 @@
   \field{urlday}{05}
   \field{urlmonth}{01}
   \field{urlyear}{2016}
-\endentry
-
-\entry{skew}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Tyler~Akidau}{T.~A.}%
-     {Craig Chambers Slava Chernyak Rafael J. Fernandez-Moctezuma Reuven Lax
-  Sam McVeety Daniel Mills Frances Perry Eric Schmidt Sam~Whittle}{C.~C. S. C.
-  R. J. F.-M. R. L. S. M. D. M. F. P. E. S. S.~W.}%
-     {}{}%
-     {Robert~Bradshaw}{R.~B.}}%
-  }
-  \strng{namehash}{TARBCCSCRJFMRLSMDMFPESSW1}
-  \strng{fullhash}{TARBCCSCRJFMRLSMDMFPESSW1}
-  \field{sortinit}{T}
-  \field{title}{The Dataflow Model: A Practical Approach to Balancing
-  Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data
-  Processing}
-  \verb{url}
-  \verb http://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf
-  \endverb
-  \field{year}{2015}
 \endentry
 
 \entry{watson}{online}{}
@@ -1135,7 +1344,7 @@
 
 \entry{hapreduce}{online}{}
   \field{sortinit}{W}
-  \field{title}{Word Count - Hadoop Map Reduce Example}
+  \field{title}{Word Co7unt - Hadoop Map Reduce Example}
   \verb{url}
   \verb http://kickstarthadoop.blogspot.hu/2011/04/word-count-hadoop-map-reduce
   \verb -example.html
