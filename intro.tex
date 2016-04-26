@@ -6,6 +6,8 @@
 \usepackage[magyar]{babel}
 \usepackage{csquotes}
 \usepackage{indentfirst}
+\linespread{1.3}
+\usepackage[margin=0.9in]{geometry}
 \usepackage{listings}
 \usepackage{xcolor}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -201,8 +203,7 @@ Az adatfeldolgozási folyamat nagyon egyszerű, vesszük a különböző típus�
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/batch.png}
-\caption{Bal oldalon található entrópikus adatokból MapReduce segítségével strukturált, információval rendelkező adatokat generálunk.
-http://radar.oreilly.com/2015/08/the-world-beyond-batch-streaming-101.html \label{batchreduce}}
+\caption{Bal oldalon található entrópikus adatokból MapReduce segítségével strukturált, információval rendelkező adatokat generálunk. \cite{tyler} \label{batchreduce}}
 \end{figure}
 
 \subsubsection{Kötegelt feldolgozás végtelen adaton}
@@ -227,6 +228,8 @@ Ahhoz, hogy a végtelen, adatfolyam alapú feldolgozást a lehető legjobban el 
 
 Másik heurisztika, ami a feldolgozást segíti azt a problémát oldja meg, hogy mikor adhatjuk át egy ablaknak az adatokat, mivel az adatok rendezetlenek az esemény idejének tekintetében, külső jelre van szükségünk, ami biztosítja ezt az információt. A \textit{trigger}~\cite{skew} mechanizmusa biztosítja ezt számunkra, amellett, hogy az idő elteltével lehet az ablakok méretét változtatni, ezzel növelve az adatok teljességét. 
 	
+\subsection{Összegzés}
+Az eddig elmondottak alapján láthatjuk, hogy a megnövekedett számítási kapacitást és tárolási igényt csak akkor tudjuk kielégíteni, ha elosztott rendszereket használunk. Az elosztott rendszer alkalmazása egy gépi tanulási eljárás során fog megvalósulni, amit a következő fejezetben fejtek ki részletesen.
 
 
 \newpage
@@ -426,10 +429,24 @@ A kötegelt feldolgozást egy, az adatfolyam specifikus részének tekinti, így
 \caption{Apache Flink felépítése~\cite{flink} \label{apache_flink}}
 \end{figure}
 
-\subsection{Flink DataStream}
+\subsection{Flink Streaming~\cite{streamprocessing}}
+
+Flink Streaming a központi API kiterjesztése, mely segítségével nagy áteresztő képességű, alacsony várakozási idejű adatfeldolgozást hajthatunk végre. A rendszerbe különböző előre definiált (pl.: RabbitMQ, Twitter) vagy felhasználó által biztosított forrásokból csatlakoztathatunk adatfolyamakat. Az adafolyamot magas szintű metódusok segítségével transzformálhatjuk és módosíthatjuk, úgy mint a nem Streaming feldolgozás esetében.  
+
+Flinkben a DataStream olyan adatfolyamot reprezentál, mely egyazon típusú adatokból áll fel, (közel) valós időben, általában előre nem tudható ideig közvetítünk a programunknak. Ilyen adatfolyam lehet például egy üzenetsor (message queue), socket illetve egy fájl is. Az eredményeket úgynevezett "sink"-ként közvetítjük, így adatot írva fájl-ba, vagy a standard kimeneten (parancssor) megjelenítve. Ahhoz, hogy tudjuk, hogy dolgozunk egy Flink programban, pár alapvető fogalmat ismertetnék~\cite{datastreamapi}:
+
+\begin{itemize}
+\item Adatfolyam Transzformáció: Ezeknek a segítségével alakíthatunk át egy vagy több adatfolyamot egy újabb adatfolyamba. Ilyenek például a $Map$ (egy elemet vesz inputnak, és egy elemet ad tovább), a $FlatMap$ (egy elemet vesz inputnak és nulla, egy vagy több kimenetet generál) illetve a $Filter$ (bemeneti elemre egy Bool függvényt futtat le, és azokat adja tovább amik Igaz értékkel térnek vissza) transzformátorok.
+\item Feladatláncolás (task chaining): Ahhoz, hogy minél optimálisabban fusson a Flink programunk, ún. feladatláncolásra van lehetőségünk, mely során az egymást követő transzformációkat egy szálon tudjuk futtatni. $someStream.filter(...).map(...).startNewChain().map(...);$ esetében először egy $filter$ és $map$ metódust valósítunk meg, míg ezután ugyanazon a szálon futtatva még egy $map$ metódust.
+\item Adatforrások: A Flink lehetőséget ad többféle adatforrás csatlakoztatására is. Előre definiált lehetőségek esetén dolgozhatunk fájlokkal, socketről érkező információkkal, collection-el 
+illetve egyedi forrással is, mely esetén egy külső adattároló megoldást csatlakoztatunk a Flinkhez (pl.: Apache Kafka~\cite{kafka}).
+\item Data Sinks: Egy adatfolyamot vár bemenetnek és kimenetként létrehozhat fájlt ($writeAsCsv(...)$), tovább küldheti az adatot egy socketnek ($writeToSocket$) illetve akár ki is irathatjuk az eredményt a konzolra ($print()$). 
+\item Iterációk: Előfordulhat olyan eset, amikor a programunk egy részét szeretnénk \textsl{végtelenszer} lefuttatni, nem tudunk megadni egy véges számú iterációt. Ebben az esetben eldönthetjük, hogy programunk az adat mely részét továbbítja és mely részét küldjük újra az iterációba. 
+\item Lusta kiértékelés (lazy evaluation): Amikor a program $main$ metódusa lefut, az adatbetöltés és a transzformáció nem fog megtörténni. E helyett a műveleteket a Flink feldolgozza, és  akkor fognak lefutni, amikor explicit $execute()$ hívás történik a $StreamExecutionEnvironment$ objektumon függetlenül attól, hogy a program lokálisan vagy klaszteren fut. Ennek segítségével bonyolultabb programokat is holisztikusan, előre megtervezett egységként tudja kezelni a Flink.
+\item Adattípusok: Flink néhány megszorítással él az adatok típusát illetően azért, hogy a lehető legoptimálisabban tudjon a rendszer futni. A 6 fő kategória a Java Tuple, Scala Case osztály, Java POJO, Primitív típusok, egyéb generális osztályok, értékek, Hadoop típusok.
+\end{itemize}
 
 A következőkben egy szószámoló adatfolyam alkalmazás példája látható, ami 5 másodperces ablakokban aggregálja a web socketről érkező adatokat:
-
 
 \begin{lstlisting}[style=Scala]
 import java.util.concurrent.TimeUnit
@@ -499,13 +516,39 @@ pipeline.fit(input)
 val predictions: DataSet[LabeledVector] = pipeline.predict(unlabeled)
 \end{lstlisting}
 
-\subsection{Elosztott sztochasztikus gradiens leszállás}
-\newpage
+\subsection{Lineáris regresszió}
 
-\section{Fejlesztési lehetőségek}
+A dolgozatomban használt függvény, melyet optimalizálok a lineáris regresszió. A lineáris regresszió széles körben használt a gépi tanulási problémáknál, segítségével egyszerűen meg tudunk olyan problémákat oldani, ahol a kapcsolat a magyarázó és a magyarázott változó között lineáris. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=130mm]{img/linreg.png}
+\caption{Lineáris regresszió minta} \label{}
+\end{figure}
+
+Tegyük fel, hogy egy egyenest szeretnénk a pontokra illeszteni.  Ehhez az ismert $y = mx + b$ egyenes egyenletét használhatjuk, ahol $m$ az egyenes meredeksége, b pedig megmutatja, hogy hol metszi az egyenes az y tengelyt. Ahhoz, hogy megtaláljuk a legpontosabban illeszkedő egyenest, a legpontosabb $m$ és $b$ értékeket keressük.
+Egy megszokott megközelítés a probléma megoldásához, ha létrehozunk egy célfüggvényt, ami méri az egyenes "pontosságát". A metódus (m, b) párokat fog bemenetnek várni, és visszatérési értékként megadja, hogy mennyire illeszkedik az egyenesünk a pontokra. A kiszámításhoz végigiterálunk az összes $(x, y)$ adatpontunkon és összegezzük a négyzetes különbségeket az $y$ pontok értéke és a vonal $y$ értéke között: $ \frac{1}{N} \sum_{i=1}^{N} (y_{i} - (m x_{i} + b^2))$.
+
+Azok az egyenesek illeszkednek jobban a pontjainkra, ahol kisebb a célfügvényben kiszámolt hiba. Tehát akkor találjuk meg a legpontosabb egyenest, ha a függvény minimumát keressük.
+Amikor gradiens leszállás műveletet végzünk el, véletlenszerű paraméterekkel kezdünk számolni. Ahhoz, hogy optimalizálni tudjunk, a függvény gradiensét kell kiszámolnuk. A gradiens egyfajta "iránytűként" fogja megmutatni, hogy milyen irányban kell változtatnunk a paramétert, hogy a függvény értéke csökkenjen. Mivel a függvényünk két paraméterből áll ($m$ és $b$) ezért parciális deriválást kell végrehajtanunk, ami:
+
+\[\frac{ \delta }{ \delta m} =  \frac{2}{N}  \sum_{i=1}^{N} -x_{i} (y_{i} - (mx_{i} + b))\] illetve 
+\[\frac{ \delta }{ \delta b} =  \frac{2}{N}  \sum_{i=1}^{N} - (y_{i} - (mx_{i} + b))\] deriváltakat eredményezi.
+
+Inicializálhatunk egy bármilyen $m$ és $b$ párt, és hagyjuk, hogy a gradiens leszállás folyamatosan csökkentse a célfüggvényt. Minden egyes iteráció során az $m$ és $b$ értéket úgy frissítjük, hogy az egyenesünk egy kicsit jobban illeszkedik, mint az előző paramétereknél. 
+
+\subsection{Elosztott sztochasztikus gradiens leszállás megvalósítása}
+
+
+\newpage
+\section{Fejlesztési lehetőségek}	
 
 Konvergencia minél gyorsabb elérése (accelerated sgd). 
+Performance – We used vanilla gradient descent with a learning rate of 0.0005 in the above example, and ran it for 2000 iterations. There are approaches such a line search, that can reduce the number of iterations required. For the above example, line search reduces the number of iterations to arrive at a reasonable solution from several thousand to around 50.
+
 Vegyes als/sgd implementáció
+Most akkor áll le a program, amikor szeretnénk
+
+\section{Köszönetnyilvánítás}	
 
 
 \newpage
