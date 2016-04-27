@@ -53,10 +53,13 @@
     <requires type="static">
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>numeric.bbx</file>
+      <file>magyar.bbx</file>
+      <file>authoryear.bbx</file>
       <file>standard.bbx</file>
-      <file>numeric.cbx</file>
+      <file>magyar.cbx</file>
+      <file>authoryear.cbx</file>
       <file>biblatex.cfg</file>
+      <file>magyar.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>

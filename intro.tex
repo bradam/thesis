@@ -1,7 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{algpseudocode}
+\usepackage{t1enc}
 \usepackage{algorithm}
 \usepackage[magyar]{babel}
 \usepackage{csquotes}
@@ -9,7 +9,7 @@
 \linespread{1.3}
 \usepackage[margin=0.9in]{geometry}
 \usepackage{listings}
-\usepackage{xcolor}
+\usepackage{xcolor}		
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -32,13 +32,18 @@
   tabsize=3,
 }
 \lstset{language=Scala,texcl=true}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=bibtex, style = magyar]{biblatex}
 \addbibresource{intro.bib}
+\def\magyarOptions{hyphenation=huhyphn}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{url}
 \frenchspacing
 \author{Belényesi Roland}
+\DefineBibliographyStrings{english}{%
+urlseen = {Letöltve:},
+}
+
 
 \begin{document}
 
@@ -48,7 +53,7 @@
 \section{Bevezetés}
 A nagy adat (big data) napjainkban az egyik vezető cím az informatikai terminológiák körében, különböző címekkel ellátva, mint: 
 \textsl{Data, data everywhere}~\cite{economist} vagy 
-\textsl{Big data: Distilling meaning from data}~\cite{nature}. Olyannyira megnőtt a kereslet a nagy adattal foglalkozó szakemberek iránt, hogy már az informatikán kívül is megjelent, Hal Varian --aki egyben Google vezető közgazdásza-- szerint a \textsl{következő 10 éven belül az egyik legvonzóbb szakma lesz az adatokkal foglalkozó állás}~\cite{varian}. De mit is jelent pontosan? Nincs explicit meghatározás a fogalomra, de Doug Laney 2001-es definíciója egy jó kiindulópontnak tekinthető: az adatok nagy mennyiségben (volume), gyorsan (velocity) és különböző formátumban (variety) jelennek meg (3V's)~\cite{3v}. Azonban, ma már kiegészíthetjük ezt a fogalmat még 4V-vel: bizonyosság (veracity, érték (value), adategyezés (variability) és megjelenítés (visualization).~\cite{7v} Az adatmennyiség amit előállítunk exponenciálisan növekszik olyan szintre, aminek tárolását, menedzselését és elemzését már nem tudjuk megoldani a saját, lokális erőforrásainkon belül az eddig megszokott adatelemzési eszközökkel, mint például Microsoft Excel, vagy különböző relációs adatbázis technológiák által.
+\textsl{Big data: Distilling meaning from data}~\cite{nature}. Olyannyira megnőtt a kereslet a nagy adattal foglalkozó szakemberek iránt, hogy már az informatikán kívül is megjelent, Hal Varian --aki egyben Google vezető közgazdásza-- szerint a \textsl{következő 10 éven belül az egyik legvonzóbb szakma lesz az adatokkal foglalkozó állás}~\parencite{varian}. De mit is jelent pontosan? Nincs explicit meghatározás a fogalomra, de Doug Laney 2001-es definíciója egy jó kiindulópontnak tekinthető: az adatok nagy mennyiségben (volume), gyorsan (velocity) és különböző formátumban (variety) jelennek meg (3V's)~\cite{3v}. Azonban, ma már kiegészíthetjük ezt a fogalmat még 4V-vel: bizonyosság (veracity, érték (value), adategyezés (variability) és megjelenítés (visualization).~\cite{7v} Az adatmennyiség amit előállítunk exponenciálisan növekszik olyan szintre, aminek tárolását, menedzselését és elemzését már nem tudjuk megoldani a saját, lokális erőforrásainkon belül az eddig megszokott adatelemzési eszközökkel, mint például Microsoft Excel, vagy különböző relációs adatbázis technológiák által.
 Becslések~\cite{2020} szerint az adatok mennyisége kétévente duplázódik, így 2020-ra a \textsl{forgalomban} lévő adatmennyiség elérheti a 44 zetabájtnyi (vagy 44 trillió gigabyte-nyi) mennyiséget.
 \newline
 
@@ -58,16 +63,16 @@ A cloud computing, és új technológiák megszületése és az, hogy a fizikai 
 \newpage
 
 \section{A dolgozat célja}
-A technológia fejlődése és a számítási teljesítmény megnövekedése hozta létre azt az üzleti igényt~\cite{rta}, hogy egyre gyorsabban, egyre nagyobb adatmennyiség feldolgozása történjen meg. Ilyen igény például:csalás felderítés~\cite{fraud}, ,,dolgok'' internete (IoT)~\cite{iot} vagy alkalmazás monitoring~\cite{ganalitycs}. Ez az adatfeldolgozási sebesség olyan szintre eljutott, hogy közel valós időben, az adat keletkezése után megtörténhet ennek feldolgozása. Ilyen gyorsaságú adatfeldolgozásra csak elosztott rendszerek segítségével vagyunk képesek,~\cite{ucl} amelyek felépítésükből fakadóan sok lehetőség és költség jellemez, amelyeket a későbbiekben fogok kifejteni. A dolgozatomban használt Apache Flink (mely az Apache Software Foundation egyik legújabb és legmodernebb terméke) platform közel 40 millió elem feldolgozására képes egy 40 magos architektúrán másodpercenként.~\cite{flinkintro}.\newline
+A technológia fejlődése és a számítási teljesítmény megnövekedése hozta létre azt az üzleti igényt~\cite{rta}, hogy egyre gyorsabban, egyre nagyobb adatmennyiség feldolgozása történjen meg. Ilyen igény például:csalás felderítés~\parencite{fraud}, ,,dolgok'' internete (IoT)~\cite{iot} vagy alkalmazás monitoring~\cite{ganalitycs}. Ez az adatfeldolgozási sebesség olyan szintre eljutott, hogy közel valós időben, az adat keletkezése után megtörténhet ennek feldolgozása. Ilyen gyorsaságú adatfeldolgozásra csak elosztott rendszerek segítségével vagyunk képesek,~\cite{ucl} amelyek felépítésükből fakadóan sok lehetőség és költség jellemez, amelyeket a későbbiekben fogok kifejteni. A dolgozatomban használt Apache Flink (mely az Apache Software Foundation egyik legújabb és legmodernebb terméke) platform közel 40 millió elem feldolgozására képes egy 40 magos architektúrán másodpercenként.~\cite{flinkintro}.\newline
 
 Ahhoz, hogy ezt az adatmennyiséget ki tudjuk elemezni és ajánlásokat tudjunk adni, gépi tanulásra van szükségünk. A gépi tanulás az informatikának és a matematikának egy olyan ága, amely az adatok folyamatos betáplálása során új ismereteket szolgáltat, megpróbál előrejelzéseket adni anélkül, hogy explicit módon be lenne erre programozva.\cite{ml}. A gépi tanulás egy olyan fajtáját fogom alkalmazni, ahol a termékek és felhasználóktól szerzett adatokból a lehető legpontosabban próbáljuk megjósolni, hogy milyen termék szerepelhet a felhasználó preferencialistája elején. Célom, hogy elosztott módon felépítsem az algoritmust, megnézzem, hogy milyen esetekben érdemes a párhuzamosítás, hol van az a határ, ahol a felépítésből fakadó többletköltség és komplexitás ellenére is megéri párhuzamos architektúrát alkalmazni. 
 \newline
 
-A választott metódus a sztochasztikus gradiens leszállás (SGD, stochastic gradient descent)~\cite{sgd}, amely egy olyan egyszerűsítési illetve optimalizációs eljárás, ahol adott célfüggvény gradiensét folyamatosan, iteratív módon számoljuk ki. Dolgozatomban megtervezem Apache Flinkben az SGD algoritmust, összehasonlítom a teljesítményét a már implementált algoritmusokkal és megkezdem a szükséges módosítások implementálást.
+A választott metódus a sztochasztikus gradiens leszállás (SGD, stochastic gradient descent)~\cite{sgd}, amely egy olyan egyszerűsítési illetve optimalizációs eljárás, ahol adott célfüggvény gradiensét folyamatosan, iteratív módon számoljuk ki. Dolgozatomban megtervezem Apache Flinkben az SGD algoritmust, megkezdem a szükséges módosítások implementálást és kijelölök hosszú távú fejlődési lehetőségeket.
 
 \newpage
 \section{Elosztottság}
-A megnövekedett fizikai modellezési és katonai problémák miatt már 1950-es évektől kezdve felmerült az a kérdés, hogy hogyan lehetne összetett számítási feladatokat minél gyorsabban, egyszerűbben elvégezni.~\cite{cocke} Rájöttek, hogy a problémákat olyan részproblémákra kell bontani, melyek megoldása egymástól független, így párhuzamosan is megoldhatóak, így jött létre a párhuzamos programozás. \newline
+A megnövekedett fizikai modellezési és katonai problémák miatt már 1950-es évektől kezdve felmerült az a kérdés, hogy hogyan lehetne összetett számítási feladatokat minél gyorsabban, egyszerűbben elvégezni.~\parencite{cocke} Rájöttek, hogy a problémákat olyan részproblémákra kell bontani, melyek megoldása egymástól független, így párhuzamosan is megoldhatóak, így jött létre a párhuzamos programozás. \newline
 Párhuzamos programozás következő lépéseként jött létre az elosztott rendszerekre való igény, mely esetében a számolások már nem csak az adott számítási egységben különülnek el, hanem jóval több, akár különböző fizikai területen levő számítógép is ugyanannak a problémának egy számítását végzi. Azonban az ily módon elért számítási teljesítmény növekedés a komplexitás megnövekedésével is jár. Ezt a komplexitást különböző keretrendszerek elfedik, így biztosítva a lehetőséget elosztott alapon működő alkalmazások fejlesztésére. A komplexitás növekedése mellett a lehetőségeink is korlátozottak egy elosztott rendszer esetén. \newline
 
 A klasszikus megfogalmazás szerint~\cite{chandy} egy elosztott rendszer véges számú folyamatot és csatornát tartalmaz, amik valamilyen módon kapcsolatban vannak egymással. A csatornáktól elvárjuk, hogy végtelen bufferként szolgáljanak, hiba mentesek legyenek a rajtuk átküldött üzenetek és sorrendben továbbítsák az adatot. Egy csatorna állapotán az átküldött üzenetek csoportját értjük, a folyamatokra pedig jellemző az állapotok sorozata a kezdeti állapot és események sorozata.
@@ -132,13 +137,13 @@ Az elosztott rendszerek tervezésekor és használatakor három képességet vá
 \item Elérhető: Bármelyik időpillanatban kapok választ egy kérés küldése után.
 \item Particionálás-tűrő: Ha --a teljes hálózati kieséstől eltekintve-- egy csomópont eltűnik a hálózatról, akkor is kapok választ a rendszertől.
 \end{itemize}
-A CAP tétel kimondja~\cite{cap}, hogy ebből a háromból legfeljebb kettő lehet igaz egy adott időpillanatban. Azonban a valóság nem ennyire letisztult, különböző rendszerek különböző prioritással veszik figyelembe a három alapképességet, így korlátozottan megtalálhatjuk a három alapképességet egy modern elosztott rendszerben.~\cite{ecap}
+A CAP tétel kimondja~\cite{cap}, hogy ebből a háromból legfeljebb kettő lehet igaz egy adott időpillanatban. Azonban a valóság nem ennyire letisztult, különböző rendszerek különböző prioritással veszik figyelembe a három alapképességet, így korlátozottan megtalálhatjuk a három alapképességet egy modern elosztott rendszerben.~\parencite{ecap}
 
 \subsection{Párhuzamos kötegelt adatfeldolgozás}
 A kétezres évek elején és közepén, a megfelelő számítási kapacitás hiányában a párhuzamos adatfeldolgozás általában \textsl{kötegelt} (batch) módon történt. Felhasználói interakció nélkül, megadott időközönként történik a nagy mennyiségű adat feldolgozása. Előnye, hogy akkor futhat a program, amikor a rendszer leterheltsége alacsony, ezzel biztosítva az egyenletes kihasználtságot. Mivel a parancsok automatikusan futnak le, ezért kisebb az üres, nem számítással töltött idő.~\cite{batch}.
 
 \subsection{MapReduce}
-A Google által fejlesztett MapReduce volt az első olyan szélesebb körben is elismert programozási modell, ami lehetővé tette, hogy négymennyiségű adatot is lehessen feldolgozni párhuzamosan, elosztott módon.~\cite{mapreduce} Az adatokat <kulcs, érték> párokra bontjuk, ahol a kulcs egy referencia, ami hivatkozik az adatra, míg az érték maga az adat. A bemenet az adat, míg a kimenet a köztes <kulcs, érték> pár. Ezt az ún. Map függvény valósítja meg, amit a felhasználónak kell biztosítania. A köztes <kulcs, érték> párt a felhasználó által írt Reduce függvény dolgozza fel. A Reduce függvényben a köztes <kulcs, érték> párok összegzése  zajlik, tehát megkeressük a vizsgált kulcshoz az összes értéket. \newline
+A Google által fejlesztett MapReduce volt az első olyan szélesebb körben is elismert programozási modell, ami lehetővé tette, hogy nagymennyiségű adatot is lehessen feldolgozni párhuzamosan, elosztott módon.~\cite{mapreduce} Az adatokat <kulcs, érték> párokra bontjuk, ahol a kulcs egy referencia, ami hivatkozik az adatra, míg az érték maga az adat. A bemenet az adat, míg a kimenet a köztes <kulcs, érték> pár. Ezt az ún. Map függvény valósítja meg, amit a felhasználónak kell biztosítania. A köztes <kulcs, érték> párt a felhasználó által írt Reduce függvény dolgozza fel. A Reduce függvényben a köztes <kulcs, érték> párok összegzése  zajlik, tehát megkeressük a vizsgált kulcshoz az összes értéket. \newline
 Az egyik klasszikus példa a szószámolás, ahol meg kell számolnunk azt, hogy a bemeneti adatunk szavai milyen mennyiséggel fordulnak elő.
 
 \begin{figure}[ht!]
@@ -254,13 +259,14 @@ Két fő csoportja van a gépi tanulási algoritmusoknak: a felügyelt (supervis
 \end{equation*}
 függvényt, ahol a legjobban előre tudjuk jelezni az $y$ értéket a meghatározott $x$-re nézve.
 
-Fontos, hogy szétválasszuk az adatainkat tréning és teszt adatokra. Ez biztosítja azt, hogy ne fordulhasson elő az a probléma, hogy a modellünk túlságosan fontos súllyal vesz egyes objektumokat az adatsoron (amik nem jellemzőek a lehetséges valós adatokra), ami azt eredményezi, hogy a valós problémákon már nem fog eredményesen működni. A problémát túltanulásnak vagy magolásnak (overfitting) nevezik.~\cite{overfit}
+Fontos, hogy szétválasszuk az adatainkat tréning és teszt adatokra. Ez biztosítja azt, hogy ne fordulhasson elő az a probléma, hogy a modellünk túlságosan fontos súllyal vesz egyes objektumokat az adatsoron (amik nem jellemzőek a lehetséges valós adatokra), ami azt eredményezi, hogy a valós problémákon már nem fog eredményesen működni. A problémát túltanulásnak vagy magolásnak (overfitting) nevezik.~\cite[444 o.]{overfit}
+
 
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/ml.png}
-\caption{Felügyelt tanulás általános modellje \cite{UlmannSupervised} \label{ml}}
+\caption{Felügyelt tanulás általános modellje \cite[444 o.]{overfit} \label{ml}}
 \end{figure}
 
 \subsection{Nem felügyelt tanítás}
@@ -285,7 +291,7 @@ Az ajánlórendszerek alapja az ún. rating mátrix, ami tartalmazza a felhaszn�
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{img/um.png}
-\caption{Rating matrix, ahol az $A,B, C, D$ felhasználók a Star Wars, Harry Potter és Twilight filmeket értékelték~\cite{UlmannMatrix} \label{um}}
+\caption{Rating matrix, ahol az $A,B, C, D$ felhasználók a Star Wars, Harry Potter és Twilight filmeket értékelték~\cite[322 o.]{overfit} \label{um}}
 \end{figure}
 
 Célunk az, hogy hiányzó értékeket a mátrixban minél jobban megjósoljuk. Természetesen nem fontos, hogy az összes elemét kitöltsük, törekednünk kell arra, hogy az ajánlás a preferált filmek/cikkek körében legyen, mivel ezek eladása/elolvasása racionalizálható gazdasági szempontból. Jelen esetben, kíváncsiak lehetünk, hogy $A$ felhasználónak ajánlhatjuk-e Harry Potter 2. részét. Láthatjuk, hogy HP 1. részét kedvelte, és tudjuk, hogy a két film kapcsolatban van egymással (rendezők, színészek, történet, stb.) ezért gyaníthatjuk, hogy a második részt is kedvelni fogja.
@@ -404,7 +410,7 @@ Dolgozatomban Java és Scala nyelvek alatt fogom implementálni a sztochasztikus
 \paragraph{Scala}\hspace*{-0.3cm}--Scalable Language kifejezésből származtatva \cite{odersky}-- az elmúlt pár évben lett közismert a nagy adatfeldolgozó, elosztott projektek kapcsán. A vegyes objektum-orientált és funkcionális megközelítés lehetővé teszi, hogy a programozók könnyen átálljanak a nyelvre, mégis kihasználjanak újfajta paradigmákat (first-class functions, immutable data structures, immutability over mutation). Java Virtuális Gép (JVM) alapokon íródott, ezért lehetővé teszi, hogy a megszokott Java könyvtárakkal is dolgozzunk, és emiatt közel azonos sebességre is képes.  E mellett típus-biztos (type-safe), tehát a fordítási időben ellenőrzi a változók típusát és értékét, így elkerülve a futási időben keletkező hibákat~\cite{toptal}. 
 
 \subsection{Flink}
-Az Apache Software Foundation által támogatott Flink egy olyan keretrendszer, ami biztosítja, hogy valós időben, elosztott rendszereken, \textsl{végtelen adaton} is kellő pontossággal tudjunk adatelemzést végezni, anélkül, hogy bonyolult, csak a feladatra tervezett architektúrát kellene létrehoznunk. Ezt az egyszerűséget és pontosságot következő tulajdonságaival éri el~\cite{flinkartisans}
+Az Apache Software Foundation által támogatott Flink egy olyan keretrendszer, ami biztosítja, hogy valós időben, elosztott rendszereken, \textsl{végtelen adaton} is kellő pontossággal tudjunk adatelemzést végezni, anélkül, hogy bonyolult, csak a feladatra tervezett architektúrát kellene létrehoznunk. Ezt az egyszerűséget és pontosságot következő tulajdonságaival éri el(~\citeauthor{flinkartisans} 2015)
 \begin{itemize}
 \item Egyszerűsített adatfeldolgozó csővezeték (pipeline), amely az adat megkapásától az adat feldolgozásáig tart
 \item Az adatot olyan módon modellezi és dolgozza fel, ahogy az létrejött, valós-időbeli események alapján
@@ -492,7 +498,7 @@ A képesség, hogy több műveletet egy sorozatba kapcsoljunk (pipeline) egy oly
 \item Predictor, amely végrehajtja a tanulást, és az előrejelzést ad.
 \end{itemize}
 
-A (Scala) API általános formája a következő:
+Egy lehetséges (Scala) megvalósítás a következő:
 
 \begin{lstlisting}[style=Scala]
 //Tanitó adat beolvasása
@@ -528,27 +534,75 @@ A dolgozatomban használt függvény, melyet optimalizálok a lineáris regressz
 Tegyük fel, hogy egy egyenest szeretnénk a pontokra illeszteni.  Ehhez az ismert $y = mx + b$ egyenes egyenletét használhatjuk, ahol $m$ az egyenes meredeksége, b pedig megmutatja, hogy hol metszi az egyenes az y tengelyt. Ahhoz, hogy megtaláljuk a legpontosabban illeszkedő egyenest, a legpontosabb $m$ és $b$ értékeket keressük.
 Egy megszokott megközelítés a probléma megoldásához, ha létrehozunk egy célfüggvényt, ami méri az egyenes "pontosságát". A metódus (m, b) párokat fog bemenetnek várni, és visszatérési értékként megadja, hogy mennyire illeszkedik az egyenesünk a pontokra. A kiszámításhoz végigiterálunk az összes $(x, y)$ adatpontunkon és összegezzük a négyzetes különbségeket az $y$ pontok értéke és a vonal $y$ értéke között: $ \frac{1}{N} \sum_{i=1}^{N} (y_{i} - (m x_{i} + b^2))$.
 
-Azok az egyenesek illeszkednek jobban a pontjainkra, ahol kisebb a célfügvényben kiszámolt hiba. Tehát akkor találjuk meg a legpontosabb egyenest, ha a függvény minimumát keressük.
-Amikor gradiens leszállás műveletet végzünk el, véletlenszerű paraméterekkel kezdünk számolni. Ahhoz, hogy optimalizálni tudjunk, a függvény gradiensét kell kiszámolnuk. A gradiens egyfajta "iránytűként" fogja megmutatni, hogy milyen irányban kell változtatnunk a paramétert, hogy a függvény értéke csökkenjen. Mivel a függvényünk két paraméterből áll ($m$ és $b$) ezért parciális deriválást kell végrehajtanunk, ami:
+Azok az egyenesek illeszkednek jobban a pontjainkra, ahol kisebb a célfüggvényben kiszámolt hiba. Tehát akkor találjuk meg a legpontosabb egyenest, ha a függvény minimumát keressük.
+Amikor gradiens leszállás műveletet végzünk el, véletlenszerű paraméterekkel kezdünk számolni. Ahhoz, hogy optimalizálni tudjunk, a függvény gradiensét kell kiszámolnunk. A gradiens egyfajta "iránytűként" fogja megmutatni, hogy milyen irányban kell változtatnunk a paramétert, hogy a függvény értéke csökkenjen. Mivel a függvényünk két paraméterből áll ($m$ és $b$) ezért parciális deriválást kell végrehajtanunk, ami:
 
 \[\frac{ \delta }{ \delta m} =  \frac{2}{N}  \sum_{i=1}^{N} -x_{i} (y_{i} - (mx_{i} + b))\] illetve 
 \[\frac{ \delta }{ \delta b} =  \frac{2}{N}  \sum_{i=1}^{N} - (y_{i} - (mx_{i} + b))\] deriváltakat eredményezi.
 
-Inicializálhatunk egy bármilyen $m$ és $b$ párt, és hagyjuk, hogy a gradiens leszállás folyamatosan csökkentse a célfüggvényt. Minden egyes iteráció során az $m$ és $b$ értéket úgy frissítjük, hogy az egyenesünk egy kicsit jobban illeszkedik, mint az előző paramétereknél. 
+Inicializálhatunk egy bármilyen $m$ és $b$ párt, és hagyjuk, hogy a gradiens leszállás folyamatosan csökkentse a célfüggvényt. Minden egyes iteráció során az $m$ és $b$ értéket úgy frissítjük, hogy az egyenesünk egy kicsit jobban illeszkedik a pontokra, mint az előző paramétereknél. 
 
 \subsection{Elosztott sztochasztikus gradiens leszállás megvalósítása}
 
+A megvalósított sztochasztikus gradiens leszállás Java és Scala alapokon valósítottam meg. Mindkét osztály UML diagramja a függelékben található meg. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=130mm]{img/workflow.png}
+\caption{Program életciklusmodellje} \label{}
+\end{figure}
+
+Minden egyes Flink program esetén szükségünk van arra, hogy a Flink környezetet felállítsuk, ezzel megalapozva a későbbi működést. Ezt követően az adatfeldolgozást hajtjuk végre, amely során elvégezzünk a szükséges (String => Double) konverziókat, azért, hogy elkerüljük a futásidőben fellépő esetleges hibákat. Az adatfeldolgozás során egy statikus fájlból vesszük a bemeneti értékeket. Következő lépésként elindítjuk a Flink környezetet, és a feldolgozott adatot beolvassuk egy Flink Collectionbe, mely során megtörténik az adatok leképzése, és a fizikai elosztása. \newline
+
+A gradiens számítás megvalósításához 3 saját implementált metódussal dolgoztam. A $SubUpdate()$, az $UpdateAccumulator()$ és az $Update()$ felelős azért, hogy a paraméterek deriválása és frissítése megtörténjen minden egyes iteráció során. 
+Végül elvégezzük a particionálást ($Broadcast()$), hogy kihasználjuk a Flink elosztott rendszer előnyeit, és egy véletlen szám generátor segítségével eldöntjük, hogy a feldolgozott adatot a kimenetre, esetleg újabb iterációra küldjük ($Connected()$).
+
+\section{Fejlesztési lehetőségek}	
+Továbbfejlesztési lehetőségeket több szempontból is meg lehet vizsgálni. Először is a már létező funkciók optimalizálásával lehet foglalkozni. A konvergencia elérése az algoritmusnál nem túl hatékony, ez nagy adatmennyiségnél jelentős erőforrás veszteségként jelenhet meg, mivel minden egyes iteráció után 50\% az esélye, hogy tovább iterálunk.
+Ahhoz, hogy konvergenciára jussunk, a tanulási ráta ($\alpha$) egy idő után folyamatosan csökken egészen 0-ig. Azonban ez az életciklus végén már nagyon lassan megy végbe, ezért úgynevezett új variancia változót lehetne bevezetni, mellyel a tanulási rátát optimálisabban tudnám változtatni.~\parencite{svrg}.
+
+Egyes publikációk szerint~\parencite{sgd} annak ellenére, hogy a sztochasztikus gradiens leszállásnál véletlenszerűen járjuk végig az adatsorunkat, segíthet az algoritmus hatékonyságán, ha összekeverjük az adatokat, így az esetleges csoportosulások megbomlanak. Ezt segítve optimális megoldás lenne, ha az osztályunk rendelkezne azzal a képességgel, hogy feldolgozás előtt véletlenszerű sorrendbe rendezze az adatokat.
+
+A jelenlegi állapotában az osztály nem képes külső adat feldolgozására, a $LinearRegressionData$ fájl segítségével dolgoztam, így a jövőben a bemeneti adat paraméterezhetővé tétele is egy jó kiindulópont.
 
 \newpage
-\section{Fejlesztési lehetőségek}	
+\section{Összefoglalás}
+Dolgozatomban egy elosztott rendszeren futó ajánlórendszer megvalósítását kezdtem el Apache Flinkben. A megírása előtt arra voltam kíváncsi, hogy milyen módon lehet az implementálást elvégezni, milyen matematikai, informatikai és közgazdasági háttérirodalom ismerete szükséges ahhoz, hogy valaki egy jól működő, a való élet problémáit megoldó rendszert készítsen. 	
 
-Konvergencia minél gyorsabb elérése (accelerated sgd). 
-Performance – We used vanilla gradient descent with a learning rate of 0.0005 in the above example, and ran it for 2000 iterations. There are approaches such a line search, that can reduce the number of iterations required. For the above example, line search reduces the number of iterations to arrive at a reasonable solution from several thousand to around 50.
+A dolgozat első részében bemutattam, hogy mit is jelent az elosztottság és a 
+hibatűrés, miért fontos az, hogy különböző technológiákkal és megoldásokkal megelőzzük azt, hogy az adatunk megsemmisüljön, vagy ellentétes esetben többször is eljusson a címzetthez. Ezt alátámasztva ismertettem CAP-tételt,  mely során kifejtettem, hogy miért nem lehetséges az, hogy konzisztens, elérhető és particionálás-tűrő legyen egy adott időpillanatban a rendszer.
 
-Vegyes als/sgd implementáció
-Most akkor áll le a program, amikor szeretnénk
+Az elméleti bevezetés után megmutattam a Google fájl rendszert, ami a modern adattárolás és adatelőhívás alapja.
+Ezt követően ugyancsak a Googlenek köszönhetően, megismerhettük a MapReduce technológiát, ami lehetővé tette, hogy az akkor még nagyon bonyolult, alacsony szintű, párhuzamos vagy elosztott programozást, egy magasabb absztrakciós szinten, akár egy nem specializáltan ezzel a témakörrel foglalkozó programozó is viszonylag egyszerűen kihasználja.
+
+Fontosnak tartottam megemlíteni, hogy a korai kötegelt adatfeldolgozáson alapuló technológiáknak milyen hátrányai vannak, és milyen feltételeknek kell egy rendszernek ma megfelelnie, hogy túlnőhessen az architektúra adott korlátokon. Ezek után bemutattam egy már modernebb, jól működő, ám rengeteg felesleges fenntartási költséggel járó Lambda-architektúrát, mely teljesítményben már közel járt az optimálishoz, azonban a megoldás, hogy párhuzamosan futtatunk egy kötegelt és egy adatfolyam alapú architektúrát, a programozási és az infrastrukturális költségek jelentősen magasabbak az elvártnál. A legismertebb adatfeldolgozási mintázatok és heurisztikák megismerésével eljutottunk arra a pontra, hogy egy modern adatfeldolgozó rendszer alapjait lefektettük illetve megismertük, hogy milyen optimalizálási lehetőségeink vannak, ha egy ilyen rendszer építésébe kezdünk.
+
+A dolgozat másik fő témája a gépi tanuláshoz köthető, vagyis az olyan rendszerek, ahol explicit programozás nélkül, csupán a historikus adatok segítségével tudunk bonyolult problémákat megoldani, melyeket a hagyományos eszközökkel nem tudnánk. Bemutattam a két fő kategóriáját, a felügyelt és a nem felügyelt tanítást, a ma ismert gépi tanulási tudománynak, amibe a ma ismert \textsl{mesterséges intelligencia} jellegű problémák nagy részét bele tudjuk illeszteni.  Ezt követően az ajánlórendszerek témáját ismertettem, ahol világossá vált, hogy a manapság a végtelen információ idejében szükséges az, hogy a felhasználóknak valamilyen módon ajánlásokat adjunk, ami megközelítőleg megfelel a preferenciájának, így elősegítve a választást a termékek közül. Az ajánlórendszerek megértéséhez szükséges tudni, hogy az egyes felhasználó-termék leképzéseket egy mátrixban tároljuk, és ezek a mátrixok ritkák (mivel a felhasználók az összes termék csak meglehetősen kis hányadát értékelik), így ezen mátrixok kitöltése erőforrásigényes.
+\newline
+Ennek a problémának a megoldására vázoltam fel az ALS algoritmus, mely során az úgynevezett \textsl{rating mátrixunkat} két, olyan $U$ és $I$ részmátrixokra bontjuk, amelyek szorzata hozzávetőlegesen megegyezik az eredeti 
+mátrixunkkal. 
+Egy másik közismert lehetőség az ajánlórendszerek létrehozására, a dolgozatomban is vizsgált (sztochasztikus) gradiens leszállás, mely során a cél, hogy minél kevesebb iteráció során konvergenciára jussak, tehát a hibát a valós és predikált eredmény között minimalizáljam. Ismertettem a minimalizálandó függvényt, ami az ajánlórendszereknél a mért és becsült adatok négyzetes hibájából adódik (RMSE).  
+\newline
+
+A dolgozatom utolsó részében bemutattam, az implementáláshoz használt Java és Scala nyelvet, illetve az elosztottsághoz használt Apache Flink keretrendszert is. A dolgozat egy másik motivációja volt, hogy eddig ha ajánlórendszert szerettünk volna létrehozni Flink segítségével, csak ALS implementálását végezhettük el, azonban egyes esetekben az SGD hatékonyabban tud ajánlásokat adni.~\parencite{alsgd}. Az implementáció elkészültével javaslatokat adtam arra, hogy milyen lehetőség van a program továbbfejlesztésére.
+\newline
+
+Az Apache Flink, dolgozatom megírásakor elérte az 1.0-s verziószámot, ami azt mutatja, hogy van létjogosultsága egy általános célú, nagy teljesítményű, alacsony késleltetési idővel dolgozó rendszerre, Az egyszerű kezelhetőség, a magas szintű alkalmazásprogramozási interfész, illetve a lehetőség, hogy (majdnem) azonos logikával hozhatunk létre kötegelt és adatfolyam alapú rendszereket hozzájárulnak ahhoz, hogy a jövőben elterjedjenek az ilyen, és ehhez hasonló alkalmazások.
 
 \section{Köszönetnyilvánítás}	
+
+\section{Függelék}	
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=130mm]{img/scala.png}
+\caption{A Scala osztály UML megvalósítása} \label{}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=130mm]{img/java.png}
+\caption{A JAVA osztály UML megvalósítása} \label{}
+\end{figure}
 
 
 \newpage

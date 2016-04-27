@@ -16,6 +16,26 @@
   {}
 \endgroup
 
+\entry{alsgd}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Aberger~R.}{A.~R.}%
+     {Christopher}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ARC1}
+  \strng{fullhash}{ARC1}
+  \field{labelyear}{2014}
+  \field{sortinit}{A}
+  \field{title}{Recommender: An Analysis of Collaborative Filtering Techniques}
+  \verb{url}
+  \verb http://cs229.stanford.edu/proj2014/Christopher%20Aberger,%20Recommender
+  \verb .pdf
+  \endverb
+  \field{year}{2014}
+\endentry
+
 \entry{tyler}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -92,6 +112,7 @@
   }
   \strng{namehash}{AT+1}
   \strng{fullhash}{ATBABKCSHJLRMSMDNPWS1}
+  \field{labelyear}{2013}
   \field{sortinit}{A}
   \field{booktitle}{Very Large Data Bases}
   \field{pages}{734\bibrangedash 746}
@@ -159,6 +180,7 @@
   }
   \strng{namehash}{AT+1}
   \strng{fullhash}{ATBRCCCSFMRJLRMSMDPFSEWS1}
+  \field{labelyear}{2015}
   \field{sortinit}{A}
   \field{title}{The Dataflow Model: A Practical Approach to Balancing
   Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data
@@ -170,6 +192,15 @@
 \endentry
 
 \entry{flink}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
   \field{sortinit}{A}
   \field{title}{Apache Flink}
   \verb{url}
@@ -180,15 +211,473 @@
   \field{urlyear}{2016}
 \endentry
 
-\entry{microbatch}{online}{}
+\entry{datastreamapi}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
   \field{sortinit}{A}
-  \field{title}{Apache Storm Design Pattern—Micro Batching}
+  \field{title}{Flink DataStream API Programming Guide}
   \verb{url}
-  \verb http://hortonworks.com/blog/apache-storm-design-pattern-micro-batching/
+  \verb https://ci.apache.org/projects/flink/flink-docs-master/apis/streaming/i
+  \verb ndex.html#task-chaining-and-resource-groups
   \endverb
-  \field{urlday}{17}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{streamprocessing}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Flink Stream Processing API}
+  \verb{url}
+  \verb https://ci.apache.org/projects/flink/flink-docs-release-0.8/streaming_g
+  \verb uide.html
+  \endverb
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{infosphere}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{IBM InfoSphere Streams}
+  \verb{url}
+  \verb http://www-03.ibm.com/software/products/en/ibm-streams
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{imdb}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{IMDb Votes/Ratings Top Frequently Asked Questions}
+  \verb{url}
+  \verb http://www.imdb.com/help/show_leaf?votestopfaq
+  \endverb
+  \field{urlday}{16}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
+\endentry
+
+\entry{knearest}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{k-legközelebbi szomszéd modell}
+  \verb{url}
+  \verb https://mialmanach.mit.bme.hu/fogalomtar/k-legkozelebbi_szomszed_modell
+  \endverb
+  \field{urlday}{22}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{lambdaarch}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Lambda architecture}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Lambda_architecture
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{02}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{scikit}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Machine Learning in Python}
+  \verb{url}
+  \verb http://scikit-learn.org/stable/
+  \endverb
+  \field{urlday}{27}
+  \field{urlmonth}{01}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{mllib}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Machine Learning Library (MLlib) Guide}
+  \verb{url}
+  \verb http://spark.apache.org/docs/latest/mllib-guide.html
+  \endverb
+  \field{urlday}{27}
+  \field{urlmonth}{01}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{ml}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Machine Learning: What it is and why it matters}
+  \verb{url}
+  \verb http://www.sas.com/en_us/insights/analytics/machine-learning.html
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{batch}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Mainframes working after hours: Batch processing}
+  \verb{url}
+  \verb http://www-01.ibm.com/support/knowledgecenter/#!/zosbasics/com.ibm.zos.
+  \verb zmainframe/zconc_batchproc.htm
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{akka}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Message Delivery Reliability}
+  \verb{url}
+  \verb http://doc.akka.io/docs/akka/2.3.7/general/message-delivery-reliability
+  \verb .html
+  \endverb
+  \field{urlday}{06}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{ganalitycs}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Monitor activity as it happens on your site or app}
+  \verb{url}
+  \verb https://support.google.com/analytics/answer/1638635?hl=en
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{mf_databricks}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Movie Recommendation with MLlib}
+  \verb{url}
+  \verb https://databricks-training.s3.amazonaws.com/movie-recommendation-with-
+  \verb mllib.html
+  \endverb
+  \field{urlday}{28}
+  \field{urlmonth}{01}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{asf}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Projects by language:}
+  \verb{url}
+  \verb https://projects.apache.org/projects.html?language/
+  \endverb
+  \field{urlday}{05}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{rta}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Real-time business intelligence}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Real-time_business_intelligence
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{longtail}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Rethinking the Long Tail Theory: How to Define Hits and Niches}
+  \verb{url}
+  \verb http://knowledge.wharton.upenn.edu/article/rethinking-the-long-tail-the
+  \verb ory-how-to-define-hits-and-niches/
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{spark}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Spark Lightning-fast cluster computing}
+  \verb{url}
+  \verb http://spark.apache.org
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{storm}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Storm}
+  \verb{url}
+  \verb http://storm.apache.org
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{flinkintro}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Streaming}
+  \verb{url}
+  \verb http://flink.apache.org/features.html
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{2020}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{The Digital Universe of Opportunities: Rich Data and the
+  Increasing Value of the Internet of Things}
+  \verb{url}
+  \verb http://www.emc.com/leadership/digital-universe/2014iview/executive-summ
+  \verb ary.htm
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{tiobe}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{TIOBE Index for April 2016}
+  \verb{url}
+  \verb http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
+  \endverb
+  \field{urlday}{25}
+  \field{urlmonth}{04}
+  \field{urlyear}{2016}
+\endentry
+
+\entry{watson}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{Watson – A System Designed for Answers}
+  \verb{url}
+  \verb http://www-03.ibm.com/innovation/us/engines/assets/9442_Watson_A_System
+  \verb _White_Paper_POW03061-USEN-00_Final_Feb10_11.pdf
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{hadoop}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anonymous}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{What Is Apache Hadoop?}
+  \verb{url}
+  \verb https://hadoop.apache.org/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
 \endentry
 
 \entry{balazinska}{article}{}
@@ -211,6 +700,7 @@
   }
   \strng{namehash}{BMHJHSMA1}
   \strng{fullhash}{BMHJHSMA1}
+  \field{labelyear}{2009}
   \field{sortinit}{B}
   \field{title}{Fault-tolerance and high availability in data stream management
   systems}
@@ -218,19 +708,6 @@
   \verb https://homes.cs.washington.edu/~magda/encyclopedia-short.pdf
   \endverb
   \field{year}{2009}
-\endentry
-
-\entry{mckinsey}{online}{}
-  \field{sortinit}{B}
-  \field{title}{Big data: The next frontier for innovation, competition, and
-  productivity}
-  \verb{url}
-  \verb http://www.mckinsey.com/insights/business_technology/big_data_the_next_
-  \verb frontier_for_innovation
-  \endverb
-  \field{urlday}{16}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{bottou}{article}{}
@@ -243,8 +720,10 @@
   }
   \strng{namehash}{BL1}
   \strng{fullhash}{BL1}
+  \field{labelyear}{2010}
   \field{sortinit}{B}
   \field{title}{Large-Scale Machine Learning with Stochastic Gradient Descent}
+  \field{year}{2010}
 \endentry
 
 \entry{sgd}{article}{}
@@ -257,6 +736,7 @@
   }
   \strng{namehash}{BL1}
   \strng{fullhash}{BL1}
+  \field{labelyear}{2012}
   \field{sortinit}{B}
   \field{title}{Stochastic Gradient Descent Tricks}
   \verb{url}
@@ -265,13 +745,21 @@
   \field{year}{2012}
 \endentry
 
-\entry{cap}{online}{}
+\entry{ecap}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Brewer}{B.}%
+     {Eric}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BE1}
+  \strng{fullhash}{BE1}
   \field{sortinit}{B}
-  \field{title}{Brewer's Conjecture and the Feasibility of Consistent,
-  Available, Partition-Tolerant Web Services}
+  \field{title}{CAP Twelve Years Later: How the "Rules" Have Changed}
   \verb{url}
-  \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.20.1495&rep=re
-  \verb p1&type=pdf
+  \verb http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have
+  \verb -changed
   \endverb
   \field{urlday}{30}
   \field{urlmonth}{12}
@@ -358,6 +846,7 @@
   }
   \strng{namehash}{BL+1}
   \strng{fullhash}{BLLGBMPFMAGONVPPGAGJLRVJJAHBVG1}
+  \field{labelyear}{2013}
   \field{sortinit}{B}
   \field{title}{API design for machine learning software: experiences from the
   scikit-learn project}
@@ -367,18 +856,6 @@
   \field{volume}{abs/1309.0238}
   \field{journaltitle}{CoRR}
   \field{year}{2013}
-\endentry
-
-\entry{ecap}{online}{}
-  \field{sortinit}{C}
-  \field{title}{CAP Twelve Years Later: How the "Rules" Have Changed}
-  \verb{url}
-  \verb http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have
-  \verb -changed
-  \endverb
-  \field{urlday}{30}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{chandy}{article}{}
@@ -396,6 +873,7 @@
   }
   \strng{namehash}{CKMLL1}
   \strng{fullhash}{CKMLL1}
+  \field{labelyear}{1985}
   \field{sortinit}{C}
   \field{title}{Distributed Snapshots: Determining Global States of Distributed
   Systems}
@@ -420,6 +898,7 @@
   }
   \strng{namehash}{CJSD1}
   \strng{fullhash}{CJSD1}
+  \field{labelyear}{1958}
   \field{sortinit}{C}
   \field{title}{THE USE OF PARALLELISM IN NUMERICAL CALCULATIONS}
   \list{institution}{1}{%
@@ -439,15 +918,24 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{economist}{online}{}
+\entry{microbatch}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Damji}{D.}%
+     {Jules~S.}{J.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DJS1}
+  \strng{fullhash}{DJS1}
   \field{sortinit}{D}
-  \field{title}{Data, data everywhere}
+  \field{title}{Apache Storm Design Pattern—Micro Batching}
   \verb{url}
-  \verb http://www.economist.com/node/15557443
+  \verb http://hortonworks.com/blog/apache-storm-design-pattern-micro-batching/
   \endverb
-  \field{urlday}{16}
-  \field{urlmonth}{02}
-  \field{urlyear}{2016}
+  \field{urlday}{17}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
 \endentry
 
 \entry{varian}{online}{}
@@ -494,6 +982,7 @@
   }
   \strng{namehash}{DJGS1}
   \strng{fullhash}{DJGS1}
+  \field{labelyear}{2004}
   \field{sortinit}{D}
   \field{booktitle}{Proceedings of the 6th Conference on Symposium on Opearting
   Systems Design \& Implementation - Volume 6}
@@ -506,8 +995,37 @@
   \field{year}{2004}
 \endentry
 
+\entry{economist}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Economist}{E.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{E1}
+  \strng{fullhash}{E1}
+  \field{sortinit}{E}
+  \field{title}{Data, data everywhere}
+  \verb{url}
+  \verb http://www.economist.com/node/15557443
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{02}
+  \field{urlyear}{2016}
+\endentry
+
 \entry{ucl}{online}{}
-  \field{sortinit}{D}
+  \name{author}{1}{}{%
+    {{}%
+     {Emmerich}{E.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{EW1}
+  \strng{fullhash}{EW1}
+  \field{sortinit}{E}
   \field{title}{Distributed System Principles}
   \verb{url}
   \verb http://www0.cs.ucl.ac.uk/staff/ucacwxe/lectures/ds98-99/dsee3.pdf
@@ -515,6 +1033,26 @@
   \field{urlday}{15}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
+\endentry
+
+\entry{ingestion}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ewen}{E.}%
+     {Stephan}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ES1}
+  \strng{fullhash}{ES1}
+  \field{sortinit}{E}
+  \field{title}{Rework windowing logic}
+  \verb{url}
+  \verb https://issues.apache.org/jira/browse/FLINK-2674
+  \endverb
+  \field{urlday}{08}
+  \field{urlmonth}{01}
+  \field{urlyear}{2016}
 \endentry
 
 \entry{flinkartisans}{online}{}
@@ -535,8 +1073,7 @@
   \field{sortinit}{E}
   \field{title}{How Apache Flink enables new streaming applications}
   \verb{url}
-  \verb http://data-artisans.com/how-apache-flink-enables-new-streaming-applica
-  \verb tions-part-1/
+  \verb l/
   \endverb
   \field{urlday}{30}
   \field{urlmonth}{12}
@@ -558,34 +1095,11 @@
   }
   \strng{namehash}{FFRR1}
   \strng{fullhash}{FFRR1}
+  \field{labelyear}{2008}
   \field{sortinit}{F}
   \field{title}{Big data: Distilling meaning from data}
   \field{journaltitle}{Nature}
   \field{year}{2008}
-\endentry
-
-\entry{datastreamapi}{online}{}
-  \field{sortinit}{F}
-  \field{title}{Flink DataStream API Programming Guide}
-  \verb{url}
-  \verb https://ci.apache.org/projects/flink/flink-docs-master/apis/streaming/i
-  \verb ndex.html#task-chaining-and-resource-groups
-  \endverb
-  \field{urlday}{26}
-  \field{urlmonth}{04}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{streamprocessing}{online}{}
-  \field{sortinit}{F}
-  \field{title}{Flink Stream Processing API}
-  \verb{url}
-  \verb https://ci.apache.org/projects/flink/flink-docs-release-0.8/streaming_g
-  \verb uide.html
-  \endverb
-  \field{urlday}{26}
-  \field{urlmonth}{04}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{unsupervised}{online}{}
@@ -628,12 +1142,99 @@
   }
   \strng{namehash}{GSGHLST1}
   \strng{fullhash}{GSGHLST1}
+  \field{labelyear}{2003}
   \field{sortinit}{G}
   \field{title}{The Google File System}
   \list{institution}{1}{%
     {Google}%
   }
   \field{year}{2003}
+\endentry
+
+\entry{topn}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ghosh}{G.}%
+     {Pranab}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GP1}
+  \strng{fullhash}{GP1}
+  \field{sortinit}{G}
+  \field{title}{Realtime Trending Analysis with Approximate Algorithms}
+  \verb{url}
+  \verb https://pkghosh.wordpress.com/2014/09/10/realtime-trending-analysis-wit
+  \verb h-approximate-algorithms/
+  \endverb
+  \field{urlday}{17}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{cap}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Gilbert}{G.}%
+     {Seth}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lynch}{L.}%
+     {Nancy}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{GSLN1}
+  \strng{fullhash}{GSLN1}
+  \field{labelyear}{2002}
+  \field{sortinit}{G}
+  \verb{doi}
+  \verb 10.1145/564585.564601
+  \endverb
+  \field{issn}{0163-5700}
+  \field{number}{2}
+  \field{pages}{51\bibrangedash 59}
+  \field{title}{Brewer's Conjecture and the Feasibility of Consistent,
+  Available, Partition-tolerant Web Services}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/564585.564601
+  \endverb
+  \field{volume}{33}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{SIGACT News}
+  \field{month}{06}
+  \field{year}{2002}
+\endentry
+
+\entry{lambda}{online}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Hausenblas}{H.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bijnens}{B.}%
+     {Nathan}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HMBN1}
+  \strng{fullhash}{HMBN1}
+  \field{sortinit}{H}
+  \field{title}{Lambda Architecture}
+  \verb{url}
+  \verb http://lambda-architecture.net
+  \endverb
+  \field{urlday}{16}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
 \endentry
 
 \entry{toptal}{online}{}
@@ -656,30 +1257,6 @@
   \field{urlyear}{2016}
 \endentry
 
-\entry{asf}{online}{}
-  \field{sortinit}{H}
-  \field{title}{How Apache Flink enables new streaming applications}
-  \verb{url}
-  \verb https://projects.apache.org/projects.html?language/
-  \endverb
-  \field{urlday}{05}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
-\endentry
-
-\entry{fraud}{online}{}
-  \field{sortinit}{H}
-  \field{title}{How Big Data is Revolutionizing Fraud Detection in Financial
-  Services}
-  \verb{url}
-  \verb http://www.pactera.com/resources/blog/how-big-data-is-revolutionizing-f
-  \verb raud-detection-in-financial-services/
-  \endverb
-  \field{urlday}{15}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
 \entry{koren}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -700,34 +1277,13 @@
   }
   \strng{namehash}{HYKYVC1}
   \strng{fullhash}{HYKYVC1}
+  \field{labelyear}{2008}
   \field{sortinit}{H}
   \field{title}{Collaborative Filtering for Implicit Feedback Datasets}
   \verb{url}
-  \verb http://yifanhu.PUB/cf.pdf
+  \verb http://yifanhu.net/PUB/cf.pdf
   \endverb
   \field{year}{2008}
-\endentry
-
-\entry{infosphere}{online}{}
-  \field{sortinit}{I}
-  \field{title}{IBM InfoSphere Streams}
-  \verb{url}
-  \verb http://www-03.ibm.com/software/products/en/ibm-streams
-  \endverb
-  \field{urlday}{08}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
-\endentry
-
-\entry{imdb}{online}{}
-  \field{sortinit}{I}
-  \field{title}{IMDb Votes/Ratings Top Frequently Asked Questions}
-  \verb{url}
-  \verb http://www.imdb.com/help/show_leaf?votestopfaq
-  \endverb
-  \field{urlday}{16}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{brk}{online}{}
@@ -751,26 +1307,30 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{knearest}{online}{}
-  \field{sortinit}{K}
-  \field{title}{k-legközelebbi szomszéd modell}
+\entry{svrg}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Johnson}{J.}%
+     {Rie}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Tong}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JRZT1}
+  \strng{fullhash}{JRZT1}
+  \field{labelyear}{2013}
+  \field{sortinit}{J}
+  \field{title}{Accelerating Stochastic Gradient Descent using Predictive
+  Variance Reduction}
   \verb{url}
-  \verb https://mialmanach.mit.bme.hu/fogalomtar/k-legkozelebbi_szomszed_modell
+  \verb http://papers.nips.cc/paper/4937-accelerating-stochastic-gradient-desce
+  \verb nt-using-predictive-variance-reduction.pdf
   \endverb
-  \field{urlday}{22}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{kafka}{online}{}
-  \field{sortinit}{K}
-  \field{title}{Kafka + Flink: A practical, how-to guide}
-  \verb{url}
-  \verb http://data-artisans.com/kafka-flink-a-practical-how-to/
-  \endverb
-  \field{urlday}{26}
-  \field{urlmonth}{04}
-  \field{urlyear}{2015}
+  \field{year}{2013}
 \endentry
 
 \entry{korenmf}{article}{}
@@ -793,30 +1353,30 @@
   }
   \strng{namehash}{KYBRVC1}
   \strng{fullhash}{KYBRVC1}
+  \field{labelyear}{2009}
   \field{sortinit}{K}
   \field{title}{MATRIX FACTORIZATION TECHNIQUES FOR RECOMMENDER SYSTEMS}
   \field{year}{2009}
 \endentry
 
-\entry{lambda}{online}{}
-  \field{sortinit}{L}
-  \field{title}{Lambda Architecture}
+\entry{hapreduce}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {KS}{K.}%
+     {Bejoy}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KB1}
+  \strng{fullhash}{KB1}
+  \field{sortinit}{K}
+  \field{title}{Word Count - Hadoop Map Reduce Example}
   \verb{url}
-  \verb http://lambda-architecture.net
+  \verb http://kickstarthadoop.blogspot.hu/2011/04/word-count-hadoop-map-reduce
+  \verb -example.html
   \endverb
-  \field{urlday}{16}
+  \field{urlday}{21}
   \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{lambdaarch}{online}{}
-  \field{sortinit}{L}
-  \field{title}{Lambda architecture}
-  \verb{url}
-  \verb https://en.wikipedia.org/wiki/Lambda_architecture
-  \endverb
-  \field{urlday}{16}
-  \field{urlmonth}{02}
   \field{urlyear}{2015}
 \endentry
 
@@ -841,45 +1401,44 @@
   \field{urlyear}{2015}
 \endentry
 
-\entry{scikit}{online}{}
-  \field{sortinit}{M}
-  \field{title}{Machine Learning in Python}
+\entry{gatsby}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Le~Roux}{L.~R.}%
+     {Nicolas}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LRN1}
+  \strng{fullhash}{LRN1}
+  \field{labelyear}{2009}
+  \field{sortinit}{L}
+  \field{title}{Using Gradient Descent for Optimization and Learning}
   \verb{url}
-  \verb http://scikit-learn.org/stable/
+  \verb http://www.gatsby.ucl.ac.uk/teaching/courses/ml2-2008/graddescent.pdf
   \endverb
-  \field{urlday}{27}
+  \field{year}{2009}
+  \field{urlday}{06}
   \field{urlmonth}{01}
-  \field{urlyear}{2015}
+  \field{urlyear}{2016}
 \endentry
 
-\entry{mllib}{online}{}
+\entry{mckinsey}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Manyika}{M.}%
+     {James}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MJ1}
+  \strng{fullhash}{MJ1}
   \field{sortinit}{M}
-  \field{title}{Machine Learning Library (MLlib) Guide}
+  \field{title}{Big data: The next frontier for innovation, competition, and
+  productivity}
   \verb{url}
-  \verb http://spark.apache.org/docs/latest/mllib-guide.html
-  \endverb
-  \field{urlday}{27}
-  \field{urlmonth}{01}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{ml}{online}{}
-  \field{sortinit}{M}
-  \field{title}{Machine Learning: What it is and why it matters}
-  \verb{url}
-  \verb http://www.sas.com/en_us/insights/analytics/machine-learning.html
-  \endverb
-  \field{urlday}{16}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{batch}{online}{}
-  \field{sortinit}{M}
-  \field{title}{Mainframes working after hours: Batch processing}
-  \verb{url}
-  \verb http://www-01.ibm.com/support/knowledgecenter/#!/zosbasics/com.ibm.zos.
-  \verb zmainframe/zconc_batchproc.htm
+  \verb http://www.mckinsey.com/insights/business_technology/big_data_the_next_
+  \verb frontier_for_innovation
   \endverb
   \field{urlday}{16}
   \field{urlmonth}{12}
@@ -901,6 +1460,7 @@
   }
   \strng{namehash}{MPSV1}
   \strng{fullhash}{MPSV1}
+  \field{labelyear}{2008}
   \field{sortinit}{M}
   \field{title}{Recommender Systems}
   \verb{url}
@@ -909,60 +1469,37 @@
   \field{year}{2008}
 \endentry
 
-\entry{akka}{online}{}
+\entry{kafka}{online}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Metzger}{M.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tzoumas}{T.}%
+     {Kostas}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MRTK1}
+  \strng{fullhash}{MRTK1}
   \field{sortinit}{M}
-  \field{title}{Message Delivery Reliability}
+  \field{title}{Kafka + Flink: A practical, how-to guide}
   \verb{url}
-  \verb http://doc.akka.io/docs/akka/2.3.7/general/message-delivery-reliability
-  \verb .html
+  \verb http://data-artisans.com/kafka-flink-a-practical-how-to/
   \endverb
-  \field{urlday}{06}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
+  \field{urlday}{26}
+  \field{urlmonth}{04}
+  \field{urlyear}{2015}
 \endentry
 
 \entry{overfit}{inbook}{}
+  \field{labelyear}{2014}
   \field{sortinit}{M}
   \field{chapter}{CHAPTER 9. RECOMMENDATION SYSTEMS}
   \field{title}{Mining of Massive Datasets}
   \field{year}{2014}
-\endentry
-
-\entry{UlmannSupervised}{inbook}{}
-  \field{sortinit}{M}
-  \field{chapter}{CHAPTER 9. RECOMMENDATION SYSTEMS}
-  \field{title}{Mining of Massive Datasets}
-  \field{year}{2014}
-\endentry
-
-\entry{UlmannMatrix}{inbook}{}
-  \field{sortinit}{M}
-  \field{chapter}{CHAPTER 9. RECOMMENDATION SYSTEMS}
-  \field{title}{Mining of Massive Datasets}
-  \field{year}{2014}
-\endentry
-
-\entry{ganalitycs}{online}{}
-  \field{sortinit}{M}
-  \field{title}{Monitor activity as it happens on your site or app}
-  \verb{url}
-  \verb https://support.google.com/analytics/answer/1638635?hl=en
-  \endverb
-  \field{urlday}{15}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{mf_databricks}{online}{}
-  \field{sortinit}{M}
-  \field{title}{Movie Recommendation with MLlib}
-  \verb{url}
-  \verb https://databricks-training.s3.amazonaws.com/movie-recommendation-with-
-  \verb mllib.html
-  \endverb
-  \field{urlday}{28}
-  \field{urlmonth}{01}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{odersky}{online}{}
@@ -1000,6 +1537,7 @@
   }
   \strng{namehash}{PEKMB1}
   \strng{fullhash}{PEKMB1}
+  \field{labelyear}{2006}
   \field{sortinit}{P}
   \field{title}{Valuing thoughts, ignoring behavior: The introspection illusion
   as a source of the bias blind spot}
@@ -1020,6 +1558,7 @@
   }
   \strng{namehash}{RS1}
   \strng{fullhash}{RS1}
+  \field{labelyear}{2015}
   \field{sortinit}{R}
   \field{title}{How Machine Learning Algorithms Work Part 1}
   \verb{url}
@@ -1029,41 +1568,6 @@
   \field{urlday}{08}
   \field{urlmonth}{01}
   \field{urlyear}{2016}
-\endentry
-
-\entry{iot}{online}{}
-  \field{sortinit}{R}
-  \field{title}{Real-Time Analytics and the Internet of Things are a Perfect
-  Match}
-  \verb{url}
-  \verb https://datafloq.com/read/real-time-analytics-internet-of-things/943
-  \endverb
-  \field{urlday}{15}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{rta}{online}{}
-  \field{sortinit}{R}
-  \field{title}{Real-time business intelligence}
-  \verb{url}
-  \verb https://en.wikipedia.org/wiki/Real-time_business_intelligence
-  \endverb
-  \field{urlday}{15}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{topn}{online}{}
-  \field{sortinit}{R}
-  \field{title}{Realtime Trending Analysis with Approximate Algorithms}
-  \verb{url}
-  \verb https://pkghosh.wordpress.com/2014/09/10/realtime-trending-analysis-wit
-  \verb h-approximate-algorithms/
-  \endverb
-  \field{urlday}{17}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{alfa}{online}{}
@@ -1081,6 +1585,7 @@
   }
   \strng{namehash}{RBWS1}
   \strng{fullhash}{RBWS1}
+  \field{labelyear}{2013}
   \field{sortinit}{R}
   \field{title}{Optimization}
   \verb{url}
@@ -1093,35 +1598,33 @@
   \field{urlyear}{2016}
 \endentry
 
-\entry{longtail}{online}{}
+\entry{iot}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rijmenam}{R.}%
+     {Mark~van}{M.~v.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RMv1}
+  \strng{fullhash}{RMv1}
   \field{sortinit}{R}
-  \field{title}{Rethinking the Long Tail Theory: How to Define Hits and Niches}
+  \field{title}{Real-Time Analytics and the Internet of Things are a Perfect
+  Match}
   \verb{url}
-  \verb http://knowledge.wharton.upenn.edu/article/rethinking-the-long-tail-the
-  \verb ory-how-to-define-hits-and-niches/
+  \verb https://datafloq.com/read/real-time-analytics-internet-of-things/943
   \endverb
-  \field{urlday}{16}
+  \field{urlday}{15}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
-\endentry
-
-\entry{ingestion}{online}{}
-  \field{sortinit}{R}
-  \field{title}{Rework windowing logic}
-  \verb{url}
-  \verb https://issues.apache.org/jira/browse/FLINK-2674
-  \endverb
-  \field{urlday}{08}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
 \endentry
 
 \entry{7v}{online}{}
   \name{author}{1}{}{%
     {{}%
      {Rijmenam}{R.}%
-     {Mark}{M.}%
-     {van}{v.}%
+     {Mark~van}{M.~v.}%
+     {}{}%
      {}{}}%
   }
   \strng{namehash}{RMv1}
@@ -1151,31 +1654,11 @@
   }
   \strng{namehash}{RHMS1}
   \strng{fullhash}{RHMS1}
+  \field{labelyear}{1951}
   \field{sortinit}{R}
   \field{title}{A Stochastic Approximation Method}
   \field{journaltitle}{The Annals of Mathematical Statistics}
   \field{year}{1951}
-\endentry
-
-\entry{gatsby}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Roux}{R.}%
-     {Nicolas~Le}{N.~L.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{RNL1}
-  \strng{fullhash}{RNL1}
-  \field{sortinit}{R}
-  \field{title}{Using Gradient Descent for Optimization and Learning}
-  \verb{url}
-  \verb http://www.gatsby.ucl.ac.uk/teaching/courses/ml2-2008/graddescent.pdf
-  \endverb
-  \field{year}{2009}
-  \field{urlday}{06}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
 \endentry
 
 \entry{mldebt}{inproceedings}{}
@@ -1223,12 +1706,35 @@
   }
   \strng{namehash}{SD+1}
   \strng{fullhash}{SDHGGDDEPTEDCVYM1}
+  \field{labelyear}{2014}
   \field{sortinit}{S}
   \field{booktitle}{SE4ML: Software Engineering for Machine Learning (NIPS 2014
   Workshop)}
   \field{title}{Machine Learning: The High Interest Credit Card of Technical
   Debt}
   \field{year}{2014}
+\endentry
+
+\entry{fraud}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sensmeier}{S.}%
+     {Lisa}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SL1}
+  \strng{fullhash}{SL1}
+  \field{sortinit}{S}
+  \field{title}{How Big Data is Revolutionizing Fraud Detection in Financial
+  Services}
+  \verb{url}
+  \verb http://hortonworks.com/blog/how-big-data-is-revolutionizing-fraud-detec
+  \verb tion-in-financial-services/
+  \endverb
+  \field{urlday}{15}
+  \field{urlmonth}{12}
+  \field{urlyear}{2015}
 \endentry
 
 \entry{szemantika}{online}{}
@@ -1251,105 +1757,22 @@
   \field{urlyear}{2016}
 \endentry
 
-\entry{spark}{online}{}
-  \field{sortinit}{S}
-  \field{title}{Spark Lightning-fast cluster computing}
-  \verb{url}
-  \verb http://spark.apache.org
-  \endverb
-  \field{urlday}{08}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
-\endentry
-
-\entry{storm}{online}{}
-  \field{sortinit}{S}
-  \field{title}{Storm}
-  \verb{url}
-  \verb http://storm.apache.org
-  \endverb
-  \field{urlday}{08}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
-\endentry
-
-\entry{flinkintro}{online}{}
-  \field{sortinit}{S}
-  \field{title}{Streaming}
-  \verb{url}
-  \verb http://flink.apache.org/features.html
-  \endverb
-  \field{urlday}{15}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
 \entry{summingbird}{online}{}
-  \field{sortinit}{S}
+  \name{author}{1}{}{%
+    {{}%
+     {Twitter}{T.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{T1}
+  \strng{fullhash}{T1}
+  \field{sortinit}{T}
   \field{title}{Streaming MapReduce with Scalding and Storm}
   \verb{url}
   \verb https://github.com/twitter/summingbird
   \endverb
   \field{urlday}{17}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{2020}{online}{}
-  \field{sortinit}{T}
-  \field{title}{The Digital Universe of Opportunities: Rich Data and the
-  Increasing Value of the Internet of Things}
-  \verb{url}
-  \verb http://www.emc.com/leadership/digital-universe/2014iview/executive-summ
-  \verb ary.htm
-  \endverb
-  \field{urlday}{15}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{tiobe}{online}{}
-  \field{sortinit}{T}
-  \field{title}{TIOBE Index for January 2016}
-  \verb{url}
-  \verb http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
-  \endverb
-  \field{urlday}{05}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
-\endentry
-
-\entry{watson}{online}{}
-  \field{sortinit}{W}
-  \field{title}{Watson – A System Designed for Answers}
-  \verb{url}
-  \verb http://www-03.ibm.com/innovation/us/engines/assets/9442_Watson_A_System
-  \verb _White_Paper_POW03061-USEN-00_Final_Feb10_11.pdf
-  \endverb
-  \field{urlday}{16}
-  \field{urlmonth}{12}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{hadoop}{online}{}
-  \field{sortinit}{W}
-  \field{title}{What Is Apache Hadoop?}
-  \verb{url}
-  \verb https://hadoop.apache.org/
-  \endverb
-  \field{urlday}{04}
-  \field{urlmonth}{01}
-  \field{urlyear}{2016}
-\endentry
-
-\entry{hapreduce}{online}{}
-  \field{sortinit}{W}
-  \field{title}{Word Co7unt - Hadoop Map Reduce Example}
-  \verb{url}
-  \verb http://kickstarthadoop.blogspot.hu/2011/04/word-count-hadoop-map-reduce
-  \verb -example.html
-  \endverb
-  \field{urlday}{21}
   \field{urlmonth}{12}
   \field{urlyear}{2015}
 \endentry

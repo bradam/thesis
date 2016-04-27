@@ -16,58 +16,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated field_info (elt_size=4) to 15286 items from 5000.
 Database file #1: intro-blx.bib
 Database file #2: intro.bib
-I was expecting a `,' or a `}'---line 188 of file intro.bib
- : 
- : year = {2010}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 262 of file intro.bib
- : @online{fraud
- :              ,
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "asgd"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 You've used 73 entries,
             6047 wiz_defined-function locations,
-            1405 strings with 17542 characters,
-and the built_in function-call counts, 236580 in all, are:
-= -- 5914
-> -- 17275
-< -- 2247
-+ -- 13562
-- -- 13544
-* -- 11446
-:= -- 21278
+            1435 strings with 18107 characters,
+and the built_in function-call counts, 282524 in all, are:
+= -- 8163
+> -- 20546
+< -- 2672
++ -- 14031
+- -- 14403
+* -- 16399
+:= -- 26261
 add.period$ -- 0
 call.type$ -- 73
-change.case$ -- 498
-chr.to.int$ -- 1282
+change.case$ -- 753
+chr.to.int$ -- 1264
 cite$ -- 144
-duplicate$ -- 23826
-empty$ -- 23046
-format.name$ -- 2311
-if$ -- 42439
+duplicate$ -- 27968
+empty$ -- 25388
+format.name$ -- 4461
+if$ -- 52801
 int.to.chr$ -- 0
-int.to.str$ -- 109
+int.to.str$ -- 223
 missing$ -- 0
-newline$ -- 1346
-num.names$ -- 1314
-pop$ -- 23334
+newline$ -- 1768
+num.names$ -- 3122
+pop$ -- 23478
 preamble$ -- 1
-purify$ -- 562
+purify$ -- 905
 quote$ -- 0
-skip$ -- 9864
+skip$ -- 13516
 stack$ -- 0
-substring$ -- 5893
-swap$ -- 7589
-text.length$ -- 1955
+substring$ -- 6243
+swap$ -- 8780
+text.length$ -- 2409
 text.prefix$ -- 72
 top$ -- 1
 type$ -- 2762
 warning$ -- 0
-while$ -- 1621
+while$ -- 2223
 width$ -- 0
-write$ -- 1272
-(There were 2 error messages)
+write$ -- 1694
+(There was 1 warning)
