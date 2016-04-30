@@ -1,0 +1,29 @@
+\select@language {magyar} \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {1}{\ignorespaces Elosztott rendszer fel\IeC {\'e}p\IeC {\'\i }t\IeC {\'e}se $p, q, r$ folyamatokn\IeC {\'a}l \IeC {\'e}s $c1, c2, c3, c4$ csatorn\IeC {\'a}k eset\IeC {\'e}ben~\parencite {chandy} alapj\IeC {\'a}n. }}{5}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {2}{\ignorespaces Google f\IeC {\'a}jl rendszer fel\IeC {\'e}p\IeC {\'\i }t\IeC {\'e}se~\parencite {gfs} }}{8}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {3}{\ignorespaces MapReduce alkalmaz\IeC {\'a}sa sz\IeC {\'o}sz\IeC {\'a}mol\IeC {\'o} p\IeC {\'e}ld\IeC {\'a}n kereszt\IeC {\"u}l~\cite {hapreduce} alapj\IeC {\'a}n. }}{10}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {4}{\ignorespaces Adatfolyam feldolgoz\IeC {\'a}s a val\IeC {\'o}s\IeC {\'a}gban~(\cite {skew}). }}{11}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {5}{\ignorespaces Lambda architekt\IeC {\'u}ra fel\IeC {\'e}p\IeC {\'\i }t\IeC {\'e}se Nathan Marz alapj\IeC {\'a}n. }}{12}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {6}{\ignorespaces Bal oldalon tal\IeC {\'a}lhat\IeC {\'o} entr\IeC {\'o}pikus adatokb\IeC {\'o}l MapReduce seg\IeC {\'\i }ts\IeC {\'e}g\IeC {\'e}vel struktur\IeC {\'a}lt, inform\IeC {\'a}ci\IeC {\'o}val rendelkez\IeC {\H o} adatokat gener\IeC {\'a}lunk (\cite {tyler} cikk alapj\IeC {\'a}n). }}{13}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {7}{\ignorespaces Fel\IeC {\"u}gyelt tanul\IeC {\'a}s \IeC {\'a}ltal\IeC {\'a}nos modellje (Leskovec et al, 2014, 444.o).}}{17}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {8}{\ignorespaces Rating matrix, ahol az $A,B, C, D$ felhaszn\IeC {\'a}l\IeC {\'o}k a Star Wars, Harry Potter \IeC {\'e}s Twilight filmeket \IeC {\'e}rt\IeC {\'e}kelt\IeC {\'e}k(Leskovec et al, 2014, 322.o). }}{18}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {9}{\ignorespaces M\IeC {\'a}trix faktoriz\IeC {\'a}ci\IeC {\'o} ~(\cite {mf_databricks} cikke alapj\IeC {\'a}n).}}{20}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {10}{\ignorespaces Konvergencia elt\IeC {\'e}veszt\IeC {\'e}se t\IeC {\'u}l nagy \IeC {\'e}s t\IeC {\'u}l kicsi tanul\IeC {\'a}si r\IeC {\'a}t\IeC {\'a}n\IeC {\'a}l~(\cite {learningrate}). }}{22}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {11}{\ignorespaces Gradiens \IeC {\'e}s Sztochasztikus Gradiens konvergencia el\IeC {\'e}r\IeC {\'e}s minta~(\cite {alfa} alapj\IeC {\'a}n). }}{23}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {12}{\ignorespaces Apache Flink fel\IeC {\'e}p\IeC {\'\i }t\IeC {\'e}se http://flink.apache.org alapj\IeC {\'a}n. }}{27}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {13}{\ignorespaces Line\IeC {\'a}ris regresszi\IeC {\'o} minta}}{31}
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {figure}{\numberline {14}{\ignorespaces Program \IeC {\'e}letciklusmodellje}}{32}

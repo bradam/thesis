@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.1)  27 APR 2016 21:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.1)  30 APR 2016 14:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -262,23 +262,64 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip45
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.sty
-Package: t1enc 1994/06/01 Standard LaTeX package
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 44.
+\cftparskip=\skip46
+\cftbeforetoctitleskip=\skip47
+\cftaftertoctitleskip=\skip48
+\cftbeforepartskip=\skip49
+\cftpartnumwidth=\skip50
+\cftpartindent=\skip51
+\cftbeforesecskip=\skip52
+\cftsecindent=\skip53
+\cftsecnumwidth=\skip54
+\cftbeforesubsecskip=\skip55
+\cftsubsecindent=\skip56
+\cftsubsecnumwidth=\skip57
+\cftbeforesubsubsecskip=\skip58
+\cftsubsubsecindent=\skip59
+\cftsubsubsecnumwidth=\skip60
+\cftbeforeparaskip=\skip61
+\cftparaindent=\skip62
+\cftparanumwidth=\skip63
+\cftbeforesubparaskip=\skip64
+\cftsubparaindent=\skip65
+\cftsubparanumwidth=\skip66
+\cftbeforeloftitleskip=\skip67
+\cftafterloftitleskip=\skip68
+\cftbeforefigskip=\skip69
+\cftfigindent=\skip70
+\cftfignumwidth=\skip71
+\c@lofdepth=\count94
+\c@lotdepth=\count95
+\cftbeforelottitleskip=\skip72
+\cftafterlottitleskip=\skip73
+\cftbeforetabskip=\skip74
+\cfttabindent=\skip75
+\cfttabnumwidth=\skip76
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count94
+\c@float@type=\count96
 \float@exts=\toks16
 \float@box=\box26
 \@float@everytoks=\toks17
 \@floatcapt=\box27
 )
 \@float@every@algorithm=\toks18
-\c@algorithm=\count95
+\c@algorithm=\count97
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/09/25 3.9l The Babel package
@@ -288,30 +329,30 @@ Language: magyar 2007/10/19 v1.5 Magyar support from the babel v3.7 system
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
-\babel@savecnt=\count96
+\babel@savecnt=\count98
 \U@D=\dimen103
 )
 Package babel Info: Making ` an active character on input line 2732.
-\c@footnote@add=\count97
-\c@footnote@ch=\count98
+\c@footnote@add=\count99
+\c@footnote@ch=\count100
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2015/04/15 v5.1e context-sensitive quotations (JAW)
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count99
+\etb@tempcnta=\count101
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-\csq@reset=\count100
-\csq@gtype=\count101
-\csq@glevel=\count102
-\csq@qlevel=\count103
-\csq@maxlvl=\count104
-\csq@tshold=\count105
+\csq@reset=\count102
+\csq@gtype=\count103
+\csq@glevel=\count104
+\csq@qlevel=\count105
+\csq@maxlvl=\count106
+\csq@tshold=\count107
 \csq@ltx@everypar=\toks20
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -340,9 +381,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count106
-\Gm@cntv=\count107
-\c@Gm@tempcnt=\count108
+\Gm@cnth=\count108
+\Gm@cntv=\count109
+\c@Gm@tempcnt=\count110
 \Gm@bindingoffset=\dimen104
 \Gm@wd@mp=\dimen105
 \Gm@odd@mp=\dimen106
@@ -354,23 +395,23 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks21
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count109
+\lst@mode=\count111
 \lst@gtempboxa=\box28
 \lst@token=\toks22
-\lst@length=\count110
+\lst@length=\count112
 \lst@currlwidth=\dimen112
-\lst@column=\count111
-\lst@pos=\count112
+\lst@column=\count113
+\lst@pos=\count114
 \lst@lostspace=\dimen113
 \lst@width=\dimen114
-\lst@newlines=\count113
-\lst@lineno=\count114
+\lst@newlines=\count115
+\lst@lineno=\count116
 \lst@maxwidth=\dimen115
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count115
-\lst@skipnumbers=\count116
+\c@lstnumber=\count117
+\lst@skipnumbers=\count118
 \lst@framebox=\box29
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
@@ -395,7 +436,7 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count117
+\Gread@gobject=\count119
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
@@ -425,7 +466,7 @@ AB)
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count118
+\lrq@indent=\count120
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -434,121 +475,121 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count119
-\c@listtotal=\count120
-\c@listcount=\count121
-\c@liststart=\count122
-\c@liststop=\count123
-\c@citecount=\count124
-\c@citetotal=\count125
-\c@multicitecount=\count126
-\c@multicitetotal=\count127
-\c@instcount=\count128
-\c@maxnames=\count129
-\c@minnames=\count130
-\c@maxitems=\count131
-\c@minitems=\count132
-\c@citecounter=\count133
-\c@savedcitecounter=\count134
-\c@uniquelist=\count135
-\c@uniquename=\count136
-\c@refsection=\count137
-\c@refsegment=\count138
-\c@maxextrayear=\count139
-\c@maxextraalpha=\count140
-\c@abbrvpenalty=\count141
-\c@highnamepenalty=\count142
-\c@lownamepenalty=\count143
-\c@maxparens=\count144
-\c@parenlevel=\count145
-\blx@tempcnta=\count146
-\blx@tempcntb=\count147
-\blx@tempcntc=\count148
-\blx@maxsection=\count149
-\blx@maxsegment=\count150
-\blx@notetype=\count151
-\blx@parenlevel@text=\count152
-\blx@parenlevel@foot=\count153
-\labelnumberwidth=\skip46
-\labelalphawidth=\skip47
-\shorthandwidth=\skip48
-\biblabelsep=\skip49
-\bibitemsep=\skip50
-\bibnamesep=\skip51
-\bibinitsep=\skip52
-\bibparsep=\skip53
-\bibhang=\skip54
+\c@tabx@nest=\count121
+\c@listtotal=\count122
+\c@listcount=\count123
+\c@liststart=\count124
+\c@liststop=\count125
+\c@citecount=\count126
+\c@citetotal=\count127
+\c@multicitecount=\count128
+\c@multicitetotal=\count129
+\c@instcount=\count130
+\c@maxnames=\count131
+\c@minnames=\count132
+\c@maxitems=\count133
+\c@minitems=\count134
+\c@citecounter=\count135
+\c@savedcitecounter=\count136
+\c@uniquelist=\count137
+\c@uniquename=\count138
+\c@refsection=\count139
+\c@refsegment=\count140
+\c@maxextrayear=\count141
+\c@maxextraalpha=\count142
+\c@abbrvpenalty=\count143
+\c@highnamepenalty=\count144
+\c@lownamepenalty=\count145
+\c@maxparens=\count146
+\c@parenlevel=\count147
+\blx@tempcnta=\count148
+\blx@tempcntb=\count149
+\blx@tempcntc=\count150
+\blx@maxsection=\count151
+\blx@maxsegment=\count152
+\blx@notetype=\count153
+\blx@parenlevel@text=\count154
+\blx@parenlevel@foot=\count155
+\labelnumberwidth=\skip77
+\labelalphawidth=\skip78
+\shorthandwidth=\skip79
+\biblabelsep=\skip80
+\bibitemsep=\skip81
+\bibnamesep=\skip82
+\bibinitsep=\skip83
+\bibparsep=\skip84
+\bibhang=\skip85
 \blx@auxin=\read1
 \blx@auxout=\write3
-\c@mincomprange=\count154
-\c@maxcomprange=\count155
-\c@mincompwidth=\count156
-\c@labelname=\count157
-\c@savedlabelname=\count158
-\c@author=\count159
-\c@savedauthor=\count160
-\c@shortauthor=\count161
-\c@savedshortauthor=\count162
-\c@editor=\count163
-\c@savededitor=\count164
-\c@editora=\count165
-\c@savededitora=\count166
-\c@editorb=\count167
-\c@savededitorb=\count168
-\c@editorc=\count169
-\c@savededitorc=\count170
-\c@shorteditor=\count171
-\c@savedshorteditor=\count172
-\c@bookauthor=\count173
-\c@savedbookauthor=\count174
-\c@translator=\count175
-\c@savedtranslator=\count176
-\c@annotator=\count177
-\c@savedannotator=\count178
-\c@commentator=\count179
-\c@savedcommentator=\count180
-\c@introduction=\count181
-\c@savedintroduction=\count182
-\c@foreword=\count183
-\c@savedforeword=\count184
-\c@afterword=\count185
-\c@savedafterword=\count186
-\c@holder=\count187
-\c@savedholder=\count188
-\c@namea=\count189
-\c@savednamea=\count190
-\c@nameb=\count191
-\c@savednameb=\count192
-\c@namec=\count193
-\c@savednamec=\count194
-\c@institution=\count195
-\c@savedinstitution=\count196
-\c@language=\count197
-\c@savedlanguage=\count198
-\c@location=\count199
-\c@savedlocation=\count200
-\c@organization=\count201
-\c@savedorganization=\count202
-\c@origlocation=\count203
-\c@savedoriglocation=\count204
-\c@origpublisher=\count205
-\c@savedorigpublisher=\count206
-\c@pageref=\count207
-\c@savedpageref=\count208
-\c@publisher=\count209
-\c@savedpublisher=\count210
-\c@lista=\count211
-\c@savedlista=\count212
-\c@listb=\count213
-\c@savedlistb=\count214
-\c@listc=\count215
-\c@savedlistc=\count216
-\c@listd=\count217
-\c@savedlistd=\count218
-\c@liste=\count219
-\c@savedliste=\count220
-\c@listf=\count221
-\c@savedlistf=\count222
+\c@mincomprange=\count156
+\c@maxcomprange=\count157
+\c@mincompwidth=\count158
+\c@labelname=\count159
+\c@savedlabelname=\count160
+\c@author=\count161
+\c@savedauthor=\count162
+\c@shortauthor=\count163
+\c@savedshortauthor=\count164
+\c@editor=\count165
+\c@savededitor=\count166
+\c@editora=\count167
+\c@savededitora=\count168
+\c@editorb=\count169
+\c@savededitorb=\count170
+\c@editorc=\count171
+\c@savededitorc=\count172
+\c@shorteditor=\count173
+\c@savedshorteditor=\count174
+\c@bookauthor=\count175
+\c@savedbookauthor=\count176
+\c@translator=\count177
+\c@savedtranslator=\count178
+\c@annotator=\count179
+\c@savedannotator=\count180
+\c@commentator=\count181
+\c@savedcommentator=\count182
+\c@introduction=\count183
+\c@savedintroduction=\count184
+\c@foreword=\count185
+\c@savedforeword=\count186
+\c@afterword=\count187
+\c@savedafterword=\count188
+\c@holder=\count189
+\c@savedholder=\count190
+\c@namea=\count191
+\c@savednamea=\count192
+\c@nameb=\count193
+\c@savednameb=\count194
+\c@namec=\count195
+\c@savednamec=\count196
+\c@institution=\count197
+\c@savedinstitution=\count198
+\c@language=\count199
+\c@savedlanguage=\count200
+\c@location=\count201
+\c@savedlocation=\count202
+\c@organization=\count203
+\c@savedorganization=\count204
+\c@origlocation=\count205
+\c@savedoriglocation=\count206
+\c@origpublisher=\count207
+\c@savedorigpublisher=\count208
+\c@pageref=\count209
+\c@savedpageref=\count210
+\c@publisher=\count211
+\c@savedpublisher=\count212
+\c@lista=\count213
+\c@savedlista=\count214
+\c@listb=\count215
+\c@savedlistb=\count216
+\c@listc=\count217
+\c@savedlistc=\count218
+\c@listd=\count219
+\c@savedlistd=\count220
+\c@liste=\count221
+\c@savedliste=\count222
+\c@listf=\count223
+\c@savedlistf=\count224
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -560,13 +601,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 
-\c@textcitecount=\count223
-\c@textcitetotal=\count224
-\c@textcitemaxnames=\count225
-\c@biburlnumpenalty=\count226
-\c@biburlucpenalty=\count227
-\c@biburllcpenalty=\count228
-\c@smartand=\count229
+\c@textcitecount=\count225
+\c@textcitetotal=\count226
+\c@textcitemaxnames=\count227
+\c@biburlnumpenalty=\count228
+\c@biburlucpenalty=\count229
+\c@biburllcpenalty=\count230
+\c@smartand=\count231
 )
 Package biblatex Info: Trying to load bibliography style 'magyar'...
 Package biblatex Info: ... file 'magyar.bbx' found.
@@ -583,8 +624,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count230
-\c@bbx:relatedtotal=\count231
+\c@bbx:relatedcount=\count232
+\c@bbx:relatedtotal=\count233
 )))
 Package biblatex Info: Trying to load citation style 'magyar'...
 Package biblatex Info: ... file 'magyar.cbx' found.
@@ -612,7 +653,7 @@ File: biblatex.cfg
 )))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip55
+\@mathmargin=\skip86
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -630,13 +671,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count232
+\inf@bad=\count266
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count233
-\leftroot@=\count266
+\uproot@=\count267
+\leftroot@=\count268
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count267
-\DOTSCASE@=\count268
+\classnum@=\count269
+\DOTSCASE@=\count270
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -645,15 +686,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen118
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count269
-\c@MaxMatrixCols=\count270
+\macc@depth=\count271
+\c@MaxMatrixCols=\count272
 \dotsspace@=\muskip11
-\c@parentequation=\count271
-\dspbrk@lvl=\count272
+\c@parentequation=\count273
+\dspbrk@lvl=\count274
 \tag@help=\toks24
-\row@=\count273
-\column@=\count274
-\maxfields@=\count275
+\row@=\count275
+\column@=\count276
+\maxfields@=\count277
 \andhelp@=\toks25
 \eqnshift@=\dimen119
 \alignsep@=\dimen120
@@ -662,8 +703,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen123
 \lineht@=\dimen124
 \@envbody=\toks26
-\multlinegap=\skip56
-\multlinetaggap=\skip57
+\multlinegap=\skip87
+\multlinetaggap=\skip88
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -691,7 +732,7 @@ Package csquotes Info: Adjusting default style.
 
 
 Package csquotes Warning: No style for language 'magyar'.
-(csquotes)                Using fallback style on input line 48.
+(csquotes)                Using fallback style on input line 49.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
 Package biblatex Info: Trying to load language 'magyar' -> 'magyar'...
@@ -708,27 +749,21 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 
 LaTeX Warning: Label `' multiply defined.
 
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
 )
 \openout1 = `intro.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
 
 
 Package magyar.ldf Warning: No effect of \def\magyarOptions{...}
@@ -746,14 +781,14 @@ LaTeX Warning: Please use \usepackage[latin2]{inputenc} with
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(65.04256pt, 467.42276pt, 65.04256pt)
+* h-part:(L,W,R)=(99.73294pt, 432.73238pt, 65.04256pt)
 * v-part:(T,H,B)=(65.04256pt, 714.96173pt, 65.04256pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=467.42276pt
+* \textwidth=432.73238pt
 * \textheight=714.96173pt
-* \oddsidemargin=-7.22743pt
-* \evensidemargin=-7.22743pt
+* \oddsidemargin=27.46295pt
+* \evensidemargin=27.46295pt
 * \topmargin=-44.22743pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -772,19 +807,19 @@ LaTeX Warning: Please use \usepackage[latin2]{inputenc} with
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count276
+\c@lstlisting=\count278
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
+\scratchcounter=\count279
 \scratchdimen=\dimen127
 \scratchbox=\box32
-\nofMPsegments=\count278
-\nofMParguments=\count279
+\nofMPsegments=\count280
+\nofMParguments=\count281
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count280
+\MPscratchCnt=\count282
 \MPscratchDim=\dimen128
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
 \everyMPtoPDFconversion=\toks29
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -800,8 +835,8 @@ Package biblatex Warning: Data encoding is 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'intro.bbl' found.
 (./intro.bbl)
-Package biblatex Info: Reference section=0 on input line 48.
-Package biblatex Info: Reference segment=0 on input line 48.
+Package biblatex Info: Reference section=0 on input line 49.
+Package biblatex Info: Reference segment=0 on input line 49.
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -860,127 +895,120 @@ LaTeX Info: Redefining \mit on input line 512.
 
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--70
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
-<img/distSys.png, id=20, 987.69pt x 604.2575pt>
+<img/distSys.png, id=19, 987.69pt x 604.2575pt>
 File: img/distSys.png Graphic file (type png)
  <use img/distSys.png>
-Package pdftex.def Info: img/distSys.png used on input line 82.
+Package pdftex.def Info: img/distSys.png used on input line 83.
 (pdftex.def)             Requested size: 284.52756pt x 174.06844pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 [5 <./img/distSys.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 95.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
  [6]
-Overfull \hbox (24.08594pt too wide) in paragraph at lines 111--112
-\T1/cmr/m/n/12 rend-sze-rek ti-pi-ku-san egy el®-re de-fi-ni-ált $\OML/cmm/m/it
-/12 k$ \T1/cmr/m/n/12 egy id®-ben tör-té-n® hi-bát ké-pe-sek ke-zel-ni. Két[]Ba
-lazinska,
- []
-
-
-Overfull \hbox (3.24142pt too wide) in paragraph at lines 121--123
+Overfull \hbox (11.8271pt too wide) in paragraph at lines 122--124
 []\T1/cmr/m/n/12 Google 2003-ban meg-al-kot-ta a go-og-le fájl rend-szert (GFS,
- Go-og-le Fi-le Sys-tem)[]Ghemawat,
+ Go-og-le Fi-le Sys-tem) ([]Ghe-
  []
 
-<img/gfs.png, id=33, 1776.6375pt x 656.4525pt>
+[7] <img/gfs.png, id=37, 1776.6375pt x 656.4525pt>
 File: img/gfs.png Graphic file (type png)
  <use img/gfs.png>
-Package pdftex.def Info: img/gfs.png used on input line 126.
+Package pdftex.def Info: img/gfs.png used on input line 127.
 (pdftex.def)             Requested size: 369.87889pt x 136.66711pt.
- [7] [8 <./img/gfs.png>] <img/wordcountflow.jpg, id=42, 967.615pt x 634.37pt>
+ [8 <./img/gfs.png>] <img/wordcountflow.jpg, id=42, 967.615pt x 634.37pt>
 File: img/wordcountflow.jpg Graphic file (type jpg)
 
 <use img/wordcountflow.jpg>
-Package pdftex.def Info: img/wordcountflow.jpg used on input line 151.
+Package pdftex.def Info: img/wordcountflow.jpg used on input line 152.
 (pdftex.def)             Requested size: 312.9803pt x 205.19016pt.
- [9 <./img/wordcountflow.jpg>]
-<img/skew.png, id=47, 592.2125pt x 728.7225pt>
+ [9] [10 <./img/wordcountflow.jpg>]
+<img/skew.png, id=50, 592.2125pt x 728.7225pt>
 File: img/skew.png Graphic file (type png)
  <use img/skew.png>
-Package pdftex.def Info: img/skew.png used on input line 177.
+Package pdftex.def Info: img/skew.png used on input line 178.
 (pdftex.def)             Requested size: 170.71652pt x 210.06761pt.
- [10] [11 <./img/skew.png>] <img/lambda.png, id=55, 533.995pt x 288.07625pt>
+ [11 <./img/skew.png>] <img/lambda.png, id=55, 533.995pt x 288.07625pt>
 File: img/lambda.png Graphic file (type png)
-
-<use img/lambda.png>
-Package pdftex.def Info: img/lambda.png used on input line 195.
+ <use img/lambda.png>
+Package pdftex.def Info: img/lambda.png used on input line 196.
 (pdftex.def)             Requested size: 256.0748pt x 138.15193pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
-<img/batch.png, id=56, 642.4pt x 481.8pt>
+[12 <./img/lambda.png>] <img/batch.png, id=60, 642.4pt x 481.8pt>
 File: img/batch.png Graphic file (type png)
- <use img/batch.png>
-Package pdftex.def Info: img/batch.png used on input line 210.
-(pdftex.def)             Requested size: 256.0748pt x 192.06227pt.
- [12 <./img/lambda.png>]
-Overfull \hbox (12.80505pt too wide) in paragraph at lines 219--220
- \T1/cmr/bx/n/12 Ses-sion-nél[] |  \T1/cmr/m/n/12 va-la-mi-lyen fel-hasz-ná-lói
- ak-ti-vi-tás alap-ján meg-ha-tá-roz-zuk, hogy va-ló-szí-n¶-leg mennyi
- []
 
-[13 <./img/batch.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+<use img/batch.png>
+Package pdftex.def Info: img/batch.png used on input line 211.
+(pdftex.def)             Requested size: 256.0748pt x 192.06227pt.
+ [13 <./img/batch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
 [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 250--252
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 [16] <img/ml.png, id=75, 985.6825pt x 407.5225pt>
 File: img/ml.png Graphic file (type png)
  <use img/ml.png>
-Package pdftex.def Info: img/ml.png used on input line 268.
+Package pdftex.def Info: img/ml.png used on input line 269.
 (pdftex.def)             Requested size: 256.0748pt x 105.87251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
 [17 <./img/ml.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+Overfull \hbox (6.21698pt too wide) in paragraph at lines 285--286
+\T1/cmr/m/n/12 Két f® faj-tá-ját kü-lön-böz-tet-jük meg az aján-ló rend-sze-rek
+-nek. A tar-ta-lom ala-pú (content-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
 <img/um.png, id=83, 623.32875pt x 179.67125pt>
 File: img/um.png Graphic file (type png)
  <use img/um.png>
-Package pdftex.def Info: img/um.png used on input line 293.
+Package pdftex.def Info: img/um.png used on input line 294.
 (pdftex.def)             Requested size: 256.0748pt x 73.81372pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
@@ -988,176 +1016,147 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
 File: img/factor.png Graphic file (type png)
 
 <use img/factor.png>
-Package pdftex.def Info: img/factor.png used on input line 315.
+Package pdftex.def Info: img/factor.png used on input line 316.
 (pdftex.def)             Requested size: 284.52756pt x 160.69029pt.
  [19] [20 <./img/factor.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
-[21] <img/alfa.png, id=101, 953.5625pt x 424.58624pt>
+[21] <img/alfa.png, id=100, 953.5625pt x 424.58624pt>
 File: img/alfa.png Graphic file (type png)
  <use img/alfa.png>
-Package pdftex.def Info: img/alfa.png used on input line 353.
+Package pdftex.def Info: img/alfa.png used on input line 354.
 (pdftex.def)             Requested size: 256.0748pt x 114.01787pt.
 
-
-LaTeX Warning: Citation 'asgd' on page 22 undefined on input line 360.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
 
  []
 
-<img/sgd_bgd.png, id=102, 1160.335pt x 1055.945pt>
+[22 <./img/alfa.png>] <img/sgd_bgd.png, id=106, 1160.335pt x 1055.945pt>
 File: img/sgd_bgd.png Graphic file (type png)
- <use img/sgd_bgd.png>
-Package pdftex.def Info: img/sgd_bgd.png used on input line 366.
+
+<use img/sgd_bgd.png>
+Package pdftex.def Info: img/sgd_bgd.png used on input line 367.
 (pdftex.def)             Requested size: 227.62204pt x 207.14104pt.
 
-[22 <./img/alfa.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 370--372
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
 
  []
 
 [23 <./img/sgd_bgd.png>] [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 421--423
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
 
  []
 
 <img/flink.png, id=118, 386.44376pt x 301.125pt>
 File: img/flink.png Graphic file (type png)
  <use img/flink.png>
-Package pdftex.def Info: img/flink.png used on input line 434.
+Package pdftex.def Info: img/flink.png used on input line 429.
 (pdftex.def)             Requested size: 227.62204pt x 177.36813pt.
  [26]
-Overfull \hbox (99.35231pt too wide) in paragraph at lines 446--447
-\T1/cmr/m/n/12 transz-for-má-ci-ó-kat egy szá-lon tud-juk fut-tat-ni. $\OML/cmm
-/m/it/12 someStream:filter\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 :::\OT1/cmr/m/n/12 
-)\OML/cmm/m/it/12 :map\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 :::\OT1/cmr/m/n/12 )\OM
-L/cmm/m/it/12 :startNewChain\OT1/cmr/m/n/12 ()\OML/cmm/m/it/12 :map\OT1/cmr/m/n
-/12 (\OML/cmm/m/it/12 :::\OT1/cmr/m/n/12 );$
+Overfull \hbox (197.08563pt too wide) in paragraph at lines 441--442
+\T1/cmr/m/n/12 mást kö-ve-t® transz-for-má-ci-ó-kat egy szá-lon tud-juk fut-tat
+-ni. $\OML/cmm/m/it/12 someStream:filter\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 :::\O
+T1/cmr/m/n/12 )\OML/cmm/m/it/12 :map\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 :::\OT1/c
+mr/m/n/12 )\OML/cmm/m/it/12 :startNewChain\OT1/cmr/m/n/12 ()\OML/cmm/m/it/12 :m
+ap\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 :::\OT1/cmr/m/n/12 );$
  []
 
-[27 <./img/flink.png>]
-Overfull \hbox (54.80724pt too wide) in paragraph at lines 449--450
-[]\T1/cmr/m/n/12 Data Sinks: Egy adat-fo-lya-mot vár be-me-net-nek és ki-me-net
--ként lét-re-hoz-hat fájlt ($\OML/cmm/m/it/12 writeAsCsv\OT1/cmr/m/n/12 (\OML/c
-mm/m/it/12 :::\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 ),
- []
+[27 <./img/flink.png>] [28]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 452.
 
-
-Overfull \hbox (89.47026pt too wide) in paragraph at lines 451--452
-\T1/cmr/m/n/12 goz-za, és ak-kor fog-nak le-fut-ni, ami-kor exp-li-cit $\OML/cm
-m/m/it/12 execute\OT1/cmr/m/n/12 ()$ \T1/cmr/m/n/12 hí-vás tör-té-nik a $\OML/c
-mm/m/it/12 StreamExecutionEnvironment$
- []
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 457.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [28]
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+)
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
-[29] <img/linreg.png, id=134, 1156.32pt x 567.3195pt>
+[29] [30] <img/linreg.png, id=136, 1156.32pt x 567.3195pt>
 File: img/linreg.png Graphic file (type png)
- <use img/linreg.png>
-Package pdftex.def Info: img/linreg.png used on input line 530.
-(pdftex.def)             Requested size: 369.88582pt x 181.46803pt.
 
-[30] [31 <./img/linreg.png>]
-<img/workflow.png, id=143, 958.58125pt x 273.02pt>
+<use img/linreg.png>
+Package pdftex.def Info: img/linreg.png used on input line 525.
+(pdftex.def)             Requested size: 369.88582pt x 181.46803pt.
+ [31 <./img/linreg.png>]
+<img/workflow.png, id=142, 958.58125pt x 273.02pt>
 File: img/workflow.png Graphic file (type png)
  <use img/workflow.png>
-Package pdftex.def Info: img/workflow.png used on input line 550.
+Package pdftex.def Info: img/workflow.png used on input line 545.
 (pdftex.def)             Requested size: 369.88582pt x 105.34839pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
 
  []
 
-[32 <./img/workflow.png>]
-Overfull \hbox (37.86418pt too wide) in paragraph at lines 565--566
+[32 <./img/workflow.png>] [33]
+Overfull \hbox (72.55457pt too wide) in paragraph at lines 561--562
 []\T1/cmr/m/n/12 A je-len-le-gi ál-la-po-tá-ban az osz-tály nem ké-pes kül-s® a
 dat fel-dol-go-zá-sá-ra, a $\OML/cmm/m/it/12 LinearRegressionData$
  []
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 579--585
-
- []
-
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 586--588
+Underfull \hbox (badness 10000) in paragraph at lines 575--581
 
  []
 
-<img/scala.png, id=154, 704.6325pt x 849.1725pt>
-File: img/scala.png Graphic file (type png)
- <use img/scala.png>
-Package pdftex.def Info: img/scala.png used on input line 597.
-(pdftex.def)             Requested size: 369.88582pt x 445.75745pt.
- [35]
-<img/java.png, id=158, 784.9325pt x 1045.9075pt>
-File: img/java.png Graphic file (type png)
- <use img/java.png>
-Package pdftex.def Info: img/java.png used on input line 603.
-(pdftex.def)             Requested size: 369.88582pt x 492.8693pt.
- [36 <./img/scala.png>] [37 <./img/java.png>] [38]
-Overfull \hbox (14.46974pt too wide) in paragraph at lines 611--611
-[][][]\T1/cmr/m/it/12 Movie Re-com-men-da-ti-on with ML-lib\T1/cmr/m/n/12 . \T1
-/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 https : / / databricks -[] tr
-aining . s3 . amazonaws .
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 582--584
+
+ []
+
+[36] [37]
+Overfull \hbox (2.01643pt too wide) in paragraph at lines 592--592
+\T1/cmtt/m/n/12 accelerating -[] stochastic -[] gradient -[] descent -[] using 
+-[] predictive -[] variance -[]
  []
 
 
-Overfull \hbox (0.77727pt too wide) in paragraph at lines 611--611
-[][][]\T1/cmr/m/it/12 Projects by lan-gu-age: \T1/cmr/m/sc/12 url\T1/cmr/m/n/12
- : $\T1/cmtt/m/n/12 https : / / projects . apache . org / projects . html ? lan
-guage/$
+Overfull \hbox (32.75603pt too wide) in paragraph at lines 592--592
+[][]\T1/cmr/m/n/12 KS B. (2011). \T1/cmr/m/it/12 Word Count - Ha-do-op Map Re-d
+u-ce Examp-le\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n
+/12 http : / / kickstarthadoop .
  []
 
-
-Overfull \hbox (10.70984pt too wide) in paragraph at lines 611--611
-[][][]\T1/cmr/m/it/12 Rethinking the Long Ta-il The-ory: How to De-fi-ne Hits a
-nd Nic-hes\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12
- http : / / knowledge .
+[38]
+Overfull \hbox (7.49292pt too wide) in paragraph at lines 592--592
+[][]\T1/cmr/m/n/12 Storm Apache (2016). \T1/cmr/m/it/12 Storm\T1/cmr/m/n/12 . \
+T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/cmtt/m/n/12 http : / / storm . apache .
+ org$ \T1/cmr/m/n/12 (Le-tölt-ve: 01/08/2016). 
  []
 
-[39]
-Overfull \hbox (27.04506pt too wide) in paragraph at lines 611--611
-[][]\T1/cmr/m/n/12 Hausenblas Mi-cha-el, Bij-nens Nat-han. \T1/cmr/m/it/12 Lamb
--da Ar-chi-tec-tu-re\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : $\T1/c
-mtt/m/n/12 http : / / lambda -[] architecture .
+(./intro.lof
+Overfull \hbox (4.13791pt too wide) in paragraph at lines 13--13
+ \T1/cmr/m/n/12 struk-tu-rált, in-for-má-ci-ó-val ren-del-ke-z® ada-to-kat ge-n
+e-rá-lunk (Akid-au 2015 
  []
 
-[40] [41] [42] (./intro.aux)
+[39])
+\tf@lof=\write5
+\openout5 = `intro.lof'.
 
-LaTeX Warning: There were undefined references.
-
+ [40] (./intro.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                intro
-(biblatex)                and rerun LaTeX afterwards.
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'intro.run.xml'.
 \openout1 = `intro.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12738 strings out of 493089
- 196462 string characters out of 6134843
- 408583 words of memory out of 5000000
- 16022 multiletter control sequences out of 15000+600000
- 15955 words of font info for 39 fonts, out of 8000000 for 9000
+ 13092 strings out of 493089
+ 200257 string characters out of 6134843
+ 415527 words of memory out of 5000000
+ 16369 multiletter control sequences out of 15000+600000
+ 15254 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,7n,61p,1285b,2299s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,66p,1285b,2513s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -1166,20 +1165,19 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on intro.pdf (42 pages, 1185188 bytes).
+texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on intro.pdf (40 pages, 1054149 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
+ 229 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
